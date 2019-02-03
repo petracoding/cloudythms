@@ -197,7 +197,6 @@
 
 
 
-
 /* 
     COLOR STYLING
 */
@@ -429,6 +428,9 @@ input.text_field,
 .flag--accessibility-design-update .controls_section .controls_item_anchor {
     color: var(--sidebar-text);
 }
+#tag_replacer_button div {
+    color: var(--sidebar-text) !important;
+}
 .elevator {
     color: var(--scroll-up-arrow);
 }
@@ -452,11 +454,12 @@ input.text_field,
 
 /* header */
 .ui_search .search_query,
-.flag--accessibility-design-update .ui_search .search_query,
 .ui_search .search_query::placeholder,
 .flag--accessibility-design-update .ui_search .search_query::placeholder {
-    background: var(--search-bar);
     color: var(--search-bar-text);
+}
+.flag--accessibility-design-update .ui_search .search_query{
+    background: var(--search-bar);
 }
 .ui_search .search_form_field::before {
     color: var(--search-bar-text);
@@ -565,7 +568,8 @@ input.text_field,
 }
 .l-container .post_full .post_tags .post_tag,
 .post_brick .post_tags .post_tag,
-.flag--accessibility-design-update .post_brick .post_tags .post_tag {
+.flag--accessibility-design-update .post_brick .post_tags .post_tag,
+.see-all-tags {
     color: var(--post-footer-tags);
     transition:var(--transition-fast) ease;
 }
@@ -574,7 +578,10 @@ input.text_field,
 .l-container .post_full .post_tags .post_tag:active,
 .post_brick .post_tags .post_tag:hover,
 .post_brick .post_tags .post_tag:focus,
-.post_brick .post_tags .post_tag:active {
+.post_brick .post_tags .post_tag:active,
+.see-all-tags:hover,
+.see-all-tags:focus,
+.see-all-tags:active {
     color: var(--post-footer-tags-hover);
 }
 .l-container .post_controls .post_control::before,
@@ -1078,6 +1085,10 @@ pencil_edit_button  {
 .logo .png-logo {
     filter: var(--tumblr-logo-invert);
     -webkit-filter: var(--tumblr-logo-invert);
+}
+/* no ads */
+.standalone-ad-container {
+ display:none;   
 }
 
 
