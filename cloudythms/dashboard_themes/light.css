@@ -1,5 +1,5 @@
 /*
-    TUMBLR DASHBOARD THEME "light" [version 1.0]
+    TUMBLR DASHBOARD THEME "light" [version 1.1]
     created by cloudythms.tumblr.com
                 ~   ~   ~
     How to + faq:
@@ -799,7 +799,6 @@ a.post_avatar_link:hover, .l-container .avatar:hover {
     FONT SIZES
 */
 
-body,
 .post.new_post .new_post_label,
 .reblog-list-item .reblog-tumblelog-name,
 .post_full .post_header,
