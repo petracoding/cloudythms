@@ -1,0 +1,1062 @@
+/*
+    TUMBLR DASHBOARD THEME "dark" [version 1.0]
+    created by cloudythms.tumblr.com
+                ~   ~   ~
+    How to + faq:
+    => cloudythms.tumblr.com/howto/dashboardtheme
+*/
+
+/* ---------------------------------------------------------------------------------------------------------
+    NON-COLOR VARIABLES.
+    Just follow the guide.
+   --------------------------------------------------------------------------------------------------------- */
+:root {
+    
+    
+    /* invert tumblr logo */
+    /* set to 0 for white, set to 1 for black */
+    --tumblr-logo-invert: invert(0);
+    
+    /* darken blog popups/peaker */
+    /* set to 100% for normal brightness, set to something between 90% and 30% for darker */
+    --blog-popup: brightness(90%);
+    
+    /* hover effect duration times (in seconds) */
+    /* default: fast:0.2s; slow:0.5s; */
+    --transition-fast: 0.2s;
+    --transition-slow: 0.5s;
+    
+    
+    /* SHOW / HIDE. */
+    
+    /* set to 1 to show, set to 0 to hide */
+    --show-tumblr-logo:     0.7;
+    --show-search-bar:      1;
+    --show-header-icons:    1;
+    --show-new-post-button: 1;
+    --show-footer:          1;
+    
+    /* set to block to show, set to none to hide */
+    --show-header:          block;
+    --show-make-new-post:   block;
+    --show-avatars:         block;
+    --show-right-sidebar:           block;
+        --show-recommended_blogs:   block;
+        --show-radar:               block;
+        --show-blog-setting:        block;
+    --show-like-notifications-on-dash:      block;
+    --show-reblog-notifications-on-dash:    block;
+    --show-follow-notifications-on-dash:    block;
+    --show-ask-notifications-on-dash:       block;
+    
+    
+    /* SIZES. */
+    
+    --font-size:            14px;   /* default: 14px */
+    --font-size-big:        20px;   /* default: 20px */
+    --font-size-biggest:    36px;   /* default: 36px */
+    --font-size-small:      13px;   /* default: 13px */
+    --font-size-smallest:   12px;   /* default: 12px */
+    
+    --post-spacing:         50px;   /* default: 20px; */
+    
+    --post-image-rounding:  0px;    /* default: 0px; shouldn't be more than 20px */
+    --avatar-rounding:      0%;     /* default: 0%; set to 50% for completely round. */
+    
+    
+    
+    /* BLACK AND WHITE. */
+    /* set to 0% for normal color, set to 100% for black and white */
+    /* you can also do inbetweens, for example 50% */
+    
+    --post-images-grayscale:        grayscale(0%);
+    --post-images-hover-grayscale:  grayscale(0%);
+    --avatars-grayscale:            grayscale(0%);
+    --avatars-hover-grayscale:      grayscale(0%);
+     
+    
+    
+/* ---------------------------------------------------------------------------------------------------------
+    COLORS.
+    -   set to a color (hex, rgb, rgba) or re-use a previous variable like so: var(--color-accent1)
+    -   to edit a color, click the colored square.
+        if there is no square where one should be, press spacebar once right before the color.
+    -   you can use rgba for partial transperency, for example rgba(0, 0, 0, 0.6) is black with a 60% opacity
+    -   get color codes (hex and rgba) here: https://www.hexcolortool.com/
+        hex looks like this: #ffffff (don't forget the #). rgba looks like this: rgba(255, 255, 255, 1)
+        you can also simply write "black" or "white" (without "")
+        this is white with 50% transperency: rgba(255,255,255,0.5);
+        this is black with 50% transperency: rgba(0,0,0,0.5);
+    
+   --------------------------------------------------------------------------------------------------------- */
+    
+    /* these accents are for later re-use. they don't change anything on their own */
+    --color-accent1: #0075af; 
+    --color-accent2: red;
+    --color-accent3: red;
+    
+    /* text */
+    --text-content:         #cacaca;
+    --text-content-light:   rgba(255,255,255,0.2);
+    --text:                 #cacaca;
+    --text-light:           rgba(255,255,255,0.6);
+    --text-lighter:         rgba(255,255,255,0.1);
+    
+    /* basics */
+    --page-background:          #131313;
+    --post-background:          #2c2c2c;
+    --lines:                    rgba(255,255,255,0.05);
+    --button-background:        var(--color-accent1);
+    --button-text:              var(--text);
+    
+    /* dashboard stuff */
+    --sidebar-text:             var(--text);
+    --sidebar-text-transparent: var(--text-light);
+    --follow-button:            var(--text-light);
+    --pagination-button:        var(--button-background);
+    --pagination-button-text:   var(--button-text);
+    --footer-links:             var(--text-light);
+    --footer-links-hover:       var(--text-light);
+    --scroll-up-arrow:          var(--text-light);
+    --chat-online-dot:          #21cd40; 
+    
+    /* header */
+    --search-bar:               var(--text-lighter);
+    --search-bar-clicked:       var(--text);
+    --search-bar-text:          var(--text-light);
+    --search-bar-clicked-text:  var(--text-content);
+    --header-icons:             var(--text);
+    --header-icons-hover:       var(--header-icons);
+    --header-icons-active:      var(--header-icons);
+    --new-posts-badge:          var(--color-accent1);
+    --new-post-button:          var(--color-accent1);
+    
+    /* post type icons */
+    --post-type-icon-text:  #959595;
+    --post-type-icon-photo: #e03820;
+    --post-type-icon-quote: #e37b00;
+    --post-type-icon-link:  #00ae2d;
+    --post-type-icon-chat:  #009ad5;
+    --post-type-icon-audio: #664fc7;
+    --post-type-icon-video: #bf3b96;
+    
+    /* post header + footer */
+    --post-header-username-bold:    var(--text-content); 
+    --post-header-username-light:   var(--text-content-light);
+    --post-header-follow-link:      var(--color-accent1);
+    --post-footer-search:           #0c7900;
+    --post-footer-tags:             var(--text-content-light);
+    --post-footer-tags-hover:       var(--text-content);
+    --post-footer-notes:            var(--text-content);
+    --post-footer-icons:            var(--text-content);
+    --post-footer-icons-hover:      var(--text-content-light);
+    --post-footer-icon-liked:       #e63838;
+    --post-footer-icon-reblogged:   #0c7900;
+
+    /* post content */
+    --post-username:            var(--text-content); 
+    --post-title:               var(--text-content); 
+    --post-text:                var(--text-content); 
+    --post-ask-background:      var(--page-background);
+    --post-ask-url:             var(--text-content); 
+    --post-ask-message:         var(--text-content);
+    --post-keep-reading:        var(--color-accent1);
+    --post-blockquote-border:   var(--text-content-light);
+    
+    /* post styled text */
+    --post-link:                white;
+    --post-link-hover:          var(--color-accent1);
+    --post-link-underline:      var(--text-content-light);
+    --post-link-underline-hover:transparent;
+    --post-bold:                var(--text-content);
+    --post-italic:              var(--text-content);
+    --post-quote:               var(--text-content);
+    --post-chat:                var(--text-content);
+    --post-quirky:              var(--text-content);
+    --post-list-bullet:         var(--text-content);
+    --post-list-number:         var(--text-content);
+    --post-color-red:           #f86f5c;
+    --post-color-orange:        #ffb45b;
+    --post-color-yellow:        #f0e73c;
+    --post-color-green:         #4de774;
+    --post-color-blue:          #44cbff;
+    --post-color-purple:        #b167ff; 
+    --post-color-pink:          #ff89da;
+    
+    /* notifications on dashboard */
+    --notification-url:     var(--text-light);
+    --notification-info:    var(--text-light);
+    --notification-preview: var(--text-light);
+    
+    
+    
+    
+/* ------------------------------------------------------------ */
+/* --------------- DO NOT EDIT BEYOND THIS LINE --------------- */
+}
+
+
+
+
+/* 
+    COLOR STYLING
+*/
+
+/* text */
+.follower a.name-link,
+#dashboard_useraction_following #tabs .tab.selected,
+.flag--accessibility-design-update .crushes_subhead,
+.tumblr_settings .settings_heading,
+.tumblr_settings .left_column,
+.accordion_trigger_wrapper .accordion_label,
+.tumblr_settings--account .account-sessions .past-sessions .bold-copy,
+.flag--accessibility-design-update.tumblr_settings--account .account-sessions .current .bold-copy,
+.flat_select .icon,
+.white_pane h1,
+.ui_notes_switcher .active,
+#range_controls h2.heading.arrow,
+.ui_tops .tops_box .tops_header h1,
+.flag--accessibility-design-update .ui_notes .date_header,
+.flag--accessibility-design-update .ui_notes .date_header.date_activity,
+.ui_notes .activity-notification .activity-notification__activity .activity-notification__activity_message .activity-notification__activity_main .activity,
+.ui_notes .activity a,
+.flag--accessibility-design-update .ui_notes .activity-notification .activity-notification__icon .note_follow,
+.ui_tops .tops_box.tops_fans a,
+.ui_stats .row .unit .brag,
+.tumblr_settings input.text_field,
+.followers .description 
+ {
+    color: var(--text-content);
+}
+.grey_note,
+.grey_note a {
+    color: var(--text-content) !important;
+}
+.follower .description .last_updated,
+.highcharts-axis-labels span {
+    color: var(--text-content-light) !important;
+}
+.text_field::placeholder,
+.tumblr_settings--account .tagfiltering_group .tag-label,
+.tumblr_settings--account .account-sessions .label,
+.tumblr_settings--account .email_group .checkbox label,
+.tumblr_settings .help_text,
+.tumblr_settings .help_text a,
+.tumblr_settings--account .account-sessions .past-sessions .settings-copy,
+.ui_notes .activity-notification .activity-notification__activity .activity-notification__activity_message .activity-notification__activity_main .summary,
+.flag--accessibility-design-update .ui_notes .activity-notification .activity-notification__activity .activity-notification__activity_message .activity-notification__activity_response blockquote,
+#user_graphs .axis-label,
+.tops_header .top_notes,
+.ui_stats .stat_title,
+.tumblr_settings .setting.text label,
+.tumblr_settings .setting.password label,
+.tumblr_settings .setting.textarea label,
+.flag--accessibility-design-update .post_full .post_footer {
+     color: var(--text-content-light);
+}
+.crushes .crush .count,
+.flag--accessibility-design-update .sidebar_link {
+    color:var(--text-light);
+}
+.binary_switch .binary_switch_track {
+    background-color: var(--text-content-light);
+}
+
+
+/* basics */
+.identity,
+.l-header-container--refresh,
+.l-container.l-container--two-column-dashboard .l-content,
+.l-container.l-container--two-column .l-content,
+.l-container.l-container--two-column-dashboard .left_column,
+.post_avatar,
+.post_avatar .post_avatar_link,
+.l-container.l-container--two-column-dashboard .right_column,
+.l-container.l-container--two-column .right_column,
+.flag--accessibility-design-update .identity,
+.identity.flag--accessibility-design-update,
+.flag--accessibility-design-update .l-container.l-container--two-column-dashboard .l-content,
+.flag--accessibility-design-update .l-container.l-container--two-column .l-content,
+.flag--accessibility-design-update .l-container.l-container--two-column-dashboard .right_column,
+.flag--accessibility-design-update .l-container.l-container--two-column .right_column,
+.flag--accessibility-design-update .l-container.l-container--two-column-dashboard .left_column,
+.flag--accessibility-design-update .post_avatar,
+.flag--accessibility-design-update .post_avatar .post_avatar_link,
+.flag--accessibility-design-update .l-header-container--refresh,
+.discover_actions_discover.flag--accessibility-design-update .elevator,
+.search_actions_search.flag--accessibility-design-update .elevator,
+.crushes .crush .count {
+    background: var(--page-background);
+}
+.l-container .post_full .post_permalink,
+.l-container .flag--accessibility-design-update .post_full .post_permalink {
+    border-color:var(--page-background) var(--page-background) transparent transparent;
+}
+.posts-holder article,
+.l-container .post.post_full,
+.l-container .post .post-source-footer,
+.l-container .post_controls .post_control.reblog.reblogged::after,
+.radar .radar_controls,
+.notifications_page .notification_pane,
+#user_graphs .axis-label,
+.ui_notes .date_header, .ui_notes .date_header.date_activity,
+#dashboard_useraction_following .l-content,
+#dashboard_useraction_following #tabs,
+#dashboard_useraction_following #tabs .tab.selected,
+.l-container.l-container--two-column .left_column,
+.follower,
+input.text_field,
+.white_pane,
+.white_pane .pagination{
+    background: var(--post-background) !important;
+}
+.post_brick .expand-post-content,
+.post_brick.is_photo .post_media + .expand,
+.l-container .expand-post-content,
+.l-container .post_media + .expand {
+    background-color: var(--post-background) !important;
+    opacity:0.5;
+}
+input.text_field,
+.chrome.clear,
+.notifications_page .notifications_block,
+.ui_notes .activity-notification + .activity-notification,
+.ui_tops .tops_box.tops_post,
+.tumblr_settings .settings_heading,
+.tumblr_settings .settings_group + .settings_group,
+.tumblr_settings .settings_group + .settings_footer,
+.tumblr_settings--account .account-sessions .labels,
+.tumblr_settings input.text_field,
+.tumblr_settings textarea,
+.tumblr_settings .password_placeholder,
+.identity .controls_section li.section_header,
+.identity .controls_section.follow_list.recommended_tumblelogs > li.item,
+.notification,
+.post_brick.is_conversation .post_header,
+.post_brick.is_note .post_header,
+.post_brick.is_quote .post_header,
+.post_brick.is_regular .post_header,
+.l-container .reblog-list-item,
+.identity.flag--accessibility-design-update .controls_section.follow_list.recommended_tumblelogs > li.item,
+.identity.flag--accessibility-design-update .controls_section li.section_header,
+.discover .discover-section-title,
+.discover-controls-wrapper,
+.tumblr_settings--account .account-sessions .session{
+    border-color: var(--lines);
+}
+.post-content-text hr,
+.post .post_body hr,
+.reblog-content hr {
+    border-top-color: var(--lines);
+}
+.l-header-container--refresh {
+    box-shadow: 0 0 0 1px var(--lines);
+}
+#chart_activity .highcharts-grid path {
+    stroke: var(--lines);
+}
+#chart_activity .highcharts-series-group path {
+    stroke: var(--post-footer-icon-reblogged);
+    fill:none;
+}
+#chart_activity .highcharts-markers path {
+    fill: var(--post-footer-icon-reblogged);
+}
+.next.chrome,
+.previous.chrome, 
+.flag--accessibility-design-update .chrome.blue{
+    border-color: var(--pagination-button);
+    background: var(--pagination-button);
+}
+.next.chrome,
+.previous.chrome,
+.flag--accessibility-design-update .chrome.blue {
+    color: var(--pagination-button-text);
+}
+.l-footer .footer_links .footer_link a {
+    color: var(--footer-links);
+}
+.l-footer .footer_links .footer_link a:hover,
+.l-footer .footer_links .footer_link a:focus,
+.l-footer .footer_links .footer_link a:active {
+    color: var(--footer-links-hover);
+}
+.status-indicator {
+    background: var(--chat-online-dot);
+}
+.plus-follow-button,
+.flag--accessibility-design-update .plus-follow-button{
+    color: var(--page-background);
+}
+.identity .controls_section .item:hover .follow:hover,
+.plus-follow-button:hover,
+.chrome.follow_button,
+.flag--accessibility-design-update .plus-follow-button{
+    background: var(--follow-button);
+}
+.identity .controls_section li.account_header,
+.identity .controls_section li.contributors_header,
+.identity .controls_section li.editors_header,
+.identity .controls_section li.section_header,
+.identity .controls_section.user_list li .follow_list_item_blog .tumblelog_name,
+.radar .radar_tumblelog_label .subheading,
+.flag--accessibility-design-update .radar .radar_tumblelog_label .subheading,
+.identity.flag--accessibility-design-update .controls_section.user_list li .follow_list_item_blog .tumblelog_name,
+.identity.flag--accessibility-design-update .controls_section.follow_list.recommended_tumblelogs > li.item,
+.identity.flag--accessibility-design-update .controls_section li.section_header,
+.identity .controls_section .control-anchor,
+.discover.flag--accessibility-design-update .tags-and-tumblelogs .discover-tumblelogs .show-more-blogs,
+.flag--accessibility-design-update .discover-controls-wrapper .types-tabs > .content-control,
+.identity .controls_section .open_blog .currently_selected_blog,
+.identity .right_column .small_links a,
+.identity.flag--accessibility-design-update .right_column .small_text{
+    color: var(--sidebar-text-transparent);
+}
+.identity .controls_section.user_list li .follow_list_item_blog .tumblelog_title,
+.sidebar_link,
+.radar .radar_tumblelog_label .name,
+.flag--accessibility-design-update .radar .radar_tumblelog_label .name,
+.identity.flag--accessibility-design-update .controls_section.user_list li .follow_list_item_blog .tumblelog_title,
+.flag--accessibility-design-update .sidebar_link.explore_link,
+.identity.flag--accessibility-design-update .controls_section .delete_all_messages,
+.flag--accessibility-design-update .well,
+.identity.flag--accessibility-design-update .controls_section a .count,
+.discover.flag--accessibility-design-update .discover-section-title,
+.discover.flag--accessibility-design-update .discover-search-term,
+.discover-controls-wrapper .types-tabs > .content-control.active,
+.identity.flag--accessibility-design-update .controls_section .open_blog .open_blog_link,
+.identity.flag--accessibility-design-update .controls_section .sub_control,
+.flag--accessibility-design-update .controls_section .controls_item_anchor {
+    color: var(--sidebar-text);
+}
+.elevator {
+    color: var(--scroll-up-arrow);
+}
+.flag--accessibility-design-update .binary_switch input[type="checkbox"]:checked ~ .binary_switch_track {
+    background:var(--button-background);
+}
+.chrome.white,
+.flag--accessibility-design-update .chrome{
+    color:var(--button-text);
+    background:var(--button-background);
+    border-color:var(--button-background);
+}
+.chrome.clear {
+    color:var(--button-background);
+    background:none;
+    border-color:var(--button-background);
+}
+.binary_switch .binary_switch_button {
+    background:var(--button-text);
+}
+
+/* header */
+.ui_search .search_query,
+.flag--accessibility-design-update .ui_search .search_query,
+.ui_search .search_query::placeholder,
+.flag--accessibility-design-update .ui_search .search_query::placeholder {
+    background: var(--search-bar);
+    color: var(--search-bar-text);
+}
+.ui_search .search_form_field::before {
+    color: var(--search-bar-text);
+}
+.ui_search.active .search_query,
+.ui_search.active .search_query::placeholder,
+.flag--accessibility-design-update .ui_search.active .search_query,
+.flag--accessibility-design-update .ui_search.selected .search_query,
+.flag--accessibility-design-update .ui_search.active .search_query::placeholder,
+.flag--accessibility-design-update .ui_search.selected .search_query::placeholder
+{
+    background: var(--search-bar-clicked); 
+    color: var(--search-bar-clicked-text);
+}
+.flag--accessibility-design-update .ui_search.active .search_form_field::before,
+.flag--accessibility-design-update .ui_search.selected .search_form_field::before {
+    color: var(--search-bar-clicked-text);
+}
+.tab_bar .tab_anchor {
+    color: var(--header-icons);
+    opacity:1;
+    transition:var(--transition-fast) ease;
+}
+.tab_bar .tab_anchor:hover {
+    color: var(--header-icons-hover);
+}
+.tab_bar .tab.active,
+.tab_bar .tab.active .tab_anchor,
+.tab_bar .tab.selected,
+.tab_bar .tab.selected .tab_anchor {
+    color: var(--header-icons-active);
+}
+.tab_notice {
+    background: var(--new-posts-badge);
+}
+.compose-button,
+.flag--accessibility-design-update .compose-button {
+    fill: var(--new-post-button);
+}
+.selected .tab_notice,
+.flag--accessibility-design-update .selected .tab_notice,
+.flag--accessibility-design-update .tab_notice {
+    background: var(--new-post-button);
+}
+.tab-bar-container .tab_notice,
+.flag--accessibility-design-update .tab-bar-container .tab_notice,
+.flag--accessibility-design-update .tab_notice .tab_notice_value {
+    color: var(--page-background);
+}
+.flag--accessibility-design-update .tab-notice--outlined {
+    border-color: var(--page-background);
+}
+
+/* posts */
+.new_post_label i.icon_post_text,
+.flag--accessibility-design-update .new_post_label i.icon_post_text
+{ color: var(--post-type-icon-text); }
+.new_post_label i.icon_post_photo,
+.flag--accessibility-design-update .new_post_label i.icon_post_photo
+{ color: var(--post-type-icon-photo); }
+.new_post_label i.icon_post_quote,
+.flag--accessibility-design-update .new_post_label i.icon_post_quote
+{ color: var(--post-type-icon-quote); }
+.new_post_label i.icon_post_link,
+.flag--accessibility-design-update .new_post_label i.icon_post_link
+{ color: var(--post-type-icon-link); }
+.new_post_label i.icon_post_chat,
+.flag--accessibility-design-update .new_post_label i.icon_post_chat
+{ color: var(--post-type-icon-chat); }
+.new_post_label i.icon_post_audio,
+.flag--accessibility-design-update .new_post_label i.icon_post_audio
+{ color: var(--post-type-icon-audio); }
+.new_post_label i.icon_post_video,
+.flag--accessibility-design-update .new_post_label i.icon_post_video
+{ color: var(--post-type-icon-video); }
+
+/* post header + footer */
+.l-container .post_full .post_info .post_info_fence .reblog_source .post_info_link,
+.l-container .post .post_info .reblog_icon,
+.l-container .flag--accessibility-design-update .post .post_info .reblog_icon,
+.flag--accessibility-design-update .post_full .post_header,
+.flag--accessibility-design-update .post_full .post_header .post_info .post_info_link,
+.discover .post_brick.reblog_header .tumblelog_info.is_reblog .post-info-parent-tumblelog,
+.flag--accessibility-design-update .post .post_header .post_info_link {
+    color: var(--post-header-username-light);
+}
+.l-container .post_full .post_header .post_info .post_info_link:first-child,
+.post-info-tumblelog a,
+.discover .post_brick.reblog_header .tumblelog_info {
+    color: var(--post-header-username-bold);
+}
+.l-container .reblog_follow_button .follow-text,
+.worded-follow-button .follow-text,
+.l-container .flag--accessibility-design-update .reblog_follow_button .follow-text,
+.flag--accessibility-design-update .worded-follow-button .follow-text {
+    color: var(--post-header-follow-link);
+}
+.recommendation-reason-footer a {
+    color: var(--post-footer-search) !important;
+}
+.l-container .post_full .post_notes_label,
+.radar .radar_controls .note_count > a,
+.post_brick .post_notes_label .note_link_current,
+.flag--accessibility-design-update .radar .radar_controls .note_count > a {
+    color: var(--post-footer-notes);
+}
+.l-container .post_full .post_tags .post_tag,
+.post_brick .post_tags .post_tag,
+.flag--accessibility-design-update .post_brick .post_tags .post_tag {
+    color: var(--post-footer-tags);
+    transition:var(--transition-fast) ease;
+}
+.l-container .post_full .post_tags .post_tag:hover,
+.l-container .post_full .post_tags .post_tag:focus,
+.l-container .post_full .post_tags .post_tag:active,
+.post_brick .post_tags .post_tag:hover,
+.post_brick .post_tags .post_tag:focus,
+.post_brick .post_tags .post_tag:active {
+    color: var(--post-footer-tags-hover);
+}
+.l-container .post_controls .post_control::before,
+.l-container .radar .radar_button,
+.l-container .flag--accessibility-design-update .post_controls .post_control::before,
+.l-container .flag--accessibility-design-update .radar .radar_button {
+    color: var(--post-footer-icons);
+    transition:var(--transition-fast) ease;
+}
+.l-container .post_controls .post_control:hover::before,
+.l-container .radar .radar_button:hover,
+.l-container .flag--accessibility-design-update .post_controls .post_control:hover:before,
+.l-container .flag--accessibility-design-update .radar .radar_button:hover {
+    color: var(--post-footer-icons-hover);
+}
+.l-container .post_controls .post_control.reblog.reblogged::before,
+.l-container .post_controls .post_control.reblog.reblogged::after,
+.radar .radar_button.reblog.reblogged::before{
+    color: var(--post-footer-icon-reblogged);
+}
+.l-container .post_controls .post_control.like.liked::before,
+.radar .radar_button.like.liked::before{
+    color: var(--post-footer-icon-liked);
+}
+
+/* post content */
+.l-container .post_content,
+.post.new_post .new_post_label,
+.flag--accessibility-design-update .post.new_post .new_post_label,
+.post_brick .expand-post-content,
+.post_brick.is_photo .post_media + .expand,
+.post_brick .post_body pre,
+.l-container .post_content pre,
+.l-container .post .post-source-footer,
+.l-container .post .post-source-footer a.post-source-link,
+.l-container .flag--accessibility-design-update .post .post-source-footer,
+.l-container .flag--accessibility-design-update .post .post-source-footer a.post-source-link {
+    color: var(--post-text);
+}
+.l-container .reblog-list-item .reblog-tumblelog-name {
+    color: var(--post-username);
+}
+.l-container .reblog-title,
+.post_brick.is_quote .post_title {
+    color: var(--post-title);
+}
+.post-composer_note-post .note_item,
+.post_full.is_note .post-body .note_item,
+.post_full.is_note .post_body .note_item{
+    background: var(--post-ask-background);
+    border-color: var(--post-ask-background);
+}
+.l-container .post .post_body .note_wrapper .note_item .text {
+    color: var(--post-ask-message);
+}
+.post_full.is_note .nipple, .post-composer_note-post .nipple {
+    border-color: var(--post-ask-message);
+}
+.l-container .post .post_body .note_wrapper .note_item .asker,
+.post_full.is_note .asker .name,
+.post-composer_note-post .asker,
+.post-composer_note-post .answerer,
+.post_full.is_note .asker,
+.post_full.is_note .answerer,
+.post-composer_note-post .answerer .name,
+.post-composer_note-post .asker .name,
+.post_full.is_note .answerer .name,
+.post_full.is_note .asker .name{
+    color: var(--post-ask-url);
+}
+.l-container .reblog-content .tmblr-truncated .tmblr-truncated-link {
+    color: var(--post-keep-reading);
+}
+.l-container .post .post_body blockquote,
+.post-content-text blockquote,
+.post .post_body blockquote,
+.reblog-content blockquote{
+    border-color: var(--post-blockquote-border);
+}
+.post .dock_video_button {
+    background-color: var(--post-header-username-light);
+    color: var(--post-background);
+}
+
+/* post styled text */
+.l-container .post-content-text a,
+.l-container .post .post_body a,
+.l-container .reblog-content a {
+    border-bottom-color: var(--post-link-underline) !important;
+    transition:var(--transition-fast) ease;
+}
+.l-container .post-content-text a:hover,
+.l-container .post .post_body a:hover,
+.l-container .reblog-content a:hover,
+.l-container .post-content-text a:focus,
+.l-container .post .post_body a:focus,
+.l-container .reblog-content a:focus,
+.l-container .post-content-text a:active,
+.l-container .post .post_body a:active,
+.l-container .reblog-content a:active{
+    border-bottom-color: var(--post-link-underline-hover) !important;
+    transition:var(--transition-fast) ease;
+}
+.l-container .post .post_body a {color:var(--post-link);}
+.l-container .post .post_body a:hover,
+.l-container .post .post_body a:focus,
+.l-container .post .post_body a:active {color:var(--post-link-hover);}
+.l-container .post .post_body b, .post .post_body strong {color:var(--post-bold);}
+.l-container .post .post_body i, .post .post_body em {color:var(--post-italic);}
+.l-container .post .post_body .npf_quirky {color:var(--post-quirky);}
+.l-container .post .post_body .npf_quote {color:var(--post-quote);}
+.l-container .post .post_body .npf_chat {color:var(--post-chat);}
+.l-container .post .post_body ul {color:var(--post-list-bullet);}
+.l-container .post .post_body ol {color:var(--post-list-number);}
+.l-container .post .post_body .npf_color_joey,
+.l-container body.flag--npf-text-colors .post .post_content .npf_color_joey{color:var(--post-color-red);}
+.l-container .post .post_body .npf_color_monica,
+.l-container body.flag--npf-text-colors .post .post_content .npf_color_monica{color:var(--post-color-orange);} 
+.l-container .post .post_body .npf_color_phoebe,
+.l-container body.flag--npf-text-colors .post .post_content .npf_color_phoebe{color:var(--post-color-yellow);} 
+.l-container .post .post_body .npf_color_ross,
+.l-container body.flag--npf-text-colors .post .post_content .npf_color_ross{color:var(--post-color-green);} 
+.l-container .post .post_body .npf_color_rachel,
+.l-container body.flag--npf-text-colors .post .post_content .npf_color_rachel{color:var(--post-color-blue);} 
+.l-container .post .post_body .npf_color_chandler,
+.l-container body.flag--npf-text-colors .post .post_content .npf_color_chandler {color:var(--post-color-purple);}
+.l-container .post .post_body .npf_color_niles,
+.l-container body.flag--npf-text-colors .post .post_content .npf_color_niles{color:var(--post-color-pink);}
+
+/* notifications on dashboard */
+#posts .notification .notification_sentence,
+#posts .notification .notification_sentence .notification_target,
+#posts .notification .notification_sentence .colon{
+    color: var(--notification-preview);
+}
+#posts .notification .notification_sentence .username {
+    color: var(--notification-url);
+}
+#posts .notification .notification_sentence .no_popover,
+#posts .notification .notification_sentence a {
+    color: var(--notification-info);
+}
+
+
+/* 
+    SHOWING AND HIDING
+*/
+
+.logo{opacity:var(--show-tumblr-logo);}
+#search_field,#popover_search{opacity:var(--show-search-bar);}
+#tabs_outer_container{opacity:var(--show-header-icons);}
+.compose-button{opacity:var(--show-new-post-button);}
+.l-footer-container{opacity:var(--show-footer);}
+
+.l-header-container.l-header-container--refresh{display:var(--show-header);}
+#new_post_buttons{display:var(--show-make-new-post);}
+.post_avatar{display:var(--show-avatars);}
+#right_column{display:var(--show-right-sidebar);}
+#right_column .recommended_tumblelogs{display:var(--show-recommended_blogs);}
+#dashboard_controls_open_blog, .small_links {display:var(--show-blog-setting);}
+#right_column .controls_section_radar, #tumblr_radar{display:var(--show-radar);}
+
+
+#posts .notification.notification_like{display:var(--show-like-notifications-on-dash);}
+#posts .notification.notification_reblog{display:var(--show-reblog-notifications-on-dash);}
+#posts .notification.notification_follower{display:var(--show-follow-notifications-on-dash);}
+#posts .notification.notification_ask{display:var(--show-ask-notifications-on-dash);}
+
+
+/*
+    GRAYSCALE
+*/
+a.post_avatar_link, .l-container .avatar {
+    -webkit-filter: var(--avatars-grayscale);
+    filter: var(--avatars-grayscale);
+    transition:var(--transition-slow) ease;
+}
+a.post_avatar_link:hover, .l-container .avatar:hover {
+    -webkit-filter: var(--avatars-hover-grayscale);
+    filter: var(--avatars-hover-grayscale);
+}
+.l-container .post_content img {
+    -webkit-filter: var(--post-images-grayscale);
+    filter: var(--post-images-grayscale);
+    transition:var(--transition-slow) ease;
+}
+.l-container .post_content img:hover {
+    -webkit-filter: var(--post-images-hover-grayscale);
+    filter: var(--post-images-hover-grayscale);
+}
+
+/*
+    FONT SIZES
+*/
+
+body,
+.post.new_post .new_post_label,
+.reblog-list-item .reblog-tumblelog-name,
+.post_full .post_header,
+.post-content-text,
+.post-content-text h4,
+.post-content-text h5,
+.post-content-text h6,
+.post .post_body,
+.post .post_body h4,
+.post .post_body h5,
+.post .post_body h6,
+.reblog-content,
+.reblog-content h4,
+.reblog-content h5,
+.reblog-content h6,
+.identity .controls_section.user_list li .follow_list_item_blog .tumblelog_title,
+.ui_search .search_query,
+.popover_menu_item,
+.blog-list-item .blog-list-item-info,
+.blog-selector-container .selected-blog .name,
+.popover--blog-selector-dropdown .name,
+.messaging-conversation--open .conversation-message .message,
+.messaging-conversation--open .conversation-compose .text-input-container .text-input,
+.messaging-conversation--open .conversation-icebreakers,
+.messaging-inbox .inbox-row h3,
+.notifications_page .notification_pane,
+.identity .controls_section li .control-item,
+.followers .name,
+.indash_header_wrapper .navigation h3,
+.indash_header_wrapper .description,
+.tumblr_settings .settings_subheading,
+.accordion_trigger_wrapper .accordion_label,
+.white_pane,
+#dashboard_useraction_following #tabs .tab,
+.info_popover .popover_inner ul li,
+.discover-controls-wrapper .types-tabs > .content-control,
+.post_brick,
+.post_brick .post_body h1,
+.post_brick .post_body h2,
+.post_brick .post_body h3,
+.post_brick .post_body h4,
+.post_brick .post_body h5,
+.post_brick .post_body h6,
+.post_brick .post_body small,
+.post_brick .post_body sub,
+.post-content-text .tmblr-truncated, .post .post_body .tmblr-truncated,
+.reblog-content .tmblr-truncated,
+.identity .controls_section li.section_header,
+.flat_select .current_selection
+{
+    font-size:var(--font-size) !important;
+}
+.is_reblog small,
+.post-content-text small,
+.post .post_body small,
+.reblog-content small
+{
+    font-size:0.9em !important;
+}
+.post-content-text h1,
+.post-content-text h2,
+.post .post_body h1,
+.post .post_body h2,
+.reblog-content h1,
+.reblog-content h2
+{
+    font-size:var(--font-size-big) !important;
+}
+.post-content-text h1,
+.post.is_conversation .post_content .post_title,
+#posts .post.is_regular .post_content .post_title,
+.post .post-content-text .title-field *,
+.post .post_body h1, .reblog-content h1,
+.reblog-title
+{
+    font-size:var(--font-size-biggest) !important;
+}
+.post .post_tags .post_tag, .post .post_tags a,
+.post .post-source-footer,
+.post-composer_note-post .asker,
+.post-composer_note-post .answerer,
+.post_full.is_note .asker,
+.post_full.is_note .answerer,
+.post_full .post_notes_label,
+.chrome,
+.l-footer,
+.notification,
+.identity .controls_section.user_list li .follow_list_item_blog .tumblelog_name,
+.blog-list-item .blog-list-item-info .blog-list-item-info-title,
+.ui_notes .activity-notification,
+.popover--blog-selector-dropdown .title,
+.messaging-conversation--open .conversation-message .message-bubble-header,
+.messaging-inbox .inbox-row h4,
+.identity .controls_section .delete_all_messages,
+#range_controls h2.heading,
+.ui_stats .stat_title,
+.ui_tops .tops_box .tops_header h1,
+.identity .controls_section .open_blog .open_blog_link,
+.ui_notes_switcher,
+input, textarea,
+.controls_section .controls_item_anchor .small_text,
+.grey_note,
+.tumblr_settings--account .account-sessions .session,
+.post_brick .post_notes_label,
+.discover .post_brick.reblog_header .tumblelog_info.is_reblog .post-info-parent-tumblelog
+{
+    font-size:var(--font-size-small) !important;
+}
+.identity .right_column .small_links a,
+.sidebar_link,
+.popover_header,
+.popover_menu > .popover_inner .popover_item_suffix a,
+.ui_notes .date_header, .ui_notes .date_header.date_activity,
+div.retags,
+.blog-activity .blog-activity-more,
+.messaging-conversation--open .conversation-message .inline-activity,
+.messaging-conversation--open .conversation-icebreakers .relationship,
+.well .message,
+.ui_jumbo_avatar, .ui_jumbo_avatar_safe,
+.ui_tops .tops_box .tops_header .top_notes,
+.highcharts-axis-labels span,
+.l-content .follower .description,
+.tumblr_settings .help_text, .tumblr_settings .help_text a,
+.tumblr_settings .setting.text label,
+.tumblr_settings .setting.password label,
+.tumblr_settings .setting.textarea label,
+.identity .controls_section li.account_header,
+.identity .controls_section li.contributors_header,
+.identity .controls_section li.editors_header,
+.crushes .crush .count,
+.crushes_subhead,
+#xkit-find-inactives-button,
+.tumblr_settings--account .email_group .checkbox label,
+.tumblr_settings--account .tagfiltering_group .tag-label,
+.tumblr_settings--account .account-sessions .label,
+.discover .discover-section-title,
+.discover .tags-and-tumblelogs .discover-tumblelogs .show-more-blogs,
+.discover .discover-search-term,
+.post_brick .expand-post-content, .post_brick.is_photo .post_media + .expand,
+.flag--messaging-new-empty-inbox .messaging-inbox .inbox-compose-toggle .compose-start,
+.messaging-inbox .flag--messaging-new-empty-inbox .inbox-compose-toggle .compose-start,
+.post-content-text pre, .post .post_body pre, .reblog-content pre,
+.messaging-conversation--open .conversation-messages .chat-status-banner .status-text,
+.xkit-button
+{
+    font-size:var(--font-size-smallest) !important;
+}
+
+
+
+/*
+    ADDITIONAL X-KIT STYLING
+    https://new-xkit-extension.tumblr.com/
+*/
+
+/* "scroll to bottom" */
+#return_to_bottom .return_to_bottom_icon {
+    transform: scale(0.7);
+}
+
+
+
+/*
+    OTHER STYLING
+*/
+
+/* other variables */
+#posts.posts > .post_container {
+    margin:0 0 var(--post-spacing) 0;
+}
+.l-container .post_content img{
+    border-radius: var(--post-image-rounding);
+}
+.post_avatar.post-avatar--sticky .post_avatar_link,
+.reblog-list-item .reblog-avatar,
+.reblog-list-item .reblog-avatar .reblog-avatar-image-thumb,
+.messaging-conversation--minimized .avatar img,
+.identity .controls_section.user_list .avatar,
+.radar .radar_tumblelog_avatar,
+.radar .radar_avatar img,
+.notification .avatar_frame img,
+.discover .post_brick.reblog_header .post_header .tumblelog_avatar{
+    border-radius: var(--avatar-rounding);
+}
+
+/* prettier */
+.messaging-conversation--minimized .avatar {
+    box-shadow:none;
+}
+.tab-notice--outlined {
+    border-color:transparent;
+}
+.reblog-list,
+.reblog-trail--original-post,
+.chrome.follow_button,
+.chrome.bg_color_twitter,
+.bg_color_twitter{
+    border:none;
+}
+.post_brick .expand-post-content,
+.post_brick.is_photo .post_media + .expand,
+.l-container .expand-post-content,
+.l-container .post_media + .expand {
+    background: hsla(0,0%,100%,0.4);
+}
+.post_brick .post_body pre,
+.l-container .post_content pre {
+    background: none;
+    overflow-x: inherit;
+}
+.post-content-text a, .post .post_body a, .reblog-content a,
+.post-content-text a:hover,
+.post .post_body a:hover,
+.reblog-content a:hover,
+.post-content-text a:focus,
+.post .post_body a:focus,
+.reblog-content a:focus,
+.post-content-text a:active,
+.post .post_body a:active,
+.reblog-content a:active{
+    background:none;
+    border-bottom:1px solid;
+}
+.post_full .post_permalink {
+    background: rgba(0,0,0,0.1);
+}
+.post_full .post_dismiss .post_dismiss_tooltip,
+.ui_stats .unit .header {
+    display:none;
+}
+.flag--accessibility-design-update .post_full .post_header_text_link,
+.tumblr_settings--account .account-sessions .revoke-button,
+pencil_edit_button  {
+    color: rgba(0,0,0,0.3);
+}
+.discover.flag--accessibility-design-update .discover-search-term-item .discover-search-term {
+    background-color: rgba(0,0,0,0.1) !important;
+}
+.post_brick.is_conversation .conversation_lines .chat_line:nth-child(2n),
+.notifications_page .section.divider {
+    background: none;
+}
+.ui_stats.monochrome .unit.active.new_followers .button,
+.ui_stats.monochrome .unit.active.total_followers .button,
+.ui_stats.monochrome .unit.active.new_notes .button,
+.ui_stats.monochrome .unit.active.new_followers .stage,
+.ui_stats.monochrome .unit.active.total_followers .stage,
+.ui_stats.monochrome .unit.active.new_notes .stage,
+.ui_stats .unit .button,
+.ui_stats .unit .stage {
+    background:none;
+    border:none;
+}
+.ui_notes .activity-notification:hover,
+.ui_notes .activity-notification .activity-notification__activity .activity-notification__activity_message.conversational{
+    background:rgba(255,255,255,0.2);
+}
+
+/* no blue bits */
+.identity .right_column::after,
+.identity .controls_section.user_list li .follow_list_item_blog::before,
+.identity .controls_section.user_list li:active .follow_list_item_blog::before,
+.identity .controls_section.user_list li:hover .follow_list_item_blog::before,
+.radar .radar_footer .radar_avatar::before,
+.post_brick .post_tags::before,
+.post_brick .post_tags::after,
+.flag--accessibility-design-update .radar .radar_footer .radar_avatar::before,
+.identity.flag--accessibility-design-update .right_column::after{
+    background:transparent;
+    border:none;
+}
+.worded-follow-button.follow-button-right {
+    color:transparent;
+}
+
+/* dark peeper */
+.drawer.peepr-drawer-container.open {
+    -webkit-filter: var(--blog-popup);
+    filter: var(--blog-popup);
+}
+
+/* invert logo */
+.logo .png-logo {
+    filter: var(--tumblr-logo-invert);
+    -webkit-filter: var(--tumblr-logo-invert);
+}
+
+
+/* this should be the last line! */
