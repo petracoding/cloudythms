@@ -100,33 +100,36 @@
     --color-accent3: red;
     
     /* text */
-    --color-text:                       black;
-    --color-text-light:                 rgba(0,0,0,0.6);
-    --color-text-inverted:              rgba(255,255,255,0.6);
-    --color-text-inverted-transparent:  rgba(255,255,255,0.25);
+    --text-content:         black;
+    --text-content-light:   rgba(0,0,0,0.6);
+    --text:                 white;
+    --text-light:           rgba(255,255,255,0.6);
+    --text-lighter:         rgba(255,255,255,0.25);
     
     /* basics */
     --page-background:          #001935;
-    --content-background:       white;
-    --content-background-lines: rgba(255,255,255,0.15);
-    --footer-links:             var(--color-text-inverted);
-    --footer-links-hover:       var(--color-text-inverted);
-    --chat-online-dot:          #21cd40; 
-    --follow-button:            var(--color-text-inverted);
-    --sidebar-text:             white;
-    --sidebar-text-transparent: var(--color-text-inverted);
-    --scroll-up-arrow:          var(--color-text-inverted);
+    --post-background:          white;
+    --lines:                    rgba(255,255,255,0.15);
     --button-background:        var(--color-accent1);
-    --button-text:              white;
-    --next-page-button:         var(--button-background);
-    --next-page-button-text:    var(--button-text);
+    --button-text:              var(--text);
+    
+    /* dashboard stuff */
+    --sidebar-text:             var(--text);
+    --sidebar-text-transparent: var(--text-light);
+    --follow-button:            var(--text-light);
+    --pagination-button:        var(--button-background);
+    --pagination-button-text:   var(--button-text);
+    --footer-links:             var(--text-light);
+    --footer-links-hover:       var(--text-light);
+    --scroll-up-arrow:          var(--text-light);
+    --chat-online-dot:          #21cd40; 
     
     /* header */
-    --search-bar:               var(--color-text-inverted-transparent);
-    --search-bar-clicked:       #ffffff;
-    --search-bar-text:          var(--color-text-inverted);
-    --search-bar-clicked-text:  var(--color-text);
-    --header-icons:             white;
+    --search-bar:               var(--text-lighter);
+    --search-bar-clicked:       var(--text);
+    --search-bar-text:          var(--text-light);
+    --search-bar-clicked-text:  var(--text-content);
+    --header-icons:             var(--text);
     --header-icons-hover:       var(--header-icons);
     --header-icons-active:      var(--header-icons);
     --new-posts-badge:          var(--color-accent1);
@@ -142,40 +145,40 @@
     --post-type-icon-video: #ff62ce;
     
     /* post header + footer */
-    --post-header-username-bold:    var(--color-text); 
-    --post-header-username-light:   var(--color-text-light);
+    --post-header-username-bold:    var(--text-content); 
+    --post-header-username-light:   var(--text-content-light);
     --post-header-follow-link:      var(--color-accent1);
     --post-footer-search:           #00cf35;
-    --post-footer-tags:             var(--color-text-light);
-    --post-footer-tags-hover:       var(--color-text-light);
-    --post-footer-notes:            var(--color-text-light);
-    --post-footer-icons:            var(--color-text-light);
-    --post-footer-icons-hover:      var(--color-text-light);
+    --post-footer-tags:             var(--text-content-light);
+    --post-footer-tags-hover:       var(--text-content-light);
+    --post-footer-notes:            var(--text-content-light);
+    --post-footer-icons:            var(--text-content-light);
+    --post-footer-icons-hover:      var(--text-content-light);
     --post-footer-icon-liked:       #ff492f;
     --post-footer-icon-reblogged:   #00cf35;
 
     /* post content */
-    --post-username:            var(--color-text); 
-    --post-title:               var(--color-text); 
-    --post-text:                var(--color-text); 
+    --post-username:            var(--text-content); 
+    --post-title:               var(--text-content); 
+    --post-text:                var(--text-content); 
     --post-ask-background:      #f2f2f2;
     --post-ask-url:             #a6a6a6;
-    --post-ask-message:         var(--color-text);
+    --post-ask-message:         var(--text-content);
     --post-keep-reading:        var(--color-accent1);
     --post-blockquote-border:   #e7e7e7;
     
     /* post styled text */
-    --post-link:                var(--color-text);
-    --post-link-hover:          var(--color-text);
-    --post-link-underline:      var(--color-text-light);
-    --post-link-underline-hover:var(--color-text-light);
-    --post-bold:                var(--color-text);
-    --post-italic:              var(--color-text);
-    --post-quote:               var(--color-text);
-    --post-chat:                var(--color-text);
-    --post-quirky:              var(--color-text);
-    --post-list-bullet:         var(--color-text);
-    --post-list-number:         var(--color-text);
+    --post-link:                var(--text-content);
+    --post-link-hover:          var(--text-content);
+    --post-link-underline:      var(--text-content-light);
+    --post-link-underline-hover:var(--text-content-light);
+    --post-bold:                var(--text-content);
+    --post-italic:              var(--text-content);
+    --post-quote:               var(--text-content);
+    --post-chat:                var(--text-content);
+    --post-quirky:              var(--text-content);
+    --post-list-bullet:         var(--text-content);
+    --post-list-number:         var(--text-content);
     --post-color-red:           #ff492f;
     --post-color-orange:        #ff8a00;
     --post-color-yellow:        #fcf01d;
@@ -185,9 +188,9 @@
     --post-color-pink:          #ff62ce;
     
     /* notifications on dashboard */
-    --notification-url:     var(--color-text-inverted);
-    --notification-info:    var(--color-text-inverted);
-    --notification-preview: var(--color-text-inverted);
+    --notification-url:     var(--text-light);
+    --notification-info:    var(--text-light);
+    --notification-preview: var(--text-light);
     
     
     
@@ -227,15 +230,15 @@
 .tumblr_settings input.text_field,
 .followers .description 
  {
-    color: var(--color-text);
+    color: var(--text-content);
 }
 .grey_note,
 .grey_note a {
-    color: var(--color-text) !important;
+    color: var(--text-content) !important;
 }
 .follower .description .last_updated,
 .highcharts-axis-labels span {
-    color: var(--color-text-light) !important;
+    color: var(--text-content-light) !important;
 }
 .text_field::placeholder,
 .tumblr_settings--account .tagfiltering_group .tag-label,
@@ -253,14 +256,14 @@
 .tumblr_settings .setting.password label,
 .tumblr_settings .setting.textarea label,
 .flag--accessibility-design-update .post_full .post_footer {
-     color: var(--color-text-light);
+     color: var(--text-content-light);
 }
 .crushes .crush .count,
 .flag--accessibility-design-update .sidebar_link {
-    color:var(--color-text-inverted);
+    color:var(--text-light);
 }
 .binary_switch .binary_switch_track {
-    background-color: var(--color-text-light);
+    background-color: var(--text-content-light);
 }
 
 
@@ -309,13 +312,13 @@
 input.text_field,
 .white_pane,
 .white_pane .pagination{
-    background: var(--content-background) !important;
+    background: var(--post-background) !important;
 }
 .post_brick .expand-post-content,
 .post_brick.is_photo .post_media + .expand,
 .l-container .expand-post-content,
 .l-container .post_media + .expand {
-    background-color: var(--content-background) !important;
+    background-color: var(--post-background) !important;
     opacity:0.5;
 }
 input.text_field,
@@ -343,18 +346,18 @@ input.text_field,
 .discover .discover-section-title,
 .discover-controls-wrapper,
 .tumblr_settings--account .account-sessions .session{
-    border-color: var(--content-background-lines);
+    border-color: var(--lines);
 }
 .post-content-text hr,
 .post .post_body hr,
 .reblog-content hr {
-    border-top-color: var(--content-background-lines);
+    border-top-color: var(--lines);
 }
 .l-header-container--refresh {
-    box-shadow: 0 0 0 1px var(--content-background-lines);
+    box-shadow: 0 0 0 1px var(--lines);
 }
 #chart_activity .highcharts-grid path {
-    stroke: var(--content-background-lines);
+    stroke: var(--lines);
 }
 #chart_activity .highcharts-series-group path {
     stroke: var(--post-footer-icon-reblogged);
@@ -366,13 +369,13 @@ input.text_field,
 .next.chrome,
 .previous.chrome, 
 .flag--accessibility-design-update .chrome.blue{
-    border-color: var(--next-page-button);
-    background: var(--next-page-button);
+    border-color: var(--pagination-button);
+    background: var(--pagination-button);
 }
 .next.chrome,
 .previous.chrome,
 .flag--accessibility-design-update .chrome.blue {
-    color: var(--next-page-button-text);
+    color: var(--pagination-button-text);
 }
 .l-footer .footer_links .footer_link a {
     color: var(--footer-links);
@@ -657,7 +660,7 @@ input.text_field,
 }
 .post .dock_video_button {
     background-color: var(--post-header-username-light);
-    color: var(--content-background);
+    color: var(--post-background);
 }
 
 /* post styled text */
