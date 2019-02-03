@@ -635,7 +635,8 @@ input.text_field,
     color: var(--post-ask-message);
 }
 .post_full.is_note .nipple, .post-composer_note-post .nipple {
-    border-color: var(--post-ask-message);
+    border-left-color: var(--post-ask-background);
+    border-right-color: var(--post-ask-background);
 }
 .l-container .post .post_body .note_wrapper .note_item .asker,
 .post_full.is_note .asker .name,
