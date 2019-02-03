@@ -124,7 +124,7 @@
     --search-bar:               var(--text-lighter);
     --search-bar-clicked:       var(--text);
     --search-bar-text:          var(--text-light);
-    --search-bar-clicked-text:  var(--text-content);
+    --search-bar-clicked-text:  black;
     --header-icons:             var(--text);
     --header-icons-hover:       var(--header-icons);
     --header-icons-active:      var(--header-icons);
