@@ -678,15 +678,36 @@ input.text_field,
     border-bottom-color: var(--post-link-underline-hover) !important;
     transition:var(--transition-fast) ease;
 }
-.l-container .post .post_body a {color:var(--post-link);}
+.l-container .post .post_body a,
+.l-container .post-content-text a,
+.l-container .post .post_body a,
+.l-container .reblog-content a {color:var(--post-link);}
 .l-container .post .post_body a:hover,
+.l-container .post-content-text a:hover,
+.l-container .post .post_body a:hover,
+.l-container .reblog-content a:hover,
 .l-container .post .post_body a:focus,
-.l-container .post .post_body a:active {color:var(--post-link-hover);}
-.l-container .post .post_body b, .post .post_body strong {color:var(--post-bold);}
-.l-container .post .post_body i, .post .post_body em {color:var(--post-italic);}
-.l-container .post .post_body .npf_quirky {color:var(--post-quirky);}
-.l-container .post .post_body .npf_quote {color:var(--post-quote);}
-.l-container .post .post_body .npf_chat {color:var(--post-chat);}
+.l-container .post-content-text a:focus,
+.l-container .post .post_body a:focus,
+.l-container .reblog-content a:focus,
+.l-container .post .post_body a:active,
+.l-container .post-content-text a:active,
+.l-container .post .post_body a:active,
+.l-container .reblog-content a:active {color:var(--post-link-hover);}
+.l-container .post .post_body b,
+.post .post_body strong,
+.l-container .post_content b,
+.l-container .post_content strong {color:var(--post-bold);}
+.l-container .post .post_body i,
+.post .post_body em,
+.l-container .post_content i,
+.l-container .post_content em {color:var(--post-italic);}
+.l-container .post .post_body .npf_quirky,
+.l-container .npf_quirky {color:var(--post-quirky);}
+.l-container .post .post_body .npf_quote,
+.l-container .npf_quote {color:var(--post-quote);}
+.l-container .post .post_body .npf_chat,
+.l-container .npf_chat {color:var(--post-chat);}
 .l-container .post .post_body ul {color:var(--post-list-bullet);}
 .l-container .post .post_body ol {color:var(--post-list-number);}
 .l-container .post .post_body .npf_color_joey,
