@@ -1,5 +1,5 @@
 /*
-    TUMBLR DASHBOARD THEME "dark" [version 1.1]
+    TUMBLR DASHBOARD THEME "dark" [version 1.2]
     created by cloudythms.tumblr.com
                 ~   ~   ~
     How to + faq:
@@ -1089,6 +1089,15 @@ pencil_edit_button  {
 .standalone-ad-container {
  display:none;   
 }
-
+/* avatar fix */
+.post_avatar .post_avatar_image,
+.post_avatar .post_sub_avatar_image {
+    opacity:1;
+    width: 64px;
+    height: 64px;
+}
+.post_avatar_link {
+    background-size: 64px 64px !important;
+}
 
 /* this should be the last line! */
