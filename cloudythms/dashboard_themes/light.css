@@ -1,5 +1,5 @@
 /*
-    TUMBLR DASHBOARD THEME "light" [version 1.2]
+    TUMBLR DASHBOARD THEME "light" [version 1.3]
     created by cloudythms.tumblr.com
                 ~   ~   ~
     How to + faq:
@@ -223,7 +223,9 @@
 .ui_tops .tops_box.tops_fans a,
 .ui_stats .row .unit .brag,
 .tumblr_settings input.text_field,
-.followers .description 
+.followers .description,
+.flag--accessibility-design-update .editor-richtext,
+.flag--accessibility-design-update .editor-placeholder
  {
     color: var(--text-content);
 }
@@ -1055,6 +1057,9 @@ pencil_edit_button  {
 .ui_notes .activity-notification:hover,
 .ui_notes .activity-notification .activity-notification__activity .activity-notification__activity_message.conversational{
     background:rgba(255,255,255,0.2);
+}
+.editor-slot {
+    background:transparent;
 }
 
 /* no blue bits */
