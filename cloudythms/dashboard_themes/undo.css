@@ -286,7 +286,8 @@
 .flag--accessibility-design-update .l-header-container--refresh,
 .discover_actions_discover.flag--accessibility-design-update .elevator,
 .search_actions_search.flag--accessibility-design-update .elevator,
-.crushes .crush .count {
+.crushes .crush .count,
+body.flag--always-opaque-peepr.flag--accessibility-design-update .ui_peepr_glass{
     background: var(--page-background);
 }
 .l-container .post_full .post_permalink,
