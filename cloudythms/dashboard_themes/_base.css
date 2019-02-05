@@ -1105,6 +1105,9 @@ pencil_edit_button  {
     width: 0;
     height: 0;
 }
+.post_avatar .post_sub_avatar {
+    box-shadow:none;
+}
 .post_avatar_link {
     background-size: 64px 64px !important;
 }
