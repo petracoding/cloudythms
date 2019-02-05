@@ -107,7 +107,7 @@
     --post-background:          white;
     --lines:                    rgba(0,0,0,0.03);
     --button-background:        var(--color-accent1);
-    --button-text:              var(--text);
+    --button-text:              white;
     
     /* dashboard stuff */
     --sidebar-text:             var(--text);
