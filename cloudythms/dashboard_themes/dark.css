@@ -1,5 +1,5 @@
 /*
-    TUMBLR DASHBOARD THEME "dark" [version 1.4]
+    TUMBLR DASHBOARD THEME "dark" [version 1.5]
     created by cloudythms.tumblr.com
                 ~   ~   ~
     How to + faq:
@@ -262,7 +262,10 @@
 .binary_switch .binary_switch_track {
     background-color: var(--text-content-light);
 }
-
+.post_full.is_conversation .conversation_lines .chat_line:nth-child(2n) {
+    background: var(--text-lighter);
+    border-radius: 3px;
+}
 
 /* basics */
 .identity,
