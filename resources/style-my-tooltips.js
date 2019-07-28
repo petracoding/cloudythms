@@ -35,7 +35,7 @@
 					$this.attr(options.attribute,$this.data("smt-title"));
 				}
 			});
-			return this["live"]("mouseover",function(event){
+			return this["on"]("mouseover",function(event){
 				var $this=$(this),
 					title=$this.attr(options.attribute);
 				$this.addClass("smt-current-element").data({"smt-title":title,"smt-fade-speed":options.tip_fade_speed}).attr(options.attribute,"");
