@@ -113,3 +113,13 @@
 		}
 	};
 })(jQuery);  
+
+// Making usage easier
+function styleMyTooltips(delayTime, fadeSpeed) {
+	$("a[title]").style_my_tooltips({
+	    tip_follows_cursor:true,
+	    tip_delay_time:delayTime, /* put a higher number for more delay */
+	    tip_fade_speed:fadeSpeed, /* put a higher number for a slower fade */
+	    attribute:"title"
+	});
+}
