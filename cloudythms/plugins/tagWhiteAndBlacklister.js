@@ -1,5 +1,9 @@
+/*
+	Tag White- and Blacklister
+	Tumblr Plugin by Cloudythms
+	https://cloudythms.tumblr.com/post/175738891739/
+*/
 (function($) {
-	// tag whitelisting/blacklisting by cloudythms
     $.fn.tagManage = function(method, tags) {
         return this.each(function() {
             var m = method.toUpperCase().replace(/\s+/g, '');
