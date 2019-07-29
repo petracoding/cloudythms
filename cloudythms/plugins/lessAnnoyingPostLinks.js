@@ -6,7 +6,6 @@
 (function($) {
     $.fn.shorterPostURLs = function() {
         return this.each(function() {
-            
             var url = $(this).attr("href");
             var pos1 = url.search(/\/post\/\d+\//i);
             if(pos1 != -1){
