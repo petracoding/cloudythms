@@ -1,5 +1,9 @@
+/*
+	Less Annoying Post Links
+	Tumblr Plugin by Cloudythms
+	https://cloudythms.tumblr.com/post/176259565164/
+*/
 (function($) {
-	// less annoying post links by cloudythms
     $.fn.shorterPostURLs = function() {
         return this.each(function() {
             
