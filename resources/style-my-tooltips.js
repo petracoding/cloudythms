@@ -1,11 +1,28 @@
+/*
+
+USAGE:
+
+<script>
+$(document).ready(function(){
+let delayTimeInMs = 30; // put a higher number for more delay
+let fadeSpeedInMs = 300; // put a higher number for a slower fade
+$("a[title]").style_my_tooltips({
+    tip_delay_time: delayTimeInMs, 
+    tip_fade_speed: fadeSpeedInMs
+});
+});
+</script>
+
+*/
+
 //style-my-tootltips by malihu (http://manos.malihu.gr)
 //plugin home http://manos.malihu.gr/style-my-tooltips-jquery-plugin
 (function($){
 	var methods={
 		init:function(options){
 			var defaults={ 
-				tip_follows_cursor:false, //tooltip follows cursor: boolean
-				tip_delay_time:700, //tooltip delay before displaying: milliseconds
+				tip_follows_cursor:true, //tooltip follows cursor: boolean
+				tip_delay_time:30, //tooltip delay before displaying: milliseconds
 				tip_fade_speed:300, //tooltip fade in/out speed: milliseconds
 				attribute:"title" //tooltip text come from this attribute
 			},
@@ -113,13 +130,3 @@
 		}
 	};
 })(jQuery);  
-
-// Making usage easier
-function styleMyTooltips(delayTime, fadeSpeed) {
-	$("a[title]").style_my_tooltips({
-	    tip_follows_cursor:true,
-	    tip_delay_time:delayTime, /* put a higher number for more delay */
-	    tip_fade_speed:fadeSpeed, /* put a higher number for a slower fade */
-	    attribute:"title"
-	});
-}
