@@ -68,6 +68,7 @@ $("a[title]").style_my_tooltips({
 			});
 		},
 		update:function(options){
+			console.log("update");
 			var $this=$(this);
 			$this.stop().css({"display":"none","z-index":$this.data("smt-z-index")}).children("div").text(options.title);
 			smtTooltip_delay=setTimeout(function(){
@@ -78,6 +79,7 @@ $("a[title]").style_my_tooltips({
 			}, options.delay);
 		},
 		show:function(options){
+			console.log("show");
 			var $this=$(this);
 			$this.stop().fadeTo(options.speed,1);
 			if(!options.tip_follows_cursor){
@@ -85,6 +87,7 @@ $("a[title]").style_my_tooltips({
 			}
 		},
 		hide:function(options){
+			console.log("hide");
 			var $this=$(this);
 			$this.stop().fadeTo(options.speed,0,function(){
 				$this.css({"z-index":"-1"});
