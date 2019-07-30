@@ -87,6 +87,31 @@ Function | Example | Description
 
 Here is a list of all helper functions available. If you need any additional info, look into the code, all the information is in there!
 
+
+### Objects
+
+Function | Description
+-------- | -----------
+`objectIdsUnique(objArray, idParameterName, allowNullIds)` | Tells you whether the ids of the objects in an array are all unique
+
+
+### Strings
+
+Function | Description
+-------- | -----------
+`objectIdsUnique(objArray, idParameterName, allowNullIds)` | Tells you whether the ids of the objects in an array are all unique
+
+
+### Arrays
+
+Function | Description
+-------- | -----------
+`objectIdsUnique(objArray, idParameterName, allowNullIds)` | Tells you whether the ids of the objects in an array are all unique
+
+
+
+### Others
+
 Function | Description
 -------- | -----------
 `objectIdsUnique(objArray, idParameterName, allowNullIds)` | Tells you whether the ids of the objects in an array are all unique
