@@ -4,15 +4,15 @@ by cloudythms ; https://cloudythms.tumblr.com/post/todo
 
 questions or suggestions? [send me a message on tumblr!](https://cloudythms.tumblr.com/contact)
 
-- [Features]()
-- [Quick Start]()
-- [Variables]()
-- [Functions]()
-- [Helper Functions]()
+1. [Features](#features)
+1. [Quick Start](#quick-start)
+1. [Variables](#variables)
+1. [Functions](#functions)
+1. [Helper Functions](#helper-functions)
 
 ## Features
 
-- Many [javascript helper functions]() that you can use in your code
+- Many [javascript helper functions](#helper-functions) that you can use in your code
 - Adds helpful css classes to body element (which can be then used in your css or js)
   - '-loaded' when DOM is loaded
   - '-loaded-images' when all images have been loaded
@@ -20,6 +20,8 @@ questions or suggestions? [send me a message on tumblr!](https://cloudythms.tumb
 - Adds helpful css classes to post elements (which can be then used in your css or js)
   - '-tagged-TAG' for each tag you define in the settings, for example: '-TAGGED-my-art'
 - Shows/hides element with id #scrolltotop after scrolling a certain amount
+
+... and many more things that aren't done automatically, but which you can do with functions.
 
 ## Quick Start
 
@@ -81,7 +83,7 @@ Function | Example | Description
 `isPageType(type)` | `console.log(isPageType('submit'));` | Returns a boolean if the current page is of a type (string)
 `printPageTypes()` | `printPageTypes();` | Output a list of all current page types into the console
 
-## Helper functions
+## Helper Functions
 
 Here is a list of all helper functions available. If you need any additional info, look into the code, all the information is in there!
 
