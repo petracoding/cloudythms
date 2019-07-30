@@ -8,3 +8,4 @@
 - :zap: [Plugins](https://github.com/petracoding/tumblr/tree/master/cloudythms/plugins)
 - :crescent_moon: [Dashboard Themes](https://github.com/petracoding/tumblr/tree/master/cloudythms/dashboard_themes)
 - old themes at https://pastebin.com/u/Petra1999
+- [Script Helper Docs](https://github.com/petracoding/tumblr/blob/master/cloudythms/plugins/helper/README.md)
