@@ -36,7 +36,7 @@ If you don't already have jQuery in your theme, include this line:
 :bulb: Then, include the script helper like so: 
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/petracoding/tumblr@latest/cloudythms/plugins/helper.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/petracoding/tumblr@latest/cloudythms/plugins/helper/helper.js"></script>
 ```
 
 Note! You will automatically get new versions of the script within 24 hours of release.
@@ -75,7 +75,7 @@ Function | Example | Description
 
 ## Helper Functions
 
-Here is a list of all helper functions available. If you need any additional info, look into [the code](https://cdn.jsdelivr.net/gh/petracoding/tumblr@latest/cloudythms/plugins/helper.js), all the information is in there!
+Here is a list of all helper functions available. If you need any additional info, look into [the code](https://cdn.jsdelivr.net/gh/petracoding/tumblr@latest/cloudythms/plugins/helper/helper.js), all the information is in there!
 
 
 ### Objects
