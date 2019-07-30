@@ -26,6 +26,8 @@ If you don't already have jQuery in your theme, include this line:
 <script src="https://cdn.jsdelivr.net/gh/petracoding/tumblr@latest/cloudythms/plugins/helper.js"></script>
 ```
 
+Note! You will automatically get new versions of the script within 24 hours of release.
+
 ## Variables
 
 You can overwrite the default values of some variables like so (**after** the script tag from above):
