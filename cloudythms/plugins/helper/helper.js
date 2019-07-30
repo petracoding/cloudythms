@@ -4,7 +4,7 @@
 // v 0.0.0
 
 // Include like so:
-// <script src="https://cdn.jsdelivr.net/gh/petracoding/tumblr@latest/cloudythms/plugins/helper.js"></script>
+// <script src="https://cdn.jsdelivr.net/gh/petracoding/tumblr@latest/cloudythms/plugins/helper/helper.js"></script>
 // requires jQuery!
 
 // Variables ------------------------------------------
