@@ -109,8 +109,8 @@ Function | Description
 `stringArrayIsEmpty(arr)` | Checks if a string array exists, has elements, and doesn't only have empty strings
 `arraysOverlap(arr1, arr2)` | Checks if two arrays share at least one value
 `intersectionOfArrays(arr1, arr2)` | Returns an array with values that are in both arrays
-`makeArrayLowercase(array)` | Returns the array with all elements in lowercase
-`makeArrayUppercase(array)` | Returns the array with all elements in uppercase
+`makeArrayLowercase(arr)` | Returns the array with all elements in lowercase
+`makeArrayUppercase(arr)` | Returns the array with all elements in uppercase
 
 
 ### Others
