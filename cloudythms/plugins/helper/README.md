@@ -58,7 +58,7 @@ Variable (with default value) | Description | Type
 `ct_scrollToTopBreakpoint = 20;` | After how many pixels from the top the scroll-to-top button should show | number \[px]
 `ct_postSelector = '.post';` | CSS Selector for one post | string
 `ct_tagSelector = '.tag';` | CSS Selector for one tag (of a post) | string
-`ct_tagsToAdd = \[];` | Tags that should be added as CSS classes to the posts | string array
+`ct_tagsToAdd = [];` | Tags that should be added as CSS classes to the posts | string array
 `ct_pt_homeHasPosts = true;` | Sets whether the homepage shows posts | boolean
 `ct_pt_wordsToDetectOnPages = [];` | Words that should be looked for in the content of a page | string array
 `ct_pt_pageTypesToDetectWordsOn = ['custom', 'post'];` | Page types on which to look for words (see above) | string array
