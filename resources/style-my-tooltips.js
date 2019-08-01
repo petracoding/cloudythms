@@ -17,6 +17,7 @@ $("a[title]").style_my_tooltips({
 
 //style-my-tootltips by malihu (http://manos.malihu.gr)
 //plugin home http://manos.malihu.gr/style-my-tooltips-jquery-plugin
+//updated for new jquery version and hosted by cloudythms.tumblr.com
 (function($){
 	var methods={
 		init:function(options){
