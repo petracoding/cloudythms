@@ -13,7 +13,7 @@ let ct_scrollToTopMs = 500;
 let ct_scrollToTopBreakpoint = 20;
 let ct_postSelector = '.post';
 let ct_tagSelector = '.tag';
-let ct_tagsToAdd = ['theme', 'blogtheme'];
+let ct_tagsToAdd = [];
 
 let ct_pt_homeHasPosts = true;
 let ct_pt_wordsToDetectOnPages = [];
