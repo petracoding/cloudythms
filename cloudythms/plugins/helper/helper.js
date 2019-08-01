@@ -97,7 +97,7 @@ function ct_generatePageTypes() {
 
     if (url === '/') {
         ct_pageTypes.push('home');
-        if (ct_pageTypeOptions.homeHasPosts) {
+        if (ct_pt_homeHasPosts) {
             ct_pageTypes.push('posts');
         }
     } else if (strContains(url, '/page/')) {
@@ -138,11 +138,8 @@ function ct_generatePageTypes() {
 
     if (url.endsWith('/chrono')) ct_pageTypes.push('chrono');
 
-    if (
-        !arrayIsEmpty(ct_pageTypeOptions.wordsToDetectOnPages) &&
-        arraysOverlap(ct_pageTypeOptions.pageTypesToDetectWordsOn, ct_pageTypes)
-    ) {
-        ct_pageTypeOptions.wordsToDetectOnPages.forEach(function(word) {
+    if (!arrayIsEmpty(ct_pt_wordsToDetectOnPages) && arraysOverlap(ct_pt_pageTypesToDetectWordsOn, ct_pageTypes)) {
+        ct_pt_wordsToDetectOnPages.forEach(function(word) {
             if (pageContains(word)) {
                 ct_pageTypes.push('contains-' + makeSafeForCSS(word, false));
             }
