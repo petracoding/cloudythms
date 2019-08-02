@@ -9,6 +9,7 @@ questions or suggestions? [send me a message on tumblr!](https://cloudythms.tumb
 1. [Variables](#variables)
 1. [Functions](#functions)
 1. [Helper Functions](#helper-functions)
+1. [Changelog](#changelog)
 
 ## Features
 
@@ -120,3 +121,7 @@ Function | Description
 `copyToClipboard(stringToCopy)` | Copies a string to the user's clipboard
 `pageContains(str)` | Check if the page contains a whole word
 
+## Changelog
+
+**Version 1.0.0**
+- Release
