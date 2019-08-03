@@ -61,7 +61,7 @@ Variable (with default value) | Description | Type
 `ct_postSelector = '.post';` | CSS Selector for one post | string
 `ct_tagSelector = '.tag';` | CSS Selector for one tag (of a post) | string
 `ct_tagsToAdd = [];` | Tags that should be added as CSS classes to the posts | string array
-`ct_redirects = {};` | Object of redirects. Key: old url (e.g. "contact"). Value: new url (e.g. "support"). (Without "/")
+`ct_redirects = {};` | Object of redirects. Key: old url (e.g. "contact"). Value: new url (e.g. "support"). (Without "/") | object
 `ct_pt_homeHasPosts = true;` | Sets whether the homepage shows posts | boolean
 `ct_pt_wordsToDetectOnPages = [];` | Words that should be looked for in the content of a page | string array
 `ct_pt_pageTypesToDetectWordsOn = ['custom', 'post'];` | Page types on which to look for words (see above) | string array
