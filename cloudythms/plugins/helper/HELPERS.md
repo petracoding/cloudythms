@@ -1,3 +1,5 @@
+[<< back to docs](https://github.com/petracoding/tumblr/blob/master/cloudythms/plugins/helper/README.md)
+
 # Helper Functions
 
 Here is a list of all helper functions available. If you need any additional info, look into [the code](https://github.com/petracoding/tumblr/blob/master/cloudythms/plugins/helper/helper.js), all the information is in there!
