@@ -51,6 +51,10 @@ You can overwrite the default values of some variables like so (**after** the sc
 <script>
   ct_scrollToTopMs = 600;
   ct_pt_homeHasPosts = false;
+  ct_redirects = {
+    'rules' : 'about#rules',
+    'contact' : 'support'
+  };
 </script>
 ```
 
