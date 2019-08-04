@@ -1,5 +1,5 @@
 ## cloudythms :cloud:
-#### :earth_americas: http://cloudythms.tumblr.com/themes
+#### :earth_americas: http://cloudythms.tumblr.com/
 
 #### Browse codes:
 
