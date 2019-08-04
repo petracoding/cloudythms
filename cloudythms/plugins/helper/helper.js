@@ -14,10 +14,31 @@ let ct_scrollToTopBreakpoint = 20;
 let ct_postSelector = '.post';
 let ct_tagSelector = '.tag';
 let ct_tagsToAdd = [];
+let ct_redirects = {};
+let ct_externalRedirects = {};
 
 let ct_pt_homeHasPosts = true;
 let ct_pt_wordsToDetectOnPages = [];
 let ct_pt_pageTypesToDetectWordsOn = ['custom', 'post'];
+
+// Redirections --------------------------------
+
+$(document).ready(function() {
+    for (let key in ct_redirects) {
+        if (ct_redirects.hasOwnProperty(key)) {
+            if (window.location.pathname == '/' + key) {
+                window.location.replace(ct_redirects[key]);
+            }
+        }
+    }
+    for (let key in ct_externalRedirects) {
+        if (ct_externalRedirects.hasOwnProperty(key)) {
+            if (window.location.pathname == '/' + key) {
+                window.location.href = ct_externalRedirects[key];
+            }
+        }
+    }
+});
 
 // Add classes to body --------------------------------
 
@@ -26,6 +47,7 @@ $(document).ready(function() {
     ct_getPageTypes().forEach(function(pageType) {
         $('body').addClass('--' + pageType);
     });
+    ct_addGetParametersAsClasses();
     ct_addTagsToPostClasses();
 });
 
@@ -70,10 +92,7 @@ function ct_addTagsToPostClasses() {
     });
 }
 
-// Add classes to body --------------------------------
-
-const url = window.location.pathname;
-// const url = '/tagged/jskdlf'; // TESTING
+// Page types -----------------------------------------
 
 let ct_pageTypes = null;
 
@@ -94,6 +113,8 @@ function ct_getPageTypes() {
 
 function ct_generatePageTypes() {
     ct_pageTypes = [];
+
+    const url = window.location.pathname;
 
     if (url === '/') {
         ct_pageTypes.push('home');
@@ -147,6 +168,19 @@ function ct_generatePageTypes() {
     }
 
     return ct_pageTypes;
+}
+
+// Get GET Parameters from URL ------------------------
+
+function ct_addGetParametersAsClasses() {
+    let params = getGETParameters();
+    if (params) {
+        for (var prop in params) {
+            if (params.hasOwnProperty(prop)) {
+                $('body').addClass('--param-' + makeSafeForCSS(prop + '--' + params[prop], false));
+            }
+        }
+    }
 }
 
 // ----------------------------------------------------
@@ -393,4 +427,22 @@ function copyToClipboard(stringToCopy) {
     ta.select();
     document.execCommand('copy');
     document.body.removeChild(ta);
+}
+
+// Get GET Paramters (e.g. ?something=bla) as object
+function getGETParameters() {
+    url = window.location.search;
+    if (!stringOkay(url)) return null;
+    paramArray = url
+        .replace('?', '')
+        .toLowerCase()
+        .split('&');
+    let paramObject = {};
+
+    for (let i = 0; i < paramArray.length; i++) {
+        let prop = paramArray[i].slice(0, paramArray[i].search('='));
+        let value = paramArray[i].slice(paramArray[i].search('=')).replace('=', '');
+        paramObject[prop] = value;
+    }
+    return paramObject;
 }
