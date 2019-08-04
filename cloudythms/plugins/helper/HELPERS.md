@@ -45,3 +45,4 @@ Function | Description
 -------- | -----------
 `copyToClipboard(stringToCopy)` | Copies a string to the user's clipboard
 `pageContains(str)` | Check if the page contains a whole word
+`getGETParameters()` | Get all GET parameters (e.g. ?something=bla) as object (or null if there are none)
