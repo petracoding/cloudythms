@@ -18,6 +18,7 @@ questions or suggestions? [send me a message on tumblr!](https://cloudythms.tumb
 - Adds helpful css classes to body element (which can be then used in your css or js)
   - '-loaded' when DOM is loaded
   - '-loaded-images' when all images have been loaded
+  - '-param-_KEY_--_VALUE_' for each GET parameter (e.g. ?something=bla)
   - '-_TYPE_' for each page type, for example: '-home' and '-posts'
     - home, posts, tag, post, page, ask, submit, custom, chrono
     - tag-_TAG_, post-_POSTID_, custom-_URL_, contains-_WORD_
