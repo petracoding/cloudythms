@@ -1,0 +1,838 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <link rel="shortcut icon" href="{Favicon}" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-----------------------------------------------------------------------
+ 
+    {   cloudythms
+                ____ theme    }
+        
+    by cloudythms.tumblr.com
+ visit my support page for help
+
+
+...... editing ......
+
+search for "V A R I A B L E S"
+to change variables
+(e.g. colors and sizes)
+
+search for "T H E M E"
+to switch to light theme.
+
+search for "C O N T E N T "
+to edit the content of the theme.
+a guide is there.
+
+ 
+......  rules  ......
+
+* edit as much as you want for personal use
+* do not remove the credit (you may move it)
+* do not steal parts of my codes
+* do not redistribute or use as base
+
+
+......  credits  ......
+
+...
+ 
+---------------------------------------------------------------------->
+
+        <!-- Page Title
+(Text that appears on the tab / browser window)
+Change the text between <title> and </title>.
+Write {Title} to let your blogtitle show. -->
+        <title>
+            Playlists
+        </title>
+
+        <!-- V A R I A B L E S 
+
+COLORS:
+Only change the color codes (after the : and before the ;)
+Make sure there is one # before the hex code.
+Example: --color-accent:#efefef;
+You can also use "black" and "white".
+Example: --color-background:white;
+Get hex color codes here:
+https://htmlcolorcodes.com/color-picker/
+ 
+SIZES:
+For the sizes, it should look like this: --fontSize:12px;
+Change the number to your liking.
+Example (smaller font): --fontSize:10px;
+Example (bigger font): --fontSize:13px;
+Make sure the : and px; are still there.
+
+-->
+        <style>
+            /* DARK THEME */
+            body.dark {
+                --font-size: 15px;
+                --color-icons: white;
+                --color-background: #181818;
+                --color-headerGradient: rgba(255, 255, 255, 0.2);
+                --color-text: #b1b1b1;
+                --color-boldText: white;
+                --color-accent: #24b856;
+            }
+
+            /* LIGHT THEME */
+            body.light {
+                --font-size: 15px;
+                --color-icons: white;
+                --color-background: #f5f5f5;
+                --color-headerGradient: rgba(0, 0, 0, 0.2);
+                --color-text: #1a1a1a;
+                --color-boldText: black;
+                --color-accent: #24b856;
+            }
+        </style>
+
+        <!-- ---------------------------------------------------------------- -->
+        <!-- ----------------------- C S S - S T A R T ---------------------- -->
+        <!-- ---------------------------------------------------------------- -->
+        <!-- Normalize -->
+        <link href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" rel="stylesheet" type="text/css" />
+        <!-- Fonts -->
+        <link
+            href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800&display=swap&subset=latin-ext"
+            rel="stylesheet"
+        />
+        <!-- Theme -->
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.jsdelivr.net/gh/petracoding/tumblr@latest/resources/placeholderx.css"
+        />
+        <link rel="stylesheet" type="text/css" href="all.css" />
+        <script src="https://kit.fontawesome.com/aa5e1d346f.js" crossorigin="anonymous"></script>
+        <style>
+            /***************************** custom css *****************************/
+            /* paste css below this line */
+        </style>
+    </head>
+    <body class="dark">
+        <!-- T H E M E: CHANGE "dark" ABOVE TO "light" FOR LIGHT THEME. -->
+        <!-- ---------------------------------------------------------------- -->
+        <!-- ------------------- C O N T E N T - S T A R T ------------------ -->
+        <!-- ---------------------------------------------------------------- -->
+
+        <!--
+
+*** GUIDE ***
+
+- Replace SPOTIFY_PROFILE_LINK_HERE with your spotify profile link
+- Change any texts you see on the page (title, links, etc) however you want
+
+
+*** SECTION:
+
+- Insert between <main> and </main>
+- Change "big" to "small" to get a smaller display of playlists!
+- Insert your playlists between <section ...> and </section>
+
+<section class="big">
+    <h2>Optional Section Title</h2>
+    (INSERT PLAYLISTS HERE)
+</section>
+
+
+*** PLAYLIST:
+
+- Replace IMAGE_URL_HERE with your image url (300x300 pixels is best)
+- Replace POST_LINK_HERE with the link to your post about the playlist
+- Replace PLAYLIST_LINK_HERE (2x!) with the link to your playlist
+- Replace TITLE_HERE with your Playlist title
+- Replace INFO with anything. Examples:
+    - 12 FOLLOWERS
+    - 200 songs
+    - 2 hours 21 minutes
+    - All my favorite songs
+- Change "fas fa-retweet" to "fas fa-link" to get a link-icon instead of a reblog-icon.
+- Change "fab fa-spotify" to "fas fa-play-circle" to get a play-icon instead of a spotify-icon
+- Change "fas fa-info-circle" to "fas fa-bars" for a list-icon instead of an info-icon
+- Write addtional info about your playlist instead of POPUP_INFO
+- If you don't want any additional info, delete this whole line:
+    <span title="show info" class="link link-info"><i class="fas fa-info-circle"></i></span>
+
+<article>
+    <div class="cover"
+    style="background-image:url(IMAGE_URL_HERE)">
+        <div class="links">
+            <a href="POST_LINK_HERE" target="_blank" title="view post" class="link link-post">
+                <i class="fas fa-retweet"></i></a>
+            <a href="PLAYLIST_LINK_HERE" title="listen with spotify" class="link link-listen">
+                <i class="fab fa-spotify"></i></a>
+            <span title="show info" class="link link-info"><i class="fas fa-info-circle"></i></span>
+        </div>
+    </div>
+    <div class="text">
+        <h3><a href="PLAYLIST_LINK_HERE">TITLE_HERE</a></h3>
+        <p>INFO</p>
+    </div>
+    <div class="info">
+        <div class="close"><i class="fas fa-times"></i></div>
+        <p>POPUP_INFO Example for simple text.</p>
+        <ul>
+            <li>POPUP_INFO Example for a list. Start and ends with "ul".</li>
+            <li>Change both "ul" to "ol" to get a numbered list</li>
+            <li>Each "li" is a bullet point.</li>
+            <li>Artist - <i>Songtitle</i></li>
+        </ul>
+    </div>
+</article>
+
+
+
+-->
+
+        <header>
+            <h1>My Playlists</h1>
+            <a href="/" class="back"><i class="fas fa-chevron-left"></i></a>
+            <nav>
+                <a href="SPOTIFY_PROFILE_LINK_HERE" target="_blank">My Spotify Profile</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="big">
+                <h2>Section Title</h2>
+                <article>
+                    <div
+                        class="cover"
+                        style="background-image:url(https://data.whicdn.com/images/66097671/original.jpg)"
+                    >
+                        <div class="links">
+                            <a href="#" target="_blank" title="view post" class="link link-post"
+                                ><i class="fas fa-retweet"></i
+                            ></a>
+                            <a href="#" title="listen with spotify" class="link link-listen"
+                                ><i class="fab fa-spotify"></i
+                            ></a>
+                            <span title="show info" class="link link-info"><i class="fas fa-info-circle"></i></span>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <h3><a href="#">Playlist title</a></h3>
+                        <p>0 FOLLOWER</p>
+                    </div>
+                    <div class="info">
+                        <div class="close"><i class="fas fa-times"></i></div>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, corrupti? Dolor quam
+                            quibusdam possimus architecto quae molestiae non. Praesentium, perspiciatis.
+                        </p>
+                    </div>
+                </article>
+                <article>
+                    <div
+                        class="cover"
+                        style="background-image:url(https://data.whicdn.com/images/185002459/original.jpg)"
+                    >
+                        <div class="links">
+                            <a href="#" target="_blank" title="view post" class="link link-post"
+                                ><i class="fas fa-link"></i
+                            ></a>
+                            <a href="#" title="listen with spotify" class="link link-listen"
+                                ><i class="fas fa-play-circle"></i
+                            ></a>
+                            <span title="show info" class="link link-info"><i class="fas fa-bars"></i></span>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <h3><a href="#">Playlist title</a></h3>
+                        <p>255 songs</p>
+                    </div>
+                    <div class="info">
+                        <div class="close"><i class="fas fa-times"></i></div>
+                        <ul>
+                            <li>Artist - <i>Songtitle</i></li>
+                            <li>Artist - <i>Songtitle</i></li>
+                            <li>Artist - <i>Songtitle</i></li>
+                        </ul>
+                        <ol>
+                            <li>Artist - <i>Songtitle</i></li>
+                            <li>Artist - <i>Songtitle</i></li>
+                            <li>Artist - <i>Songtitle</i></li>
+                        </ol>
+                    </div>
+                </article>
+                <article>
+                    <div
+                        class="cover"
+                        style="background-image:url(https://data.whicdn.com/images/248990877/original.jpg)"
+                    >
+                        <div class="links">
+                            <a href="#" target="_blank" title="view post" class="link link-post"
+                                ><i class="fas fa-retweet"></i
+                            ></a>
+                            <a href="#" title="listen with spotify" class="link link-listen"
+                                ><i class="fab fa-spotify"></i
+                            ></a>
+                            <span title="show info" class="link link-info"><i class="fas fa-info-circle"></i></span>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <h3><a href="#">Playlist title</a></h3>
+                        <p>A short and sweet playlist.</p>
+                    </div>
+                    <div class="info">
+                        <div class="close"><i class="fas fa-times"></i></div>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, corrupti? Dolor quam
+                            quibusdam possimus architecto quae molestiae non. Praesentium, perspiciatis.
+                        </p>
+                    </div>
+                </article>
+                <article>
+                    <div
+                        class="cover"
+                        style="background-image:url(https://data.whicdn.com/images/241744428/original.jpg)"
+                    >
+                        <div class="links">
+                            <a href="#" target="_blank" title="view post" class="link link-post"
+                                ><i class="fas fa-link"></i
+                            ></a>
+                            <a href="#" title="listen with spotify" class="link link-listen"
+                                ><i class="fas fa-play-circle"></i
+                            ></a>
+                            <span title="show info" class="link link-info"><i class="fas fa-bars"></i></span>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <h3><a href="#">Playlist title</a></h3>
+                        <p>Enter subtitle here.</p>
+                    </div>
+                    <div class="info">
+                        <div class="close"><i class="fas fa-times"></i></div>
+                        <ul>
+                            <li>Artist - <i>Songtitle</i></li>
+                            <li>Artist - <i>Songtitle</i></li>
+                            <li>Artist - <i>Songtitle</i></li>
+                        </ul>
+                        <ol>
+                            <li>Artist - <i>Songtitle</i></li>
+                            <li>Artist - <i>Songtitle</i></li>
+                            <li>Artist - <i>Songtitle</i></li>
+                        </ol>
+                    </div>
+                </article>
+                <article>
+                    <div
+                        class="cover"
+                        style="background-image:url(https://data.whicdn.com/images/202352938/original.jpg)"
+                    >
+                        <div class="links">
+                            <a href="#" target="_blank" title="view post" class="link link-post"
+                                ><i class="fas fa-retweet"></i
+                            ></a>
+                            <a href="#" title="listen with spotify" class="link link-listen"
+                                ><i class="fab fa-spotify"></i
+                            ></a>
+                            <span title="show info" class="link link-info"><i class="fas fa-info-circle"></i></span>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <h3><a href="#">Playlist title</a></h3>
+                        <p>0 FOLLOWER</p>
+                    </div>
+                    <div class="info">
+                        <div class="close"><i class="fas fa-times"></i></div>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, corrupti? Dolor quam
+                            quibusdam possimus architecto quae molestiae non. Praesentium, perspiciatis.
+                        </p>
+                    </div>
+                </article>
+                <article>
+                    <div
+                        class="cover"
+                        style="background-image:url(https://data.whicdn.com/images/314392210/original.jpg)"
+                    >
+                        <div class="links">
+                            <a href="#" target="_blank" title="view post" class="link link-post"
+                                ><i class="fas fa-link"></i
+                            ></a>
+                            <a href="#" title="listen with spotify" class="link link-listen"
+                                ><i class="fas fa-play-circle"></i
+                            ></a>
+                            <span title="show info" class="link link-info"><i class="fas fa-bars"></i></span>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <h3><a href="#">Playlist title</a></h3>
+                        <p>255 songs</p>
+                    </div>
+                    <div class="info">
+                        <div class="close"><i class="fas fa-times"></i></div>
+                        <ul>
+                            <li>Artist - <i>Songtitle</i></li>
+                            <li>Artist - <i>Songtitle</i></li>
+                            <li>Artist - <i>Songtitle</i></li>
+                        </ul>
+                        <ol>
+                            <li>Artist - <i>Songtitle</i></li>
+                            <li>Artist - <i>Songtitle</i></li>
+                            <li>Artist - <i>Songtitle</i></li>
+                        </ol>
+                    </div>
+                </article>
+                <article>
+                    <div
+                        class="cover"
+                        style="background-image:url(https://data.whicdn.com/images/31229913/original.jpg)"
+                    >
+                        <div class="links">
+                            <a href="#" target="_blank" title="view post" class="link link-post"
+                                ><i class="fas fa-retweet"></i
+                            ></a>
+                            <a href="#" title="listen with spotify" class="link link-listen"
+                                ><i class="fab fa-spotify"></i
+                            ></a>
+                            <span title="show info" class="link link-info"><i class="fas fa-info-circle"></i></span>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <h3><a href="#">Playlist title</a></h3>
+                        <p>A short and sweet playlist.</p>
+                    </div>
+                    <div class="info">
+                        <div class="close"><i class="fas fa-times"></i></div>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, corrupti? Dolor quam
+                            quibusdam possimus architecto quae molestiae non. Praesentium, perspiciatis.
+                        </p>
+                    </div>
+                </article>
+                <article>
+                    <div
+                        class="cover"
+                        style="background-image:url(https://data.whicdn.com/images/271522337/original.jpg)"
+                    >
+                        <div class="links">
+                            <a href="#" target="_blank" title="view post" class="link link-post"
+                                ><i class="fas fa-link"></i
+                            ></a>
+                            <a href="#" title="listen with spotify" class="link link-listen"
+                                ><i class="fas fa-play-circle"></i
+                            ></a>
+                            <span title="show info" class="link link-info"><i class="fas fa-bars"></i></span>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <h3><a href="#">Playlist title</a></h3>
+                        <p>Enter subtitle here.</p>
+                    </div>
+                    <div class="info">
+                        <div class="close"><i class="fas fa-times"></i></div>
+                        <ul>
+                            <li>Artist - <i>Songtitle</i></li>
+                            <li>Artist - <i>Songtitle</i></li>
+                            <li>Artist - <i>Songtitle</i></li>
+                        </ul>
+                        <ol>
+                            <li>Artist - <i>Songtitle</i></li>
+                            <li>Artist - <i>Songtitle</i></li>
+                            <li>Artist - <i>Songtitle</i></li>
+                        </ol>
+                    </div>
+                </article>
+            </section>
+            <section class="small">
+                <h2>Section Title</h2>
+                <article>
+                    <div
+                        class="cover"
+                        style="background-image:url(https://data.whicdn.com/images/261319038/original.jpg)"
+                    >
+                        <div class="links">
+                            <a href="#" target="_blank" title="view post" class="link link-post"
+                                ><i class="fas fa-retweet"></i
+                            ></a>
+                            <a href="#" title="listen with spotify" class="link link-listen"
+                                ><i class="fab fa-spotify"></i
+                            ></a>
+                            <span title="show info" class="link link-info"><i class="fas fa-info-circle"></i></span>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <h3><a href="#">Playlist title</a></h3>
+                        <p>0 FOLLOWER</p>
+                    </div>
+                    <div class="info">
+                        <div class="close"><i class="fas fa-times"></i></div>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, corrupti? Dolor quam
+                            quibusdam possimus architecto quae molestiae non. Praesentium, perspiciatis.
+                        </p>
+                    </div>
+                </article>
+                <article>
+                    <div
+                        class="cover"
+                        style="background-image:url(https://data.whicdn.com/images/172010682/original.jpg)"
+                    >
+                        <div class="links">
+                            <a href="#" target="_blank" title="view post" class="link link-post"
+                                ><i class="fas fa-link"></i
+                            ></a>
+                            <a href="#" title="listen with spotify" class="link link-listen"
+                                ><i class="fas fa-play-circle"></i
+                            ></a>
+                            <span title="show info" class="link link-info"><i class="fas fa-bars"></i></span>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <h3><a href="#">Playlist title</a></h3>
+                        <p>255 songs</p>
+                    </div>
+                    <div class="info">
+                        <div class="close"><i class="fas fa-times"></i></div>
+                        <ul>
+                            <li>Artist - <i>Songtitle</i></li>
+                            <li>Artist - <i>Songtitle</i></li>
+                            <li>Artist - <i>Songtitle</i></li>
+                        </ul>
+                        <ol>
+                            <li>Artist - <i>Songtitle</i></li>
+                            <li>Artist - <i>Songtitle</i></li>
+                            <li>Artist - <i>Songtitle</i></li>
+                        </ol>
+                    </div>
+                </article>
+                <article>
+                    <div
+                        class="cover"
+                        style="background-image:url(https://data.whicdn.com/images/218184241/original.jpg)"
+                    >
+                        <div class="links">
+                            <a href="#" target="_blank" title="view post" class="link link-post"
+                                ><i class="fas fa-retweet"></i
+                            ></a>
+                            <a href="#" title="listen with spotify" class="link link-listen"
+                                ><i class="fab fa-spotify"></i
+                            ></a>
+                            <span title="show info" class="link link-info"><i class="fas fa-info-circle"></i></span>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <h3><a href="#">Playlist title</a></h3>
+                        <p>A short and sweet playlist.</p>
+                    </div>
+                    <div class="info">
+                        <div class="close"><i class="fas fa-times"></i></div>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, corrupti? Dolor quam
+                            quibusdam possimus architecto quae molestiae non. Praesentium, perspiciatis.
+                        </p>
+                    </div>
+                </article>
+                <article>
+                    <div
+                        class="cover"
+                        style="background-image:url(https://data.whicdn.com/images/92969503/original.jpg)"
+                    >
+                        <div class="links">
+                            <a href="#" target="_blank" title="view post" class="link link-post"
+                                ><i class="fas fa-link"></i
+                            ></a>
+                            <a href="#" title="listen with spotify" class="link link-listen"
+                                ><i class="fas fa-play-circle"></i
+                            ></a>
+                            <span title="show info" class="link link-info"><i class="fas fa-bars"></i></span>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <h3><a href="#">Playlist title</a></h3>
+                        <p>Enter subtitle here.</p>
+                    </div>
+                    <div class="info">
+                        <div class="close"><i class="fas fa-times"></i></div>
+                        <ul>
+                            <li>Artist - <i>Songtitle</i></li>
+                            <li>Artist - <i>Songtitle</i></li>
+                            <li>Artist - <i>Songtitle</i></li>
+                        </ul>
+                        <ol>
+                            <li>Artist - <i>Songtitle</i></li>
+                            <li>Artist - <i>Songtitle</i></li>
+                            <li>Artist - <i>Songtitle</i></li>
+                        </ol>
+                    </div>
+                </article>
+                <article>
+                    <div
+                        class="cover"
+                        style="background-image:url(https://data.whicdn.com/images/211613080/original.jpg)"
+                    >
+                        <div class="links">
+                            <a href="#" target="_blank" title="view post" class="link link-post"
+                                ><i class="fas fa-retweet"></i
+                            ></a>
+                            <a href="#" title="listen with spotify" class="link link-listen"
+                                ><i class="fab fa-spotify"></i
+                            ></a>
+                            <span title="show info" class="link link-info"><i class="fas fa-info-circle"></i></span>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <h3><a href="#">Playlist title</a></h3>
+                        <p>0 FOLLOWER</p>
+                    </div>
+                    <div class="info">
+                        <div class="close"><i class="fas fa-times"></i></div>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, corrupti? Dolor quam
+                            quibusdam possimus architecto quae molestiae non. Praesentium, perspiciatis.
+                        </p>
+                    </div>
+                </article>
+                <article>
+                    <div
+                        class="cover"
+                        style="background-image:url(https://data.whicdn.com/images/98447182/original.jpg)"
+                    >
+                        <div class="links">
+                            <a href="#" target="_blank" title="view post" class="link link-post"
+                                ><i class="fas fa-link"></i
+                            ></a>
+                            <a href="#" title="listen with spotify" class="link link-listen"
+                                ><i class="fas fa-play-circle"></i
+                            ></a>
+                            <span title="show info" class="link link-info"><i class="fas fa-bars"></i></span>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <h3><a href="#">Playlist title</a></h3>
+                        <p>255 songs</p>
+                    </div>
+                    <div class="info">
+                        <div class="close"><i class="fas fa-times"></i></div>
+                        <ul>
+                            <li>Artist - <i>Songtitle</i></li>
+                            <li>Artist - <i>Songtitle</i></li>
+                            <li>Artist - <i>Songtitle</i></li>
+                        </ul>
+                        <ol>
+                            <li>Artist - <i>Songtitle</i></li>
+                            <li>Artist - <i>Songtitle</i></li>
+                            <li>Artist - <i>Songtitle</i></li>
+                        </ol>
+                    </div>
+                </article>
+                <article>
+                    <div
+                        class="cover"
+                        style="background-image:url(https://data.whicdn.com/images/51692404/original.jpg)"
+                    >
+                        <div class="links">
+                            <a href="#" target="_blank" title="view post" class="link link-post"
+                                ><i class="fas fa-retweet"></i
+                            ></a>
+                            <a href="#" title="listen with spotify" class="link link-listen"
+                                ><i class="fab fa-spotify"></i
+                            ></a>
+                            <span title="show info" class="link link-info"><i class="fas fa-info-circle"></i></span>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <h3><a href="#">Playlist title</a></h3>
+                        <p>A short and sweet playlist.</p>
+                    </div>
+                    <div class="info">
+                        <div class="close"><i class="fas fa-times"></i></div>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, corrupti? Dolor quam
+                            quibusdam possimus architecto quae molestiae non. Praesentium, perspiciatis.
+                        </p>
+                    </div>
+                </article>
+                <article>
+                    <div
+                        class="cover"
+                        style="background-image:url(https://data.whicdn.com/images/185763367/original.jpg)"
+                    >
+                        <div class="links">
+                            <a href="#" target="_blank" title="view post" class="link link-post"
+                                ><i class="fas fa-link"></i
+                            ></a>
+                            <a href="#" title="listen with spotify" class="link link-listen"
+                                ><i class="fas fa-play-circle"></i
+                            ></a>
+                            <span title="show info" class="link link-info"><i class="fas fa-bars"></i></span>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <h3><a href="#">Playlist title</a></h3>
+                        <p>Enter subtitle here.</p>
+                    </div>
+                    <div class="info">
+                        <div class="close"><i class="fas fa-times"></i></div>
+                        <ul>
+                            <li>Artist - <i>Songtitle</i></li>
+                            <li>Artist - <i>Songtitle</i></li>
+                            <li>Artist - <i>Songtitle</i></li>
+                        </ul>
+                        <ol>
+                            <li>Artist - <i>Songtitle</i></li>
+                            <li>Artist - <i>Songtitle</i></li>
+                            <li>Artist - <i>Songtitle</i></li>
+                        </ol>
+                    </div>
+                </article>
+                <article>
+                    <div
+                        class="cover"
+                        style="background-image:url(https://data.whicdn.com/images/48641391/original.png)"
+                    >
+                        <div class="links">
+                            <a href="#" target="_blank" title="view post" class="link link-post"
+                                ><i class="fas fa-retweet"></i
+                            ></a>
+                            <a href="#" title="listen with spotify" class="link link-listen"
+                                ><i class="fab fa-spotify"></i
+                            ></a>
+                            <span title="show info" class="link link-info"><i class="fas fa-info-circle"></i></span>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <h3><a href="#">Playlist title</a></h3>
+                        <p>A short and sweet playlist.</p>
+                    </div>
+                    <div class="info">
+                        <div class="close"><i class="fas fa-times"></i></div>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, corrupti? Dolor quam
+                            quibusdam possimus architecto quae molestiae non. Praesentium, perspiciatis.
+                        </p>
+                    </div>
+                </article>
+                <article>
+                    <div
+                        class="cover"
+                        style="background-image:url(https://data.whicdn.com/images/165095400/original.jpg)"
+                    >
+                        <div class="links">
+                            <a href="#" target="_blank" title="view post" class="link link-post"
+                                ><i class="fas fa-link"></i
+                            ></a>
+                            <a href="#" title="listen with spotify" class="link link-listen"
+                                ><i class="fas fa-play-circle"></i
+                            ></a>
+                            <span title="show info" class="link link-info"><i class="fas fa-bars"></i></span>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <h3><a href="#">Playlist title</a></h3>
+                        <p>Enter subtitle here.</p>
+                    </div>
+                    <div class="info">
+                        <div class="close"><i class="fas fa-times"></i></div>
+                        <ul>
+                            <li>Artist - <i>Songtitle</i></li>
+                            <li>Artist - <i>Songtitle</i></li>
+                            <li>Artist - <i>Songtitle</i></li>
+                        </ul>
+                        <ol>
+                            <li>Artist - <i>Songtitle</i></li>
+                            <li>Artist - <i>Songtitle</i></li>
+                            <li>Artist - <i>Songtitle</i></li>
+                        </ol>
+                    </div>
+                </article>
+            </section>
+        </main>
+
+        <div class="popup-overlay"></div>
+
+        <!-- ---------------------------------------------------------------- -->
+        <!-- --------------------- C O N T E N T - E N D -------------------- -->
+        <!-- ---------------------------------------------------------------- -->
+
+        <!-- ---------------------------- credit ---------------------------- -->
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.jsdelivr.net/gh/petracoding/tumblr@latest/cloudythms/snippets/credit2.css"
+        />
+        <style>
+            #credit a,
+            #credit a:before {
+                color: var(--color-boldText);
+            }
+            #credit a:hover,
+            #credit :hover:before {
+                color: var(--color-boldText) !important;
+            }
+        </style>
+        <!-- credit link. you may move but not remove. -->
+        <div id="credit">
+            <a href="https://cloudythms.tumblr.com/"> <i class="far fa-copyright"></i></a>
+        </div>
+
+        <!-- ------------------------- tumblr controls  --------------------- -->
+        <style>
+            iframe.tmblr-iframe,
+            iframe.tmblr-iframe:hover,
+            .hcontrols {
+                display: none !important;
+            }
+        </style>
+
+        <!-- --------------------------- SCRIPTS --------------------------- -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- Smooth Scroll -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.1/SmoothScroll.min.js"></script>
+
+        <!-- Tooltips -->
+        <script src="https://cdn.jsdelivr.net/gh/petracoding/tumblr@latest/resources/style-my-tooltips.js"></script>
+        <script>
+            // $(document).ready(function() {
+            //     let delayTimeInMs = 30; // put a higher number for more delay
+            //     let fadeSpeedInMs = 300; // put a higher number for a slower fade
+            //     $('a[title]').style_my_tooltips({
+            //         tip_delay_time: delayTimeInMs,
+            //         tip_fade_speed: fadeSpeedInMs
+            //     });
+            // });
+        </script>
+
+        <!-- No Tumblr Redirects -->
+        <script>
+            $(document).ready(function() {
+                //remove tumblr redirects script by magnusthemes@tumblr
+                $('a[href*="t.umblr.com/redirect"]').each(function() {
+                    var originalURL = $(this)
+                        .attr('href')
+                        .split('?z=')[1]
+                        .split('&t=')[0];
+                    var replaceURL = decodeURIComponent(originalURL);
+                    $(this).attr('href', replaceURL);
+                });
+            });
+        </script>
+
+        <!-- Theme-specific Scripts -->
+        <script>
+            $(document).ready(function() {
+                $('.link-info').click(function() {
+                    $(this)
+                        .closest('article')
+                        .find('.info')
+                        .show();
+                    $('.popup-overlay').show();
+                });
+
+                $('.close, .popup-overlay').click(function() {
+                    $('.info').hide();
+                    $('.popup-overlay').hide();
+                });
+            });
+        </script>
+    </body>
+</html>
