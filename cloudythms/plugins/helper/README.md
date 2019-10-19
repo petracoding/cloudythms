@@ -82,6 +82,33 @@ Function | Example | Description
 `isPageType(type)` | `console.log(isPageType('submit'));` | Returns a boolean if the current page is of a type (string)
 `printPageTypes()` | `printPageTypes();` | Output a list of all current page types into the console
 
+## Page and post types
+
+Here are all the page types the plugin can detect.
+
+Name | CSS Class | Description | Typical URLs
+---- | --------- | ----------- | ------------
+n/a | -loaded | DOM is loaded | all
+n/a | -loaded-images | All images have been loaded | all
+n/a | -param-KEY--VALUE | URL has GET a parameter with key "KEY" and value "VALUE" (e.g. ?key=value) | all
+home | -home | Homepage | /
+posts | -posts | Page shows multiple posts | /, /page/...
+tag | -tag -tag-TAG | Search results of a tag | /tagged/...
+post | -post -post-POSTID | Permalink page of one post | /post/...
+page | -page | A page | /bla
+ask | -ask | Default ask page | /ask
+submit | -submit | Default submit page | /submit
+custom | -custom -custom-URL | ? | ?
+chrono | -chrono | Chronological sorting | /.../chrono
+contains-WORD | -contains-WORD | Page that contains this word | all
+
+And the following classes are added to posts:
+
+CSS Class | Description
+--------- | -----------
+-tagged-TAG | A tag you defined in the settings that this post has
+
+
 
 ## Changelog
 
