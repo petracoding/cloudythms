@@ -1,5 +1,5 @@
 /*
-    TUMBLR DASHBOARD THEME "light" [version 1.5]
+    TUMBLR DASHBOARD THEME "light" [version 1.6]
     created by cloudythms.tumblr.com
                 ~   ~   ~
     How to + faq:
@@ -225,7 +225,9 @@
 .tumblr_settings input.text_field,
 .followers .description,
 .flag--accessibility-design-update .editor-richtext,
-.flag--accessibility-design-update .editor-placeholder
+.flag--accessibility-design-update .editor-placeholder,
+.ui_notes .activity-notification.is_friend .activity-notification__activity_main .activity a,
+.ui_notes .date_header.date_activity
  {
     color: var(--text-content);
 }
@@ -304,6 +306,7 @@ body.flag--always-opaque-peepr.flag--accessibility-design-update .ui_peepr_glass
 .l-container .post_controls .post_control.reblog.reblogged::after,
 .radar .radar_controls,
 .notifications_page .notification_pane,
+.ui_notes .activity-notification.is_friend,
 #user_graphs .axis-label,
 .ui_notes .date_header, .ui_notes .date_header.date_activity,
 #dashboard_useraction_following .l-content,
