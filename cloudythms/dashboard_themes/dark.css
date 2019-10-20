@@ -227,7 +227,7 @@
 .flag--accessibility-design-update .editor-richtext,
 .flag--accessibility-design-update .editor-placeholder,
 .ui_notes .activity-notification.is_friend .activity-notification__activity_main .activity a,
-ui_notes .date_header, .ui_notes .date_header.date_activity
+.ui_notes .date_header.date_activity
  {
     color: var(--text-content);
 }
