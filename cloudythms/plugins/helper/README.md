@@ -100,6 +100,7 @@ ask | --ask | Default ask page | /ask
 submit | --submit | Default submit page | /submit
 custom | --custom -custom-URL | ? | ?
 chrono | --chrono | Chronological sorting | /.../chrono
+day | --day | Day page | /day/2019/02/14
 contains-WORD | --contains-WORD | Page that contains this word | all
 
 And the following classes are added to posts:
