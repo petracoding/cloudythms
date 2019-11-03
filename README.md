@@ -3,6 +3,7 @@
 
 Looking for theme codes? [Go here](https://github.com/petracoding/tumblr/tree/master/cloudythms)
 
-#### :zap: Plugins
+#### :zap: Plugin Docs:
 
-- [Script Helper Docs](https://github.com/petracoding/tumblr/blob/master/cloudythms/plugins/helper/README.md)
+- [Pagii](https://github.com/petracoding/cloudythms/blob/master/plugins/pagii/README.md)
+- [Script Helper](https://github.com/petracoding/cloudythms/blob/master/plugins/scripthelper/README.md)
