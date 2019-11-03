@@ -21,7 +21,11 @@ After your body content and jquery link, include and initialize Pagii like so:
 
 ```html
 <script src="https://cdn.jsdelivr.net/gh/petracoding/cloudythms@latest/plugins/pagii/pagii.js"></script>
-<script>pagii();</script>
+<script>
+  $(document).ready(function() {
+      pagii();
+  });
+</script>
 ```
 
 If your homepage does *not* show posts, use `pagii(false);` instead!
@@ -48,7 +52,7 @@ The CSS classes are added to the `<body>` element, but there is no need to write
 
 ```javascript
 if(isPageType('home')) { // use the name (see: reference)
-  $('#homepage-teaser').show();
+  // do something...
 }
 
 printPageTypes(); // for debugging. prints a list of current page types to the console.
@@ -56,13 +60,11 @@ printPageTypes(); // for debugging. prints a list of current page types to the c
 
 ## Reference
 
-Here are all the page types the plugin can detect.
+Here are all the page types the plugin can detect. An URL can have multiple page types. For example, /tagged/hello would be "posts" and "tag".
 
 The CSS Class of a type is always the name with a `-` prefix.
 
 ### Page Types
-
-A URL can have multiple page types. For example, /tagged/hello would be "posts" and "tag".
 
 Name | CSS Class(es) | Description | Typical URLs
 ---- | ------------- | ----------- | ------------
