@@ -7,6 +7,8 @@
 1. [How To Use](#how-to-use)
 1. [Reference](#reference)
 
+Current Version: v1.0
+
 ## Features
 
 - Adds css classes to the body element when the DOM/images is/are loaded
@@ -20,7 +22,7 @@ This plugin requires jQuery.
 After your body content and jquery link, include and initialize Pagii like so: 
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/petracoding/cloudythms@latest/plugins/pagii/pagii.js"></script>
+<script src="todo"></script>
 <script>
   $(document).ready(function() {
       pagii();
@@ -29,8 +31,6 @@ After your body content and jquery link, include and initialize Pagii like so:
 ```
 
 If your homepage does *not* show posts, use `pagii(false);` instead!
-
-Note: You will automatically get new versions of the script within 24 hours of release.
 
 ## How To Use
 
@@ -79,6 +79,7 @@ ask | -ask | Default ask page | /ask
 submit | -submit | Default submit page | /submit
 chrono | -chrono | Chronological sorting | /.../chrono
 day | -day | Day page | /day/2019/03/11
+anchor | -anchor -anchor-*ID* | Url with anchor | /...#example
 
 ### Misc
 
