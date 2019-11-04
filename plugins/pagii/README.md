@@ -22,7 +22,7 @@ This plugin requires jQuery.
 After your body content and jquery link, include and initialize Pagii like so: 
 
 ```html
-<script src="todo"></script>
+<script src="https://static.tumblr.com/tpbx7ye/34Dq0gj69/cloudythmspagiiv1.js"></script>
 <script>
   $(document).ready(function() {
       pagii();
