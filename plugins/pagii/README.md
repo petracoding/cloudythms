@@ -79,12 +79,13 @@ ask | -ask | Default ask page | /ask
 submit | -submit | Default submit page | /submit
 chrono | -chrono | Chronological sorting | /.../chrono
 day | -day | Day page | /day/2019/03/11
-anchor | -anchor -anchor-*ID* | Url with anchor | /...#example
+
 
 ### Misc
 
 Name | CSS Class(es) | Description
 ---- | ------------- | -----------
+anchor | -anchor -anchor-*ID* | Url with anchor (.../#example)
 param-*KEY*, param-*KEY*--*VALUE* | -param-*KEY*, -param-*KEY*--*VALUE* | URL has GET a parameter with key "KEY" and value "VALUE" (e.g. ?key=value)
 n/a | -loaded | DOM is loaded
 n/a | -loaded-images | All images have been loaded
