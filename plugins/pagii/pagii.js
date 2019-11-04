@@ -1,5 +1,5 @@
 /*
-    "Pagii"
+    "Pagii" v1.0
     Tumblr Plugin
     by cloudythms.tumblr.com
 */
@@ -72,7 +72,7 @@ function pagii_generatePageTypes(homepageHasPosts) {
             tag = tag.slice(0, -1);
         }
         pagii_pageTypes.push('tag');
-        pagii_pageTypes.push('tag-' + tag);
+        pagii_pageTypes.push('tag-' + makeSafeForCSS(tag, false));
     } else if (strContains(url, '/search/')) {
         pagii_pageTypes.push('posts');
         let searchAfter = '/search/';
@@ -88,7 +88,7 @@ function pagii_generatePageTypes(homepageHasPosts) {
             query = query.slice(0, -1);
         }
         pagii_pageTypes.push('search');
-        pagii_pageTypes.push('search-' + query);
+        pagii_pageTypes.push('search-' + makeSafeForCSS(query, false));
     } else if (strContains(url, '/day/')) {
         pagii_pageTypes.push('day');
         pagii_pageTypes.push('posts');
@@ -117,8 +117,7 @@ function pagii_generatePageTypes(homepageHasPosts) {
         if (customUrl.endsWith('/')) {
             customUrl = customUrl.slice(0, -1);
         }
-        let safeCustomUrl = makeSafeForCSS(customUrl, false);
-        pagii_pageTypes.push('custom-' + safeCustomUrl);
+        pagii_pageTypes.push('custom-' + makeSafeForCSS(customUrl, false));
     }
 
     if (url.endsWith('/chrono')) pagii_pageTypes.push('chrono');
@@ -127,10 +126,16 @@ function pagii_generatePageTypes(homepageHasPosts) {
     if (params) {
         for (var prop in params) {
             if (params.hasOwnProperty(prop)) {
-                pagii_pageTypes.push('-param-' + makeSafeForCSS(prop, false));
-                pagii_pageTypes.push('-param-' + makeSafeForCSS(prop + '--' + params[prop], false));
+                pagii_pageTypes.push('param-' + makeSafeForCSS(prop, false));
+                pagii_pageTypes.push('param-' + makeSafeForCSS(prop + '--' + params[prop], false));
             }
         }
+    }
+
+    var hash = $(location).attr('hash');
+    if (hash) {
+        pagii_pageTypes.push('anchor');
+        pagii_pageTypes.push('anchor-' + makeSafeForCSS(hash.slice(1), false));
     }
 
     return pagii_pageTypes;
