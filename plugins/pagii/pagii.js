@@ -57,7 +57,9 @@ function pagii_generatePageTypes(homepageHasPosts) {
         }
     } else if (strContains(url, '/page/')) {
         pagii_pageTypes.push('posts');
-    } else if (strContains(url, '/tagged/')) {
+    }
+
+    if (strContains(url, '/tagged/')) {
         pagii_pageTypes.push('posts');
         let searchAfter = '/tagged/';
         let startIndex = url.indexOf(searchAfter) + searchAfter.length;
@@ -72,7 +74,7 @@ function pagii_generatePageTypes(homepageHasPosts) {
             tag = tag.slice(0, -1);
         }
         pagii_pageTypes.push('tag');
-        pagii_pageTypes.push('tag-' + makeSafeForCSS(tag, false));
+        pagii_pageTypes.push('tag-' + makeSafeForCSS(tag.replace(' ', '-'), false));
     } else if (strContains(url, '/search/')) {
         pagii_pageTypes.push('posts');
         let searchAfter = '/search/';
@@ -88,7 +90,7 @@ function pagii_generatePageTypes(homepageHasPosts) {
             query = query.slice(0, -1);
         }
         pagii_pageTypes.push('search');
-        pagii_pageTypes.push('search-' + makeSafeForCSS(query, false));
+        pagii_pageTypes.push('search-' + makeSafeForCSS(query.replace(' ', '-'), false));
     } else if (strContains(url, '/day/')) {
         pagii_pageTypes.push('day');
         pagii_pageTypes.push('posts');
@@ -117,7 +119,7 @@ function pagii_generatePageTypes(homepageHasPosts) {
         if (customUrl.endsWith('/')) {
             customUrl = customUrl.slice(0, -1);
         }
-        pagii_pageTypes.push('custom-' + makeSafeForCSS(customUrl, false));
+        pagii_pageTypes.push('custom-' + makeSafeForCSS(customUrl.replace(' ', '-'), false));
     }
 
     if (url.endsWith('/chrono')) pagii_pageTypes.push('chrono');
