@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-----------------------------------------------------------------------
+ 
+              .
+               					
+              |				TAGS 03 THEME
+     .               /		© CLOUDY THEMES
+      \       |     		cloudythms.tumblr.com
+                  /
+        \  ,g88R_
+          d888(`  ).                   _
+ -  --==  888(     ).=--           .+(`  )`.
+)         Y8P(       '`.          :(   .    )
+        .+(`(      .   )     .--  `.  (    ) )
+       ((    (..__.:'-'   .=(   )   ` _`  ) )
+`.     `(       ) )       (   .  )     (   )  ._
+  )      ` __.:'   )     (   (   ))     `-'.:(`  )
+)  )  ( )       --'       `- __.'         :(      ))
+.-'  (_.'          .')                    `(    )  ))
+                  (_  )                     ` __.:'
+                      
+
+............ editing ............
+
+    search for ___ to edit ___:
+
+"TITLE HERE" -> title in header ("Tags")
+"CHECKBOX HERE" -> to remove "show archived" checkbox
+"FILTERS HERE" -> filters in the sidebar
+"TAG GROUPS HERE" -> tag groups + tags
+
+"CUSTOM CSS" -> css
+
+
+    scroll a bit down to change:
+    - window title
+    - variables (colors, font size)
+
+
+............  rules  ............
+
+* edit as much as you want for personal use
+* do not remove the credit (you may move it)
+* do not steal parts of my codes
+* do not redistribute or use as base
+ 
+---------------------------------------------------------------------->
+
+<!-- Text that appears on the tab / browser window. -->
+<title>Tags</title>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ----------------------- V A R I A B L E S ---------------------- -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<!--
+    COLORS:
+    Only change the color codes (after the : and before the ;)
+    Make sure there is one # before the hex code.
+    Example: --color-accent:#efefef;
+    You can also use "black" and "white".
+    Example: --color-background:white;
+    Get hex color codes here:
+    https://htmlcolorcodes.com/color-picker/
+    
+    SIZES:
+    For the sizes, it should look like this: --fontSize:12px;
+    Change the number to your liking.
+    Example (smaller font): --fontSize:10px;
+    Example (bigger font): --fontSize:13px;
+    Make sure the : and px; are still there.
+-->
+
+<style>
+    body {
+        --background: rgb(245, 245, 245);
+        --content: white;
+        --text: black;
+        --accent: orange;
+        --fontSize: 16px;
+    }
+</style>
+
+<!-- Meta -->
+<link rel="shortcut icon" href="{Favicon}" />
+<link rel="alternate" type="application/rss+xml" href="{RSS}" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ----------------------- R E S O U R C E S ---------------------- -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<!-- Fonts -->
+<link
+    href="https://fonts.googleapis.com/css?family=Literata:400,600,700i&display=swap&subset=latin-ext"
+    rel="stylesheet"
+/>
+
+<!-- Normalize -->
+<link href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" rel="stylesheet" type="text/css" />
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Icons -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="movie" viewBox="0 0 332.804 332.804">
+        <title>movie</title>
+        <path
+            d="M330.804,171.002c-3.6-6.4-12-8.8-18.8-4.8l-45.6,26.4l-11.6,6.8v63.2l10.8,6.4c0.4,0,0.4,0.4,0.8,0.4l44.8,26 c2,1.6,4.8,2.4,7.6,2.4c7.6,0,13.6-6,13.6-13.6v-53.6l0.4-52.8C332.804,175.402,332.404,173.002,330.804,171.002z"
+        />
+        <path
+            d="M64.404,150.602c35.6,0,64.4-28.8,64.4-64.4c0-35.6-28.8-64.4-64.4-64.4s-64.4,28.8-64.4,64.4 C-0.396,121.802,28.804,150.602,64.404,150.602z M64.404,59.802c14.8,0,26.4,12,26.4,26.4c0,14.8-12,26.4-26.4,26.4 c-14.4,0-26.4-12-26.4-26.4C37.604,71.402,49.604,59.802,64.404,59.802z"
+        />
+        <path
+            d="M227.604,154.202c-10.4,5.2-22,8.4-34.4,8.4c-15.2,0-29.6-4.4-41.6-12.4h-45.6c-12,8-26.4,12.4-41.6,12.4 c-12.4,0-24-2.8-34.4-8.4c-9.2,5.2-15.6,15.6-15.6,26.8v97.6c0,18,14.8,32.4,32.4,32.4h164.4c18,0,32.4-14.8,32.4-32.4v-97.6 C243.204,169.802,236.804,159.402,227.604,154.202z"
+        />
+        <path
+            d="M193.204,150.602c35.6,0,64.4-28.8,64.4-64.4c0-35.6-28.8-64.4-64.4-64.4c-35.6,0-64.4,28.8-64.4,64.4 C128.804,121.802,157.604,150.602,193.204,150.602z M193.204,59.802c14.8,0,26.4,12,26.4,26.4c0,14.8-12,26.4-26.4,26.4 c-14.4,0-26.4-12-26.4-26.4C166.804,71.402,178.404,59.802,193.204,59.802z"
+        />
+    </symbol>
+    <symbol id="tag" viewBox="0 0 295 295">
+        <title>tag</title>
+        <path
+            d="M290.156,23.89c-0.482-10.311-8.733-18.562-19.044-19.044L168.005,0.023c-5.62-0.272-11.097,1.855-15.077,5.836 L5.858,152.93C2.108,156.681,0,161.767,0,167.072s2.107,10.392,5.858,14.143l107.929,107.928c3.904,3.905,9.023,5.857,14.142,5.857 c5.118,0,10.237-1.953,14.143-5.857l147.069-147.069c3.98-3.98,6.1-9.454,5.837-15.077L290.156,23.89z M252.481,76.087 c-9.269,9.269-24.298,9.269-33.567,0s-9.269-24.298,0-33.567s24.298-9.269,33.567,0S261.751,66.817,252.481,76.087z"
+        />
+    </symbol>
+    <symbol id="book" viewBox="0 0 296.999 296.999">
+        <title>book</title>
+        <path
+            d="M45.432,35.049c-0.008,0-0.017,0-0.025,0c-2.809,0-5.451,1.095-7.446,3.085c-2.017,2.012-3.128,4.691-3.128,7.543 v159.365c0,5.844,4.773,10.61,10.641,10.625c24.738,0.059,66.184,5.215,94.776,35.136V84.023c0-1.981-0.506-3.842-1.461-5.382 C115.322,40.849,70.226,35.107,45.432,35.049z"
+        />
+        <path
+            d="M262.167,205.042V45.676c0-2.852-1.111-5.531-3.128-7.543c-1.995-1.99-4.639-3.085-7.445-3.085c-0.009,0-0.018,0-0.026,0 c-24.793,0.059-69.889,5.801-93.357,43.593c-0.955,1.54-1.46,3.401-1.46,5.382v166.779 c28.592-29.921,70.038-35.077,94.776-35.136C257.394,215.651,262.167,210.885,262.167,205.042z"
+        />
+        <path
+            d="M286.373,71.801h-7.706v133.241c0,14.921-12.157,27.088-27.101,27.125c-20.983,0.05-55.581,4.153-80.084,27.344 c42.378-10.376,87.052-3.631,112.512,2.171c3.179,0.724,6.464-0.024,9.011-2.054c2.538-2.025,3.994-5.052,3.994-8.301V82.427 C297,76.568,292.232,71.801,286.373,71.801z"
+        />
+        <path
+            d="M18.332,205.042V71.801h-7.706C4.768,71.801,0,76.568,0,82.427v168.897c0,3.25,1.456,6.276,3.994,8.301 c2.545,2.029,5.827,2.78,9.011,2.054c25.46-5.803,70.135-12.547,112.511-2.171c-24.502-23.19-59.1-27.292-80.083-27.342 C30.49,232.13,18.332,219.963,18.332,205.042z"
+        />
+    </symbol>
+    <symbol id="youtube" viewBox="0 0 24 24">
+        <title>youtube</title>
+        <path
+            d="m23.469 5.929.03.196c-.29-1.029-1.073-1.823-2.068-2.112l-.021-.005c-1.871-.508-9.4-.508-9.4-.508s-7.51-.01-9.4.508c-1.014.294-1.798 1.088-2.083 2.096l-.005.021c-.699 3.651-.704 8.038.031 11.947l-.031-.198c.29 1.029 1.073 1.823 2.068 2.112l.021.005c1.869.509 9.4.509 9.4.509s7.509 0 9.4-.509c1.015-.294 1.799-1.088 2.084-2.096l.005-.021c.318-1.698.5-3.652.5-5.648 0-.073 0-.147-.001-.221.001-.068.001-.149.001-.23 0-1.997-.182-3.951-.531-5.846zm-13.861 9.722v-7.293l6.266 3.652z"
+        />
+    </symbol>
+    <symbol id="camera" viewBox="0 0 60 60">
+        <title>camera</title>
+        <path d="M30,20.5c-6.617,0-12,5.383-12,12s5.383,12,12,12s12-5.383,12-12S36.617,20.5,30,20.5z" />
+        <path
+            d="M55.201,15.5h-8.524l-4-10H17.323l-4,10H12v-5H6v5H4.799C2.152,15.5,0,17.652,0,20.299v29.368 C0,52.332,2.168,54.5,4.833,54.5h50.334c2.665,0,4.833-2.168,4.833-4.833V20.299C60,17.652,57.848,15.5,55.201,15.5z M10,15.5H8v-3 h2V15.5z M30,50.5c-9.925,0-18-8.075-18-18s8.075-18,18-18s18,8.075,18,18S39.925,50.5,30,50.5z M52,27.5c-2.206,0-4-1.794-4-4 s1.794-4,4-4s4,1.794,4,4S54.206,27.5,52,27.5z"
+        />
+    </symbol>
+    <symbol id="person" viewBox="0 0 350 350">
+        <title>person</title>
+        <path
+            d="M175,171.173c38.914,0,70.463-38.318,70.463-85.586C245.463,38.318,235.105,0,175,0s-70.465,38.318-70.465,85.587 C104.535,132.855,136.084,171.173,175,171.173z"
+        />
+        <path d="M41.909,301.853C41.897,298.971,41.885,301.041,41.909,301.853L41.909,301.853z" />
+        <path d="M308.085,304.104C308.123,303.315,308.098,298.63,308.085,304.104L308.085,304.104z" />
+        <path
+            d="M307.935,298.397c-1.305-82.342-12.059-105.805-94.352-120.657c0,0-11.584,14.761-38.584,14.761 s-38.586-14.761-38.586-14.761c-81.395,14.69-92.803,37.805-94.303,117.982c-0.123,6.547-0.18,6.891-0.202,6.131 c0.005,1.424,0.011,4.058,0.011,8.651c0,0,19.592,39.496,133.08,39.496c113.486,0,133.08-39.496,133.08-39.496 c0-2.951,0.002-5.003,0.005-6.399C308.062,304.575,308.018,303.664,307.935,298.397z"
+        />
+    </symbol>
+    <symbol id="star" viewBox="0 0 49.94 49.94">
+        <title>star</title>
+        <path
+            d="M48.856,22.73c0.983-0.958,1.33-2.364,0.906-3.671c-0.425-1.307-1.532-2.24-2.892-2.438l-12.092-1.757 c-0.515-0.075-0.96-0.398-1.19-0.865L28.182,3.043c-0.607-1.231-1.839-1.996-3.212-1.996c-1.372,0-2.604,0.765-3.211,1.996 L16.352,14c-0.23,0.467-0.676,0.79-1.191,0.865L3.069,16.622c-1.359,0.197-2.467,1.131-2.892,2.438 c-0.424,1.307-0.077,2.713,0.906,3.671l8.749,8.528c0.373,0.364,0.544,0.888,0.456,1.4L8.224,44.701 c-0.183,1.06,0.095,2.091,0.781,2.904c1.066,1.267,2.927,1.653,4.415,0.871l10.814-5.686c0.452-0.237,1.021-0.235,1.472,0 l10.815,5.686c0.526,0.277,1.087,0.417,1.666,0.417c1.057,0,2.059-0.47,2.748-1.288c0.687-0.813,0.964-1.846,0.781-2.904 l-2.065-12.042c-0.088-0.513,0.083-1.036,0.456-1.4L48.856,22.73z"
+        />
+    </symbol>
+    <symbol id="heart" viewBox="0 0 176.104 176.104">
+        <title>heart</title>
+        <path
+            d="M150.383,18.301c-7.13-3.928-15.308-6.187-24.033-6.187c-15.394,0-29.18,7.015-38.283,18.015 c-9.146-11-22.919-18.015-38.334-18.015c-8.704,0-16.867,2.259-24.013,6.187C10.388,26.792,0,43.117,0,61.878 C0,67.249,0.874,72.4,2.457,77.219c8.537,38.374,85.61,86.771,85.61,86.771s77.022-48.396,85.571-86.771 c1.583-4.819,2.466-9.977,2.466-15.341C176.104,43.124,165.716,26.804,150.383,18.301z"
+        />
+    </symbol>
+    <symbol id="music" viewBox="0 0 25.685 25.685">
+        <title>music</title>
+        <path
+            style="fill:#030104;"
+            d="M22.08,0.098L10.97,3.497C9.624,3.881,8.533,5.285,8.533,6.631v11.557c0,0,0,0.158,0,0.162 c0,0-0.805-0.543-2.598-0.289c-2.633,0.374-4.768,2.395-4.768,4.515s2.135,3.419,4.768,3.045c2.635-0.372,4.566-2.331,4.566-4.452 c0,0,0-9.066,0-10.006s1.13-1.343,1.13-1.343l9.823-3.079c0,0,1.087-0.365,1.087,0.641s0,8.031,0,8.031s0,0.002,0,0.006 c0,0-1.001-0.576-2.794-0.358c-2.633,0.319-4.768,2.298-4.768,4.417c0,2.121,2.135,3.463,4.768,3.143 c2.635-0.319,4.77-2.297,4.77-4.418V1.84C24.517,0.494,23.425-0.286,22.08,0.098z"
+        />
+    </symbol>
+    <symbol id="hashtag" viewBox="0 0 512 512">
+        <title>hashtag</title>
+        <path
+            d="m497 214.341c8.284 0 15-6.716 15-15v-59.606c0-8.284-6.716-15-15-15h-90.283l19.078-107.058c.778-4.368-.417-8.856-3.265-12.259-2.848-3.402-7.055-5.37-11.492-5.373l-60.666-.045c-.004 0-.007 0-.011 0-7.258 0-13.476 5.197-14.762 12.341l-20.247 112.394h-69.653l19.652-106.89c.804-4.376-.376-8.883-3.22-12.304-2.845-3.421-7.062-5.401-11.511-5.408l-61.42-.088c-.007 0-.014 0-.021 0-7.245 0-13.457 5.18-14.757 12.309l-20.494 112.381h-138.928c-8.284 0-15 6.716-15 15v59.606c0 8.284 6.716 15 15 15h122.586l-12.837 70.394h-109.749c-8.284 0-15 6.716-15 15v59.606c0 8.284 6.716 15 15 15h93.408l-21.699 118.987c-.798 4.377.388 8.883 3.238 12.3 2.85 3.416 7.07 5.392 11.519 5.392h60.721c7.238 0 13.444-5.169 14.753-12.288l22.869-124.391h70.579l-21.51 119.406c-.783 4.348.39 8.82 3.208 12.225 2.817 3.403 6.992 5.392 11.41 5.434l61.504.593c.049.001.098.001.147.001 7.261 0 13.489-5.207 14.766-12.368l22.327-125.291h134.76c8.284 0 15-6.716 15-15v-59.606c0-8.284-6.716-15-15-15h-118.794l12.544-70.394zm-280.718 70.393 12.942-70.394h69.985l-12.681 70.394z"
+        />
+    </symbol>
+    <symbol id="art" viewBox="0 0 404.177 404.177">
+        <title>art</title>
+        <path
+            d="M176.81,17.209C54.447,51.141-30.729,187.442,10.519,286.867c32.727,78.883,130.766,132.874,253.232,97.16 c123.995-36.16,152-155.938,136.57-179.969c-32.135-50.052-58.538,36.213-71.729-1.898 c-11.481-33.171,42.21-112.111-3.931-159.385C279.841-3.15,210.322,7.915,176.81,17.209z M27.038,233.51 c-4.594-13.272,2.653-27.075,16.189-30.829c13.535-3.753,28.232,3.964,32.827,17.236c4.594,13.272-2.654,27.075-16.189,30.83 C46.33,254.501,31.631,246.783,27.038,233.51z M77.687,304.287c-4.595-13.272,2.653-27.076,16.188-30.83 c13.535-3.753,28.232,3.964,32.827,17.236c4.595,13.272-2.653,27.077-16.188,30.83C96.978,325.277,82.282,317.56,77.687,304.287z M192.733,353.76c-13.536,3.755-28.232-3.964-32.827-17.236c-4.595-13.272,2.653-27.076,16.188-30.83 c13.535-3.753,28.232,3.964,32.827,17.237C213.516,336.203,206.269,350.007,192.733,353.76z M298.347,314.747 c4.595,13.272-2.652,27.075-16.188,30.829c-13.535,3.753-28.231-3.964-32.825-17.236c-4.596-13.272,2.651-27.077,16.188-30.83 C279.055,293.755,293.752,301.472,298.347,314.747z M267.88,96.006c7.739,22.361-4.471,45.614-27.271,51.937 c-22.803,6.323-47.562-6.677-55.301-29.038c-7.74-22.36,4.47-45.613,27.271-51.937C235.38,60.644,260.141,73.646,267.88,96.006z"
+        />
+    </symbol>
+    <symbol id="pencil" viewBox="0 0 528.899 528.899">
+        <title>pencil</title>
+        <path
+            d="M328.883,89.125l107.59,107.589l-272.34,272.34L56.604,361.465L328.883,89.125z M518.113,63.177l-47.981-47.981 c-18.543-18.543-48.653-18.543-67.259,0l-45.961,45.961l107.59,107.59l53.611-53.611 C532.495,100.753,532.495,77.559,518.113,63.177z M0.3,512.69c-1.958,8.812,5.998,16.708,14.811,14.565l119.891-29.069 L27.473,390.597L0.3,512.69z"
+        />
+    </symbol>
+    <symbol id="cursor" viewBox="0 0 512 512">
+        <title>cursor</title>
+        <path
+            d="M423.547,323.115l-320-320c-3.051-3.051-7.637-3.947-11.627-2.304s-6.592,5.547-6.592,9.856V480 c0,4.501,2.837,8.533,7.083,10.048c4.224,1.536,8.981,0.192,11.84-3.285l85.205-104.128l56.853,123.179 c1.792,3.883,5.653,6.187,9.685,6.187c1.408,0,2.837-0.277,4.203-0.875l74.667-32c2.645-1.131,4.736-3.285,5.76-5.973 c1.024-2.688,0.939-5.675-0.277-8.299l-57.024-123.52h132.672c4.309,0,8.213-2.603,9.856-6.592 C427.515,330.752,426.598,326.187,423.547,323.115z"
+        />
+    </symbol>
+    <symbol id="photo" viewBox="0 0 192 192">
+        <title>photo</title>
+        <path
+            d="m184 16h-176a8 8 0 0 0 -8 8v144a8 8 0 0 0 8 8h176a8 8 0 0 0 8-8v-144a8 8 0 0 0 -8-8zm-72 32a24 24 0 1 1 -24 24 24.028 24.028 0 0 1 24-24zm64 112h-160v-72l32-40 64 88 40-32 24 24z"
+        />
+    </symbol>
+    <symbol id="link" viewBox="0 0 486.465 486.465">
+        <title>link</title>
+        <path
+            d="M453.323,39.655l-16.564-14.656C418.729,9.021,395.521,0.22,371.405,0.22c-28.223,0-55.118,12.079-73.791,33.143 L250.207,86.86c-6.105,6.876-9.164,15.722-8.608,24.901c0.557,9.166,4.642,17.576,11.518,23.673l4.438,3.94 c6.299,5.594,14.416,8.673,22.842,8.673l2.054-0.059c9.166-0.551,17.582-4.637,23.699-11.523l47.418-53.503 c8.342-9.416,24.169-10.362,33.601-2.026l16.558,14.688c4.748,4.203,7.57,10.021,7.955,16.384 c0.386,6.358-1.722,12.465-5.937,17.208L302.042,246.198c-6.982,7.887-19.377,10.164-28.734,5.342 c-14.577-7.519-33.58-3.93-44.392,8.256l-0.813,0.926c-7.573,8.518-10.727,19.838-8.674,31.104 c2.074,11.198,9.047,20.801,19.153,26.09c13.986,7.311,29.763,11.33,45.621,11.33h0.012c28.21,0,55.117-12.238,73.8-33.308 l103.691-117.046C497.746,138.226,494.004,75.731,453.323,39.655z"
+        />
+        <path
+            d="M228.873,347.458c-13.669-12.103-36.426-10.743-48.574,2.938l-47.396,53.487c-8.342,9.412-24.159,10.387-33.58,2.043 l-16.576-14.705c-4.747-4.207-7.57-10.025-7.955-16.383c-0.387-6.348,1.722-12.453,5.935-17.196l103.692-116.974 c6.876-7.765,19.047-10.111,28.297-5.566c15.121,7.448,34.359,3.818,46.05-9.416c7.433-8.374,10.555-19.496,8.586-30.463 c-1.956-11.031-8.747-20.389-18.618-25.666c-14.201-7.604-30.274-11.624-46.466-11.624c-28.223,0-55.118,12.084-73.791,33.151 L24.772,308.038c-36.062,40.666-32.308,103.082,8.361,139.143l16.564,14.482c18.021,15.979,41.229,24.582,65.345,24.582 c0.011,0,0,0,0.011,0c28.223,0,55.129-11.889,73.812-32.957l47.388-53.379c6.116-6.887,9.176-15.691,8.618-24.819 c-0.533-9.068-4.736-17.694-11.538-23.706L228.873,347.458z"
+        />
+    </symbol>
+    <symbol id="tv" viewBox="0 0 453.001 453.001">
+        <title>tv</title>
+        <path
+            d="M420.135,110.203H280.091l49.728-81.594c4.312-7.074,2.072-16.304-5.002-20.615c-7.073-4.313-16.304-2.072-20.615,5.002 l-59.243,97.207h-36.916L148.8,12.996c-4.311-7.072-13.541-9.312-20.615-5.002c-7.074,4.312-9.314,13.541-5.002,20.615 l49.728,81.594H32.865C14.743,110.203,0,124.946,0,143.067v271.271c0,18.121,14.743,32.864,32.865,32.864h387.271 c18.122,0,32.865-14.743,32.865-32.864V143.067C453,124.946,438.257,110.203,420.135,110.203z M317.677,374.912 c0,9.866-7.998,17.865-17.865,17.865H71.188c-9.866-0.001-17.864-7.999-17.864-17.865V182.494c0-9.866,7.998-17.865,17.865-17.865 h228.623c9.866,0,17.865,7.999,17.865,17.865V374.912z M383.792,369.203c-17.093,0-31-13.907-31-31c0-17.094,13.907-31,31-31 c17.093,0,31,13.906,31,31S400.885,369.203,383.792,369.203z M383.792,250.203c-17.093,0-31-13.906-31-31s13.907-31,31-31 c17.093,0,31,13.906,31,31S400.885,250.203,383.792,250.203z"
+        />
+    </symbol>
+</svg>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ----------------------- C S S - S T A R T ---------------------- -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<style>
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--background);
+  font-family: 'Literata', serif;
+  font-size: var(--fontSize);
+  color: var(--text);
+  display: -ms-grid;
+  display: grid;
+  grid-template: 'header header' 100px 'aside main' auto / 200px auto;
+  margin: 100px;
+  min-height: calc(100vh - 200px);
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: var(--background);
+  -webkit-transition: opacity 0.2s ease 0.05s;
+  transition: opacity 0.2s ease 0.05s;
+  -webkit-animation: threeSecMax 0.2s ease 3s 1 normal;
+          animation: threeSecMax 0.2s ease 3s 1 normal;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  z-index: 999999999999999;
+}
+
+.-loaded .loader {
+  opacity: 0;
+  pointer-events: none;
+  -webkit-animation: none;
+          animation: none;
+}
+
+@-webkit-keyframes threeSecMax {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+@keyframes threeSecMax {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.-loaded > * {
+  -webkit-animation: pageLoadFadeIn 1s ease 0s 1 normal;
+          animation: pageLoadFadeIn 1s ease 0s 1 normal;
+}
+
+@-webkit-keyframes pageLoadFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pageLoadFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+::-moz-selection {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+::selection {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+a,
+a:hover,
+a:focus,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+.anchor {
+  position: absolute;
+}
+
+iframe {
+  border: none;
+  width: 100%;
+}
+
+ol,
+ul {
+  padding-left: 1.5em;
+}
+
+hr {
+  border: 0;
+  height: 0;
+  border-top: 2px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+img {
+  opacity: 1;
+  border: none;
+  text-decoration: none;
+}
+
+.image-container {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  margin: 0;
+}
+
+strike {
+  -webkit-text-decoration: line-through solid black;
+          text-decoration: line-through solid black;
+}
+
+small {
+  font-size: 0.9em;
+}
+
+big {
+  font-size: 1.1em;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+code {
+  display: block;
+  margin: 25px 10px;
+  padding: 10px;
+  max-height: 90vh;
+  overflow: auto;
+  font-size: 0.8em;
+}
+
+.tippy-tooltip.custom-theme {
+  background-color: white;
+  color: black;
+}
+
+.tippy-tooltip.custom-theme[data-placement^='top'] .tippy-arrow {
+  border-top-color: white;
+}
+
+.tippy-tooltip.custom-theme[data-placement^='bottom'] .tippy-arrow {
+  border-bottom-color: white;
+}
+
+.tippy-tooltip.custom-theme[data-placement^='left'] .tippy-arrow {
+  border-left-color: white;
+}
+
+.tippy-tooltip.custom-theme[data-placement^='right'] .tippy-arrow {
+  border-right-color: white;
+}
+
+/* ******************************************* */
+/* ----------------- HEADER ------------------ */
+/* ******************************************* */
+header {
+  position: relative;
+  grid-area: header;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: var(--content);
+  padding: 0 30px;
+  padding-left: 0;
+  height: 100px;
+}
+
+.home {
+  position: absolute;
+  top: -14px;
+  left: -14px;
+  background: var(--accent);
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 3px solid var(--content);
+  z-index: 1;
+}
+
+.home svg {
+  fill: var(--content);
+  padding: 7px 8px 8px 7px;
+  -webkit-transition: -webkit-transform 0.15s ease;
+  transition: -webkit-transform 0.15s ease;
+  transition: transform 0.15s ease;
+  transition: transform 0.15s ease, -webkit-transform 0.15s ease;
+  width: 20px;
+  height: 20px;
+}
+
+.home:hover svg, .home:focus svg {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+}
+
+h1 {
+  position: relative;
+  margin-right: 20px;
+}
+
+h1::before {
+  content: '';
+  display: inline-block;
+  background: var(--accent);
+  height: 100px;
+  width: 200px;
+  margin-right: 55px;
+  vertical-align: middle;
+  pointer-events: none;
+}
+
+h1::after {
+  content: '#';
+  position: absolute;
+  top: 0;
+  left: 53px;
+  z-index: 1;
+  color: var(--content);
+  width: 200px;
+  text-align: center;
+  font-size: 185px;
+  line-height: 0.22;
+  pointer-events: none;
+}
+
+.custom-checkbox {
+  display: block;
+  position: relative;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background: var(--content);
+  padding: 10px;
+}
+
+.custom-checkbox label {
+  display: block;
+  cursor: help;
+  vertical-align: sub;
+}
+
+.fake-checkbox {
+  position: relative;
+  display: inline-block;
+  color: var(--text);
+  width: 1em;
+  height: 1em;
+  z-index: 0;
+  border: 2px solid;
+  border-radius: 20%;
+  vertical-align: middle;
+  margin-right: 0.5em;
+  margin-top: -3px;
+  -webkit-transition: border-radius 0.2s ease, color 0.2s ease;
+  transition: border-radius 0.2s ease, color 0.2s ease;
+}
+
+.fake-checkbox::after {
+  opacity: 0;
+  content: '';
+  background: var(--accent);
+  border-radius: 50%;
+  position: absolute;
+  font-size: 1.4em;
+  width: 50%;
+  height: 50%;
+  top: 25%;
+  left: 25%;
+  font-weight: bold;
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+  line-height: 1;
+}
+
+input[type='checkbox'] {
+  width: auto !important;
+  opacity: 0.0001 !important;
+  position: absolute;
+  left: 0.25em;
+  top: 0.25em;
+  margin: 0;
+  padding: 0;
+}
+
+input[type='checkbox']:checked + label .fake-checkbox {
+  border-radius: 50%;
+  color: var(--accent);
+}
+
+input[type='checkbox']:checked + label .fake-checkbox::after {
+  opacity: 1;
+}
+
+/* ******************************************* */
+/* ---------------- FILTERS ------------------ */
+/* ******************************************* */
+aside {
+  grid-area: aside;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  background: var(--content);
+}
+
+[data-filter-group] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  margin: 15px 0;
+}
+
+[data-filter] {
+  cursor: help;
+  border: none;
+  margin: 5px 0;
+  padding: 10px 25px;
+  background: var(--content);
+  text-align: left;
+  color: var(--text);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+[data-filter] > div {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 1em;
+  width: 15px;
+  height: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  vertical-align: middle;
+}
+
+[data-filter] > div .icon {
+  width: 100%;
+  height: 100%;
+}
+
+[data-filter] > div .icon.hashtag {
+  width: 85%;
+}
+
+[data-filter] > div .icon.link {
+  margin-top: -5px;
+}
+
+[data-filter] > span {
+  position: relative;
+}
+
+[data-filter] > span::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px;
+  height: 1px;
+  background: var(--accent);
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  transition: -webkit-transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+[data-filter].active {
+  color: var(--accent);
+}
+
+[data-filter].active svg {
+  fill: var(--accent);
+}
+
+[data-filter].active > span::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+/* ******************************************* */
+/* ------------------ TAGS ------------------- */
+/* ******************************************* */
+main {
+  grid-area: main;
+  margin-top: 25px;
+  margin-left: 25px;
+}
+
+.grid-sizer,
+section {
+  width: calc((100% - 75px) / 4);
+}
+
+section {
+  background: var(--content);
+  padding: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-bottom: 25px;
+}
+
+h2 {
+  font-size: 1.25em;
+  margin-bottom: 25px;
+}
+
+h2 a {
+  color: var(--text);
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+}
+
+nav a {
+  padding: 7px 0;
+  color: var(--accent);
+  -webkit-transition: color 0.15s ease;
+  transition: color 0.15s ease;
+}
+
+nav a::before {
+  content: '# ';
+}
+
+nav a:hover, nav a:focus {
+  color: var(--text);
+}
+
+/* ******************************************* */
+/* --------------- RESPONSIVE ---------------- */
+/* ******************************************* */
+@media screen and (max-width: 1400px) {
+  .grid-sizer,
+  section {
+    width: calc((100% - 50px) / 3);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .grid-sizer,
+  section {
+    width: calc((100% - 25px) / 2);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 10%;
+  }
+  header {
+    width: 100%;
+    margin-bottom: 25px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  aside {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    max-width: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+  [data-filter-group] {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    padding: 0 10px;
+  }
+  [data-filter] {
+    margin: 0;
+    padding: 5px 15px;
+  }
+  main {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  body {
+    margin: 5%;
+  }
+  h1::before {
+    width: 100px;
+    margin-right: 25px;
+  }
+  h1::after {
+    font-size: 129px;
+    left: -30px;
+    top: 30px;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  h1 {
+    margin-left: 20px;
+  }
+  h1::before, h1::after {
+    display: none;
+  }
+  .grid-sizer,
+  section {
+    width: 100%;
+  }
+}
+
+
+    /* ******************************************* */
+    /* ---------------- CUSTOM CSS --------------- */
+    /* ******************************************* */
+    /* paste css below this line */
+</style>
+</head>
+<body>
+<div class="loader" aria-hidden="true"></div>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- -------------------------- H E A D E R ------------------------- -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<header>
+    <a href="/" class="home">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 495.398 495.398">
+            <path
+                d="M487.083 225.514l-75.08-75.08v-86.73c0-15.682-12.708-28.391-28.413-28.391-15.669 0-28.377 12.709-28.377 28.391v29.941L299.31 37.74c-27.639-27.624-75.694-27.575-103.27.05L8.312 225.514c-11.082 11.104-11.082 29.071 0 40.158 11.087 11.101 29.089 11.101 40.172 0l187.71-187.729c6.115-6.083 16.893-6.083 22.976-.018l187.742 187.747a28.337 28.337 0 0020.081 8.312c7.271 0 14.541-2.764 20.091-8.312 11.086-11.086 11.086-29.053-.001-40.158z"
+            />
+            <path
+                d="M257.561 131.836c-5.454-5.451-14.285-5.451-19.723 0L72.712 296.913a13.977 13.977 0 00-4.085 9.877v120.401c0 28.253 22.908 51.16 51.16 51.16h81.754v-126.61h92.299v126.61h81.755c28.251 0 51.159-22.907 51.159-51.159V306.79c0-3.713-1.465-7.271-4.085-9.877L257.561 131.836z"
+            />
+        </svg>
+    </a>
+    <h1><span>Tags</span></h1> <!-- TITLE HERE -->
+   
+
+    <!-- CHECKBOX HERE: remove the code below if you don't want the checkbox -->
+    <!-- start -->
+    <div class="custom-checkbox">
+        <input type="checkbox" id="show-archived" />
+        <label for="show-archived">
+            <i class="fake-checkbox"></i>
+            <span>show archived</span>
+        </label>
+    </div>
+    <!-- end -->
+</header>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ----------------------- SIDEBAR (FILTERS) ---------------------- -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<aside>
+    <div data-filter-group="media">
+        <div class="active" data-filter="">
+            <div>
+                <svg class="icon hashtag">
+                    <use xlink:href="#hashtag" />
+                </svg>
+            </div>
+            <span>all tags</span> <!-- "all tags" label-->
+        </div>
+
+
+
+
+
+        <!-- FILTERS HERE:
+
+        available icons: 
+            movie, tag, book, youtube, camera,
+            person, star, heart, music, hashtag,
+            art, pencil, cursor, photo, link, tv
+        -->
+
+
+        <div data-filter=".tv">
+            <div>
+                <svg class="icon tv">
+                    <use xlink:href="#tv" />
+                </svg>
+            </div>
+            <span>tv</span>
+        </div>
+        
+        <div data-filter=".film">
+            <div>
+                <svg class="icon movie">
+                    <use xlink:href="#movie" />
+                </svg>
+            </div>
+            <span>movies</span>
+        </div>
+        
+        <div data-filter=".book">
+            <div>
+                <svg class="icon book">
+                    <use xlink:href="#book" />
+                </svg>
+            </div>
+            <span>books</span>
+        </div>
+        
+        <div data-filter=".music">
+            <div>
+                <svg class="icon music">
+                    <use xlink:href="#music" />
+                </svg>
+            </div>
+            <span>music</span>
+        </div>
+        
+        
+    </div>
+</aside>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ---------------------------- T A G S --------------------------- -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<main>
+    <div class="grid-sizer"></div>
+
+
+<section class="tv">
+    <h2><a href="/tagged/TAG">She-Ra</a></h2>
+    <nav>
+        <a href="/tagged/TAG">Adora</a>
+        <a href="/tagged/TAG">Glimmer</a>
+        <a href="/tagged/TAG">Bow</a>
+        <a href="/tagged/TAG">Catra</a>
+        <a href="/tagged/TAG">Scorpia</a>
+        <a href="/tagged/TAG">Light Hope</a>
+    </nav>
+</section>
+
+<section class="tv archived">
+    <h2><a href="/tagged/TAG">Glee</a></h2>
+    <nav>
+        <a href="/tagged/TAG">Rachel</a>
+        <a href="/tagged/TAG">Finn</a>
+        <a href="/tagged/TAG">Kurt</a>
+        <a href="/tagged/TAG">Blaine</a>
+    </nav>
+</section>
+
+<section class="film">
+    <h2><a href="/tagged/TAG">Marvel</a></h2>
+    <nav>
+        <a href="/tagged/TAG">Iron Man</a>
+        <a href="/tagged/TAG">Spider Man</a>
+        <a href="/tagged/TAG">The Hulk</a>
+        <a href="/tagged/TAG">Captain America</a>
+        <a href="/tagged/TAG">Winter Soldier</a>
+        <a href="/tagged/TAG">Black Widow</a>
+    </nav>
+</section>
+
+<section class="film archived">
+    <h2><a href="/tagged/TAG">Old Horror</a></h2>
+    <nav>
+        <a href="/tagged/TAG">The Shining</a>
+        <a href="/tagged/TAG">Psycho</a>
+        <a href="/tagged/TAG">The Exorcist</a>
+        <a href="/tagged/TAG">Halloween</a>
+        <a href="/tagged/TAG">Scream</a>
+    </nav>
+</section>
+
+<section class="book">
+    <h2><a href="/tagged/TAG">Harry Potter</a></h2>
+    <nav>
+        <a href="/tagged/TAG">Harry</a>
+        <a href="/tagged/TAG">Ron</a>
+        <a href="/tagged/TAG">Hermione</a>
+        <a href="/tagged/TAG">Draco</a>
+        <a href="/tagged/TAG">Neville</a>
+        <a href="/tagged/TAG">Ginny</a>
+    </nav>
+</section>
+
+<section class="book archived">
+    <h2><a href="/tagged/TAG">Warrior Cats</a></h2>
+    <nav>
+        <a href="/tagged/TAG">Fanart</a>
+        <a href="/tagged/TAG">Fanfictions</a>
+        <a href="/tagged/TAG">Headcanons</a>
+        <a href="/tagged/TAG">RPs</a>
+    </nav>
+</section>
+
+
+<section class="music">
+    <h2><a href="/tagged/TAG">Music</a></h2>
+    <nav>
+        <a href="/tagged/TAG">My Playlists</a>
+        <a href="/tagged/TAG">Favorite Tracks</a>
+        <a href="/tagged/TAG">Genre Edits</a>
+        <a href="/tagged/TAG">Soundtracks</a>
+    </nav>
+</section>
+
+<section class="music archived">
+    <h2><a href="/tagged/TAG">Emo Bands</a></h2>
+    <nav>
+        <a href="/tagged/TAG">Twenty One Pilots</a>
+        <a href="/tagged/TAG">My Chemical Romance</a>
+        <a href="/tagged/TAG">Fall Out Boy</a>
+        <a href="/tagged/TAG">Panic! at the Disco</a>
+    </nav>
+</section>
+
+    
+</main>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- -------------------------- C R E D I T ------------------------- -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<style>
+    #credit {
+        position: fixed;
+        bottom: 0px;
+        right: 0px;
+        height: 16px;
+        width: 16px;
+        padding: 10px;
+        transition: opacity 0.2s linear;
+        opacity: 0.3;
+        color: black;
+        color: var(--text);
+    }
+
+    #credit::before {
+        content: 'cloudythms';
+        font-size: 12px;
+        letter-spacing: 1px;
+        position: absolute;
+        right: 100%;
+        top: 11px;
+        transition: opacity 0.2s linear;
+        opacity: 0;
+    }
+
+    #credit:hover {
+        opacity: 0.75;
+    }
+
+    #credit:hover::before {
+        opacity: 1;
+    }
+</style>
+<a id="credit" href="https://cloudythms.tumblr.com/" target="_blank">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 276.715 276.715">
+        <path
+            d="M138.357 0C62.066 0 0 62.066 0 138.357s62.066 138.357 138.357 138.357 138.357-62.066 138.357-138.357S214.648 0 138.357 0zm0 258.715C71.992 258.715 18 204.723 18 138.357S71.992 18 138.357 18s120.357 53.992 120.357 120.357-53.991 120.358-120.357 120.358z"
+        />
+        <path
+            d="M194.798 160.903a9.003 9.003 0 00-12.432 2.732c-8.694 13.593-23.503 21.708-39.614 21.708-25.908 0-46.985-21.078-46.985-46.986s21.077-46.986 46.985-46.986c15.633 0 30.2 7.747 38.968 20.723a9 9 0 0014.914-10.078c-12.118-17.937-32.262-28.645-53.882-28.645-35.833 0-64.985 29.152-64.985 64.986s29.152 64.986 64.985 64.986c22.281 0 42.759-11.218 54.778-30.009a9 9 0 00-2.732-12.431z"
+        />
+    </svg>
+</a>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ------------------------ TUMBLR CONTROLS ----------------------- -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<style>
+    iframe.tmblr-iframe,
+    .tumblr-control-teaser {
+        display: none;
+    }
+    .tmblr-iframe--app-cta-button {
+        display: none !important;
+    }
+</style>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- ------------------------- P L U G I N S ------------------------ -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+<!-- Isotope -->
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+
+<!-- Pagii -->
+<script src="https://static.tumblr.com/tpbx7ye/Rmtq0m3m1/cloudythms_pagii_v1.js"></script>
+
+<!-- Init -->
+<script>
+    $(document).ready(function() {
+        /* Pagii */
+        pagii();
+
+        /* remove tumblr redirects script © magnusthemes@tumblr */
+        $('a[href*="t.umblr.com/redirect"]').each(function() {
+            var originalURL = $(this)
+                .attr('href')
+                .split('?z=')[1]
+                .split('&t=')[0];
+            var replaceURL = decodeURIComponent(originalURL);
+            $(this).attr('href', replaceURL);
+        });
+
+        /* Isotope */
+        var $isotope = $('main').isotope({
+            itemSelector: 'section',
+            percentPosition: true,
+            masonry: {
+                columnWidth: '.grid-sizer',
+                horizontalOrder: true,
+                gutter: 25
+            }
+        });
+        var isotopeFilters = {};
+
+        dealWithCheckbox();
+
+        $('[data-filter]').click(function() {
+            var $buttonGroup = $(this).parents('[data-filter-group]');
+            var filterGroup = $buttonGroup.attr('data-filter-group');
+            isotopeFilters[filterGroup] = $(this).attr('data-filter');
+            var filterValue = concatValues(isotopeFilters);
+            $isotope.isotope({ filter: filterValue });
+            $buttonGroup.find('.active').removeClass('active');
+            $(this).addClass('active');
+        });
+
+        $('input[type="checkbox"]').change(function() {
+            dealWithCheckbox();
+        });
+
+        function dealWithCheckbox() {
+            if ($('input[type="checkbox"]').is(':checked')) {
+                isotopeFilters['archive'] = '';
+            } else {
+                isotopeFilters['archive'] = ':not(.archived)';
+            }
+            var filterValue = concatValues(isotopeFilters);
+            $isotope.isotope({ filter: filterValue });
+        }
+
+        function concatValues(obj) {
+            var value = '';
+            for (var prop in obj) {
+                value += obj[prop];
+            }
+            return value;
+        }
+    });
+</script>
+</body>
+</html>
