@@ -1,3 +1,1 @@
-Tag Page Code: https://pastebin.com/fdZUfAZR
-
-Faq Page Code: https://pastebin.com/3nCYs4Zz
+Click on *tags02.html* (for the tag page code) or *faq01.html* (for the faq page code) above!

@@ -1,0 +1,995 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="https://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><link rel="shortcut icon" href="{Favicon}"/><meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+  <!-----------------------------------------------------------------------
+  
+  
+         {   cloudythms
+                      social media 01
+               (revamp)                      }
+            
+  
+                         by
+              cloudythms.tumblr.com
+        contact me if you have questions!
+  
+  
+ ......  rules  ......
+  
+ * edit as much as you want
+ * do not remove the credit
+ * do not steal parts of my codes
+ * do not redistribute or use as base
+  
+    
+ ......  guide  ......
+  
+ > HOW TO SEARCH
+    1. Make sure you have already clicked somewhere in the code
+    2. Press Ctrl and F
+    3. A little "search for" window should open
+    
+ > ADDING CONTENT:
+    Search for "edit from here",
+    you will be working between that line and "to here".
+    After the "to here" line there's a template to copy.
+    Follow the guide there.
+  
+ > CHANGING THE TEXT ON THE TAB IN YOUR BROWSER:
+    Search for "page title",
+    follow the guide there.
+  
+ > CHANGING HEADER TITLE/LINKS:
+    Search for "edit header here",
+    follow the guide there.
+    
+ > CHANGING THE COLORS/SIZES:
+    Search for "variables",
+    follow the guide there.
+    If you don't want the default social media colors,
+    search for "overwrite colors",
+    follow the guide there.
+    
+ > SHOWING TUMBLR CONTROLS:
+    (Tumblr controls are the buttons on the top right corner
+    of blogs, like the follow, block, dashboard button etc.)
+    By default, my page themes have the tumblr controls hidden.
+    If you want them to show, search for "hide tumblr controls"
+    and delete the line below it.
+    
+  
+  
+ ......  credits  ......
+  
+ svg icons:          flaticon.com
+ icon font:          fontawesome
+ fonts:              fonts.google.com
+ tumblr controls:    @cyantists
+ smoothscroll:       @zacharyfury
+ tooltips:           @tutorial-baby
+ full credits:       cloudythms.tumblr.com/credits
+ 
+ 
+ ......  list of icons  ......
+ 
+ ao3      
+ behance        
+ deviantart    
+ deviantart2   
+ eighttracks    
+ facebook      
+ googleplus   
+ instagram    
+ instagram2    
+ linkedin      
+ listography   
+ pinterest     
+ redbubble    
+ reddit       
+ skype         
+ snapchat      
+ soundcloud 
+ spotify     
+ telegram     
+ tumblr     
+ tumblr2   
+ twitter 
+ weheartit
+ youtube
+ youtube2
+ 
+ brush
+ business
+ camera
+ chat
+ dollar
+ email
+ euro
+ heart
+ images
+ internet
+ link
+ messenger
+ movie
+ music
+ palette
+ phone
+ shop
+ star
+ 
+ 
+  
+ ---------------------------------------------------------------------->
+ 
+ 
+ <!-- Page Title
+ (Text that appears on the tab / browser window)
+ Change the text between <title> and </title>.
+ Write {Title} to let your blogtitle show. -->
+ <title>
+ social media
+ </title>
+ 
+ 
+ 
+ 
+ <!-- Variables 
+ 
+ COLORS:
+ Only change the color codes (after the : and before the ;)
+ Make sure there is one # before the hex code.
+ Example: --color-accent:#efefef;
+ You can also use "black" and "white".
+ Example: --color-background:white;
+ Get hex color codes here:
+ https://htmlcolorcodes.com/color-picker/
+ 
+ OTHERS:
+ For the sizes, it should look like this: --fontSize:12px;
+ Change the number to your liking.
+ Example (smaller font): --fontSize:10px;
+ Example (bigger font): --fontSize:13px;
+ Make sure the : and px; are still there.
+ 
+ -->
+ <style>
+ :root {
+     
+     --fontSize:12px;
+     
+     --linkSize:60px;
+     
+     --color-background:white;
+     --color-text:black;
+     
+     --color-defaultLinkLight:#e0e0e0;
+     --color-defaultLinkDark:#303030;
+     
+ }</style>
+ 
+ 
+ 
+ 
+ <!-- ---------------------------------------------------------------- -->
+ <!-- ----------------------- C S S - S T A R T ---------------------- -->
+ <!-- ---------------------------------------------------------------- -->
+ <style type="text/css">
+ 
+     
+ /* hide tumblr controls
+ (delete the line below if you want the controls to show) */
+ body > iframe:first-child { display: none !important; } 
+ 
+     
+ /* ****************************** BASICS ****************************** */
+  
+ body {
+     padding:3%;
+     font-family:'Karla','Open Sans', sans-serif;
+     font-size:var(--fontSize, 12px);
+     color:var(--color-text,black);
+     background:var(--color-background,white);
+ }
+  
+ #wrapper {
+     display:block;
+     width: 80%;
+     max-width: 500px;
+ }
+  
+ .center {
+     position: absolute;
+     top:25vh;
+     left:50%;
+     -ms-transform: translateX(-50%) translateY(0%);
+     -webkit-transform: translate(-50%,0%);
+     -moz-transform: translate(-50%,0%);
+       -o-transform: translate(-50%,0%);
+          transform: translate(-50%,0%);
+ }
+  
+ a, a:hover{
+     color:var(--color-link,black);
+ }
+  
+ a, a:focus {
+     outline: 0;
+     text-decoration:none;
+ }
+  
+ /* selections */
+ ::-moz-selection {
+   background: rgba(0,0,0,0.3);
+   color: white;
+ }
+ ::selection {
+   background: rgba(0,0,0,0.3);
+   color: white;
+ }
+ ::-moz-selection {
+   background: rgba(0,0,0,0.3);
+   color: white;
+ }
+  
+ /* custom scrollbar */
+ ::-webkit-scrollbar-thumb:vertical {
+ background-color:rgba(0,0,0,0.2);
+ height:100px;
+ -webkit-border-radius:15px;
+         border-radius:15px;
+ }
+ ::-webkit-scrollbar-thumb:horizontal {
+ background-color:rgba(0,0,0,0.2);
+ height:100px !important;
+ }
+ ::-webkit-scrollbar {
+ height:10px;
+ width:10px;
+ background-color:transparent;
+ }
+  
+ /* tumblr controls */
+  iframe.tmblr-iframe {
+     z-index:99999999999999!important;
+     top:0!important;
+     right:0!important;
+     opacity:0.3;
+         filter:invert(1) contrast(150%);
+         -webkit-filter:invert(1) contrast(150%);
+         -o-filter:invert(1) contrast(150%);
+         -moz-filter:invert(1) contrast(150%);
+         -ms-filter:invert(1) contrast(150%);
+     transform:scale(0.65);
+     transform-origin:100% 0;
+     -webkit-transform:scale(0.65);
+     -webkit-transform-origin:100% 0;
+     -o-transform:scale(0.65);
+     -o-transform-origin:100% 0;
+     -moz-transform:scale(0.65);
+     -moz-transform-origin:100% 0;
+     -ms-transform:scale(0.65);
+     -ms-transform-origin:100% 0;
+      transition:1s ease;
+      -o-transition:1s ease;
+      -moz-transition:1s ease;
+      -webkit-transition:1s ease;
+  }
+ iframe.tmblr-iframe:hover {
+     opacity:0.6!important;}
+ .tmblr-iframe--app-cta-button {
+     display: none!important;
+ }
+  
+ /***************************** loading *****************************/
+  
+ #loader-wrapper {
+     position: fixed;
+     top: 0;
+     left:0;
+     width: 100%;
+     height: 100%;
+     background: var(--color-background,white);
+     z-index: 9999999999999990;
+     display: -webkit-box;
+     display: -webkit-flex;
+     display: -moz-box;
+     display: -ms-flexbox;
+     display: flex;
+     -webkit-box-pack: center;
+     -webkit-justify-content: center;
+        -moz-box-pack: center;
+         -ms-flex-pack: center;
+             justify-content: center;
+     -webkit-box-align: center;
+     -webkit-align-items: center;
+        -moz-box-align: center;
+         -ms-flex-align: center;
+             align-items: center;
+ }
+  
+ #loader {
+     z-index: 9999999999999991;
+ }
+  
+ .loaded #loader {
+     opacity: 0;
+     transition: all 0.3s ease-out;
+     -webkit-transition: all 0.3s ease-out;
+     -moz-transition: all 0.3s ease-out;
+     -o-transition: all 0.3s ease-out;
+ }
+  
+ .loaded #loader-wrapper {
+     visibility: hidden;
+     opacity: 0;
+     transition: opacity 0.3s 0.3s ease-out, visibility 0.3s 0.6s;
+     -webkit-transition: opacity 0.3s 0.3s ease-out, visibility 0.3s 0.6s;
+     -moz-transition: opacity 0.3s 0.3s ease-out, visibility 0.3s 0.6s;
+     -o-transition: opacity 0.3s 0.3s ease-out, visibility 0.3s 0.6s;
+ }
+  
+ .no-js #loader-wrapper {
+     display: none;
+ }
+  
+ .spinner {
+   margin: 0;
+   text-align: center;
+ }
+  
+ .spinner > div {
+   width: 12px;
+   height: 12px;
+   background-color: #efefef;
+   -webkit-border-radius: 100%;
+           border-radius: 100%;
+   margin:0 5px;
+   display: inline-block;
+   -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+   -moz-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+     -o-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+        animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+ }
+ .spinner .bounce1 {
+   -webkit-animation-delay: -0.32s;
+   -moz-animation-delay: -0.32s;
+     -o-animation-delay: -0.32s;
+        animation-delay: -0.32s;
+ }
+ .spinner .bounce2 {
+   -webkit-animation-delay: -0.16s;
+   -moz-animation-delay: -0.16s;
+     -o-animation-delay: -0.16s;
+        animation-delay: -0.16s;
+ }
+ @-webkit-keyframes sk-bouncedelay {
+   0%, 80%, 100% { -webkit-transform: scale(0) }
+   40% { -webkit-transform: scale(1.0) }
+ }
+ @-moz-keyframes sk-bouncedelay {
+   0%, 80%, 100% {
+     -webkit-transform: scale(0);
+     -moz-transform: scale(0);
+          transform: scale(0);
+   } 40% {
+     -webkit-transform: scale(1.0);
+     -moz-transform: scale(1.0);
+          transform: scale(1.0);
+   }
+ }
+ @-o-keyframes sk-bouncedelay {
+   0%, 80%, 100% {
+     -webkit-transform: scale(0);
+     -o-transform: scale(0);
+        transform: scale(0);
+   } 40% {
+     -webkit-transform: scale(1.0);
+     -o-transform: scale(1.0);
+        transform: scale(1.0);
+   }
+ }
+ @keyframes sk-bouncedelay {
+   0%, 80%, 100% {
+     -webkit-transform: scale(0);
+     -moz-transform: scale(0);
+       -o-transform: scale(0);
+          transform: scale(0);
+   } 40% {
+     -webkit-transform: scale(1.0);
+     -moz-transform: scale(1.0);
+       -o-transform: scale(1.0);
+          transform: scale(1.0);
+   }
+ }
+  
+  
+  
+ /* ************************** HEADER ************************** */
+  
+ header {
+     margin-bottom:5vh;
+     text-align: center;
+ }
+  
+ header h1 {
+     margin-bottom:0;
+     font-weight: normal;
+ }
+  
+ nav {
+    
+ }
+  
+ nav a {
+     color:var(--color-text,black);
+     display:inline-block;
+     margin-right:5px;
+     border-bottom:1px solid transparent;
+ }
+  
+ nav a:hover {
+     color:var(--color-text,black);
+     border-bottom:1px solid;
+ }
+  
+  
+  
+ /* ************************** CONTENT ************************** */
+  
+ main {
+    
+ }
+  
+ section {
+     display:-webkit-box;
+     display:-webkit-flex;
+     display:-moz-box;
+     display:-ms-flexbox;
+     display:flex;
+     -webkit-box-orient: horizontal;
+     -webkit-box-direction: normal;
+     -webkit-flex-flow: row wrap;
+        -moz-box-orient: horizontal;
+        -moz-box-direction: normal;
+         -ms-flex-flow: row wrap;
+             flex-flow: row wrap;
+     -webkit-box-pack: center;
+     -webkit-justify-content: center;
+        -moz-box-pack: center;
+         -ms-flex-pack: center;
+             justify-content: center;
+     -webkit-align-content: center;
+         -ms-flex-line-pack: center;
+             align-content: center;
+     -webkit-box-align: end;
+     -webkit-align-items: flex-end;
+        -moz-box-align: end;
+         -ms-flex-align: end;
+             align-items: flex-end;
+ }
+ section a {
+     display:-webkit-inline-box;
+     display:-webkit-inline-flex;
+     display:-moz-inline-box;
+     display:-ms-inline-flexbox;
+     display:inline-flex;
+     width:var(--linkSize, 50px);
+     height:var(--linkSize, 50px);
+     -webkit-border-radius: 30%;
+             border-radius: 30%;
+     margin: 5px 10px 5px 0;
+ }
+ section a:after {
+     width:var(--linkSize, 50px);
+     height:var(--linkSize, 50px);
+     content:'';
+     position:absolute;
+     background:rgba(255,255,255,0.5);
+     -webkit-transition:0.2s ease;
+     -o-transition:0.2s ease;
+     -moz-transition:0.2s ease;
+     transition:0.2s ease;
+ }
+ section a:after {
+     opacity:0.4; /* 0   = no overlay
+                     0.5 = 50% opacity
+                    ...
+                     1   = full overlay  */
+ }
+ section a:hover:after {
+     opacity:0;   /* 0   = no overlay on hover
+                     0.5 = 50% opacity on hover
+                    ...
+                     1   = full overlay on hover */
+ }
+ section a img {
+     position:relative;
+     display:block;
+     width:40%;
+     height:40%;
+     margin:auto;
+ }
+ section a.bigger img {
+     width:50%;
+     height:50%;
+ }
+ section a.smaller img {
+     width:30%;
+     height:30%;
+ }
+ section a.black {
+     background:var(--color-defaultLinkLight, #e0e0e0);
+ }
+ section a.white {
+     background:var(--color-defaultLinkDark, #303030);
+ }
+ section a.white img {
+     filter: invert(1);
+     -webkit-filter: invert(1);
+ }
+ 
+ /* ************************** ICONS ************************** */
+ :root {
+ /* social media colors collected by cloudythms */
+ --android:#68B545;
+ --ao3:#911111;
+ --behance:#0057FF;
+ --deviantart:#05cc46;
+ --deviantartOld:#54675A;
+ --eighttracks:#3e546e;
+ --facebook:#3C5A9A;
+ --googleplus:#F63E28;
+ --instagram1:#8B3FB1;
+ --instagram2:#E83D61;
+ --instagram3:#DA4E58;
+ --instagramOld:#517FA4;
+ --linkedin:#0173B2;
+ --listography:#c12aca;
+ --pinterest:#CB2027;
+ --redbubble:#E41421;
+ --reddit:#FF1A00;
+ --skype:#00AFF0;
+ --snapchat:#FFE100;
+ --soundcloud:#FB5F00;
+ --spotify:#9BD44E;
+ --telegram:#2DA6DF;
+ --tumblr:#2A445F;
+ --twitter:#21A5DF;
+ --weheartit:#ff4477;
+ --youtube:#cd1f20;
+ }
+ 
+ 
+ 
+ /* overwrite colors
+ 
+ if you don't want the default social media colors
+ (blue for facebook, lightblue for twitter, etc)
+ then delete the following code */
+ 
+ /* FROM HERE */
+ 
+ .ao3            { background:var(--ao3) !important; }
+ .behance        { background:var(--behance) !important; }
+ .deviantart     { background:var(--deviantart) !important; }
+ .deviantart2    { background:var(--deviantartOld) !important; }
+ .eighttracks    { background:var(--eighttracks) !important; }
+ .facebook       { background:var(--facebook) !important; }
+ .googleplus     { background:var(--googleplus) !important; }
+ .instagram      { background:var(--instagram3) !important; }
+ .instagram2     { background:var(--instagramOld) !important; }
+ .linkedin       { background:var(--linkedin) !important; }
+ .listography    { background:var(--listography) !important; }
+ .pinterest      { background:var(--pinterest) !important; }
+ .redbubble      { background:var(--redbubble) !important; }
+ .reddit         { background:var(--reddit) !important; }
+ .skype          { background:var(--skype) !important; }
+ .snapchat       { background:var(--snapchat) !important; }
+ .soundcloud     { background:var(--soundcloud) !important; }
+ .spotify        { background:var(--spotify) !important; }
+ .telegram       { background:var(--telegram) !important; }
+ .tumblr         { background:var(--tumblr) !important; }
+ .twitter        { background:var(--twitter) !important; }
+ .weheartit      { background:var(--weheartit) !important; }
+ .youtube        { background:var(--youtube) !important; }
+ 
+ .youtube2       { background:var(--youtube) !important; }
+ .tumblr2        { background:var(--tumblr) !important; }
+ 
+ /* TO HERE */
+ 
+ 
+  
+ </style>
+ </head>
+ <!-- ---------------------------------------------------------------- -->
+ <!-- ------------------------ HTML - S T A R T ---------------------- -->
+ <!-- ---------------------------------------------------------------- -->
+ <body>
+ <!-- ---------------------------- loading  -------------------------- -->
+ <div id="loader-wrapper">
+    <div id="loader">
+        <div class="spinner">
+          <div class="bounce1"></div>
+          <div class="bounce2"></div>
+          <div class="bounce3"></div>
+        </div>
+    </div>
+ </div>
+ <div id="wrapper" class="center">
+ <header>
+ 
+ 
+ 
+ 
+ 
+ <!--- edit header here
+ you can change the title and link texts.
+ you can also add or remove links. just copy-paste or delete. ---->
+ 
+ <h1>my social media</h1>
+ <nav>
+     <a href="/">home</a>
+     <a href="/ask">ask</a>
+     <a href="/archive">archive</a>
+ </nav>
+ 
+     
+     
+     
+     
+     
+ </header><main>
+ <!-- ----------------------- EDIT FROM HERE ------------------------- -->
+ <section> 
+ 
+ 
+ <a class="ao3 white" title="ao3"
+ href="LINK_TO_YOUR_PROFILE_HERE"><img></a>
+ 
+ <a class="behance white bigger" title="behance"
+ href="LINK_TO_YOUR_PROFILE_HERE"><img></a>
+ 
+ <a class="deviantart white" title="deviantart"
+ href="LINK_TO_YOUR_PROFILE_HERE"><img></a>
+ 
+ <a class="eighttracks white" title="eighttracks"
+ href="LINK_TO_YOUR_PROFILE_HERE"><img></a>
+ 
+ <a class="facebook white" title="facebook"
+ href="LINK_TO_YOUR_PROFILE_HERE"><img></a>
+ 
+ <a class="googleplus white" title="googleplus"
+ href="LINK_TO_YOUR_PROFILE_HERE"><img></a>
+ 
+ <a class="instagram white" title="instagram"
+ href="LINK_TO_YOUR_PROFILE_HERE"><img></a>
+ 
+ <a class="linkedin white" title="linkedin"
+ href="LINK_TO_YOUR_PROFILE_HERE"><img></a>
+ 
+ <a class="listography white" title="listography"
+ href="LINK_TO_YOUR_PROFILE_HERE"><img></a>
+ 
+ <a class="pinterest white" title="pinterest"
+ href="LINK_TO_YOUR_PROFILE_HERE"><img></a>
+ 
+ <a class="redbubble white" title="redbubble"
+ href="LINK_TO_YOUR_PROFILE_HERE"><img></a>
+ 
+ <a class="reddit white" title="reddit"
+ href="LINK_TO_YOUR_PROFILE_HERE"><img></a>
+ 
+ <a class="skype white" title="skype"
+ href="LINK_TO_YOUR_PROFILE_HERE"><img></a>
+ 
+ <a class="snapchat black" title="snapchat"
+ href="LINK_TO_YOUR_PROFILE_HERE"><img></a>
+ 
+ <a class="soundcloud white bigger" title="soundcloud"
+ href="LINK_TO_YOUR_PROFILE_HERE"><img></a>
+ 
+ <a class="spotify white" title="spotify"
+ href="LINK_TO_YOUR_PROFILE_HERE"><img></a>
+ 
+ <a class="telegram white" title="telegram"
+ href="LINK_TO_YOUR_PROFILE_HERE"><img></a>
+ 
+ <a class="tumblr white" title="tumblr"
+ href="LINK_TO_YOUR_PROFILE_HERE"><img></a>
+ 
+ <a class="twitter black" title="twitter"
+ href="LINK_TO_YOUR_PROFILE_HERE"><img></a>
+ 
+ <a class="weheartit white" title="weheartit"
+ href="LINK_TO_YOUR_PROFILE_HERE"><img></a>
+ 
+ <a class="youtube white" title="youtube"
+ href="LINK_TO_YOUR_PROFILE_HERE"><img></a>
+ 
+ 
+ 
+ 
+ <a class="brush white" title="custom links"
+ href="LINK_TO_YOUR_PROFILE_HERE"><img></a>
+ 
+ <a class="business white" title="custom links"
+ href="LINK_TO_YOUR_PROFILE_HERE"><img></a>
+ 
+ <a class="camera white" title="custom links"
+ href="LINK_TO_YOUR_PROFILE_HERE"><img></a>
+ 
+ <a class="chat black" title="custom links"
+ href="LINK_TO_YOUR_PROFILE_HERE"><img></a>
+ 
+ <a class="dollar white" title="custom links"
+ href="LINK_TO_YOUR_PROFILE_HERE"><img></a>
+ 
+ <a class="email white" title="custom links"
+ href="LINK_TO_YOUR_PROFILE_HERE"><img></a>
+ 
+ <a class="euro white" title="custom links"
+ href="LINK_TO_YOUR_PROFILE_HERE"><img></a>
+ 
+ <a class="heart black" title="custom links"
+ href="LINK_TO_YOUR_PROFILE_HERE"><img></a>
+ 
+ <a class="images white" title="custom links"
+ href="LINK_TO_YOUR_PROFILE_HERE"><img></a>
+ 
+ <a class="internet white" title="custom links"
+ href="LINK_TO_YOUR_PROFILE_HERE"><img></a>
+ 
+ <a class="link white" title="custom links"
+ href="LINK_TO_YOUR_PROFILE_HERE"><img></a>
+ 
+ <a class="messenger white" title="custom links"
+ href="LINK_TO_YOUR_PROFILE_HERE"><img></a>
+ 
+ <a class="movie black" title="custom links"
+ href="LINK_TO_YOUR_PROFILE_HERE"><img></a>
+ 
+ <a class="music white" title="custom links"
+ href="LINK_TO_YOUR_PROFILE_HERE"><img></a>
+ 
+ <a class="palette white" title="custom links"
+ href="LINK_TO_YOUR_PROFILE_HERE"><img></a>
+ 
+ <a class="phone white" title="custom links"
+ href="LINK_TO_YOUR_PROFILE_HERE"><img></a>
+ 
+ <a class="star black" title="custom links"
+ href="LINK_TO_YOUR_PROFILE_HERE"><img></a>
+ 
+ <a class="shop white bigger" title="custom links"
+ href="LINK_TO_YOUR_PROFILE_HERE"><img></a>
+ 
+ 
+ 
+ </section>
+ <!-- -------------------------- TO HERE ----------------------------- 
+ 
+ 
+ 
+     *** how to add links: ***
+     
+ 1. copy the following block of code and
+    paste it between "edit from here" and "to here"
+ 2. change "facebook" to any social media name or extra icon
+    (you can see which icons exist at the start of the code.
+    you can also add your own icons at the end of the code.)
+ 3. change "white" to "black" if you want your icon to be black
+ 4. add " bigger" after "white"/"black" if you icon image seems
+    a bit to small, and " smaller" if it seems to big.
+ 5. change the title text to anything you want. that is the text
+    that shows on hover.
+ 
+ 
+     *** link template: ***
+     
+ <a class="facebook white" title="my facebook profile"
+ href="LINK_TO_YOUR_PROFILE_HERE"><img></a>
+ 
+ 
+ 
+ 
+ 
+ --><div style="height:100px"></div></main></div>
+ 
+ 
+ <!-- ---------- credit ---------- -->
+ <!-- credit link. you may move but not remove. -->
+ <link href="https://static.tumblr.com/tpbx7ye/yiLpc9kpz/cloudythms.css" rel="stylesheet"><style>#credit { opacity:0.5; }</style>
+ <div id="credit"><a href="https://cloudythms.tumblr.com/">
+ <i class="far fa-copyright"></i></a></div>
+ 
+ 
+ <!-- -------------------------- SCRIPTS ---------------------------- -->
+   
+ <!-- jQuery -->	
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+ 
+ <!-- Fonts -->
+ <link href="https://fonts.googleapis.com/css?family=Fira+Mono|Lora|Open+Sans|Roboto|Roboto+Mono|Roboto+Slab|Karla&amp;subset=latin-ext" rel="stylesheet">
+  
+ <!-- FontAwesome -->
+ <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+ 
+ <!-- Smooth Scroll -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.1/SmoothScroll.min.js"></script>
+  
+ <!-- no tumblr redirect links -->
+ <script>
+ $(document).ready(function(){
+ //remove tumblr redirects script by magnusthemes@tumblr
+ $('a[href*="t.umblr.com/redirect"]').each(function(){
+   var originalURL = $(this).attr("href").split("?z=")[1].split("&t=")[0];
+   var replaceURL = decodeURIComponent(originalURL);
+   $(this).attr("href", replaceURL);
+ });
+ });
+ </script>
+     
+ <!-- Tooltips -->
+ <script src="https://static.tumblr.com/iuw14ew/VSQma1786/jquery.style-my-tooltips.js"></script>
+ <script>
+ (function($){
+ $(document).ready(function(){
+ $("a[title]").style_my_tooltips({
+ tip_follows_cursor:true,
+ tip_delay_time:30, /* put a higher number for more delay */
+ tip_fade_speed:400, /* put a higher number for a slower fade */
+ attribute:"title"
+ });
+ });
+ })(jQuery);
+ </script>
+ <style>
+ .tooltip{display: inline;
+ position: relative;}
+ #s-m-t-tooltip {
+     max-width:300px;
+     border-radius: 0px;
+     padding:3px 4px 5px 4px;
+     margin:20px 7px -2px 20px;
+     background-color:var(--color-background,white);
+     border:1px solid #E0E0E0;
+     border-radius: 5px;
+     font-size:1em;
+     letter-spacing:0.5px;
+     text-transform:lowercase;
+     color:var(--color-text,black);
+     z-index:9999999999999999;
+ }
+ </style>
+ 
+ 
+ <!-- Icons -->
+ <script>$(document).ready(function(){
+ 
+ 
+ /*  S O C I A L   M E D I A  */
+ $(".ao3 img").attr("src",
+ "https://image.flaticon.com/icons/svg/16/16941.svg");
+ $(".behance img").attr("src",
+ "https://image.flaticon.com/icons/svg/733/733594.svg");
+ $(".deviantart img").attr("src",
+ "https://image.flaticon.com/icons/svg/220/220793.svg");
+ $(".deviantart2 img").attr("src",
+ "https://image.flaticon.com/icons/svg/152/152850.svg");
+ $(".eighttracks img").attr("src",
+ "https://image.flaticon.com/icons/svg/100/100483.svg");
+ $(".facebook img").attr("src",
+ "https://image.flaticon.com/icons/svg/34/34304.svg");
+ $(".googleplus img").attr("src",
+ "https://image.flaticon.com/icons/svg/299/299411.svg");
+ $(".instagram img").attr("src",
+ "https://image.flaticon.com/icons/svg/87/87390.svg");
+ $(".instagram2 img").attr("src",
+ "https://image.flaticon.com/icons/svg/48/48898.svg");
+ $(".linkedin img").attr("src",
+ "https://image.flaticon.com/icons/svg/34/34227.svg");
+ $(".listography img").attr("src",
+ "https://image.flaticon.com/icons/svg/61/61739.svg");
+ $(".pinterest img").attr("src",
+ "https://image.flaticon.com/icons/svg/152/152817.svg");
+ $(".redbubble img").attr("src",
+ "https://image.flaticon.com/icons/svg/34/34627.svg");
+ $(".reddit img").attr("src",
+ "https://image.flaticon.com/icons/svg/34/34103.svg");
+ $(".skype img").attr("src",
+ "https://image.flaticon.com/icons/svg/34/34020.svg");
+ $(".snapchat img").attr("src",
+ "https://image.flaticon.com/icons/svg/220/220790.svg");
+ $(".soundcloud img").attr("src",
+ "https://image.flaticon.com/icons/svg/33/33649.svg");
+ $(".spotify img").attr("src",
+ "https://image.flaticon.com/icons/svg/152/152756.svg");
+ $(".telegram img").attr("src",
+ "https://image.flaticon.com/icons/svg/152/152827.svg");
+ $(".tumblr img").attr("src",
+ "https://image.flaticon.com/icons/svg/34/34316.svg");
+ $(".tumblr2 img").attr("src",
+ "https://image.flaticon.com/icons/svg/220/220379.svg");
+ $(".twitter img").attr("src",
+ "https://image.flaticon.com/icons/svg/34/34238.svg");
+ $(".weheartit img").attr("src",
+ "https://image.flaticon.com/icons/svg/48/48970.svg");
+ $(".youtube img").attr("src",
+ "https://image.flaticon.com/icons/svg/33/33265.svg");
+ $(".youtube2 img").attr("src",
+ "https://image.flaticon.com/icons/svg/33/33671.svg");
+ 
+ 
+ /*  E X T R A S  */
+ $(".brush img").attr("src",
+ "https://image.flaticon.com/icons/svg/353/353001.svg");
+ $(".business img").attr("src",
+ "https://image.flaticon.com/icons/svg/17/17185.svg");
+ $(".camera img").attr("src",
+ "https://image.flaticon.com/icons/svg/34/34231.svg");
+ $(".chat img").attr("src",
+ "https://image.flaticon.com/icons/svg/121/121922.svg");
+ $(".dollar img").attr("src",
+ "https://image.flaticon.com/icons/svg/70/70030.svg");
+ $(".email img").attr("src",
+ "https://image.flaticon.com/icons/svg/121/121923.svg");
+ $(".euro img").attr("src",
+ "https://image.flaticon.com/icons/svg/70/70046.svg");
+ $(".heart img").attr("src",
+ "https://image.flaticon.com/icons/svg/121/121729.svg");
+ $(".images img").attr("src",
+ "https://image.flaticon.com/icons/svg/34/34239.svg");
+ $(".internet img").attr("src",
+ "https://image.flaticon.com/icons/svg/61/61437.svg");
+ $(".link img").attr("src",
+ "https://image.flaticon.com/icons/svg/61/61353.svg");
+ $(".messenger img").attr("src",
+ "https://image.flaticon.com/icons/svg/121/121916.svg");
+ $(".movie img").attr("src",
+ "https://image.flaticon.com/icons/svg/34/34414.svg");
+ $(".music img").attr("src",
+ "https://image.flaticon.com/icons/svg/34/34072.svg");
+ $(".palette img").attr("src",
+ "https://image.flaticon.com/icons/svg/352/352970.svg");
+ $(".phone img").attr("src",
+ "https://image.flaticon.com/icons/svg/121/121942.svg");
+ $(".shop img").attr("src",
+ "https://image.flaticon.com/icons/svg/61/61571.svg");
+ $(".star img").attr("src",
+ "https://image.flaticon.com/icons/svg/121/121726.svg");
+ 
+    
+ /*  C U S T O M  */ 
+ $(".example img").attr("src",
+ "IMAGELINK");
+ 
+ /*  TO ADD ICONS:
+ 
+ Copy the two lines above, and paste them again below.
+ 
+ Change "example" to whatever you want - remember the word.
+ (Don't use any special characters).
+ 
+ Then replace "IMAGELINK" with the image url you want to use.
+     you can find icons here:
+     https://www.flaticon.com/
+     for this theme you want to use filled out black icons.
+     (they are automatically inverted)
+ 
+ Then you can use your icon like any other.
+        
+ */
+    
+ });</script>
+ 
+ 
+ 
+ <!-- finish loading -->
+ <script>
+ $(document).ready(function() {
+         $('body').addClass('loaded');
+ });
+ </script>
+  
+ </body>
+ </html>

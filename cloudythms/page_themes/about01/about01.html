@@ -1,0 +1,702 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="https://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><link rel="shortcut icon" href="{Favicon}"/><meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+  <!-----------------------------------------------------------------------
+  
+  
+         {   cloudythms
+                      about page 01    }
+            
+  
+                         by
+              cloudythms.tumblr.com
+        contact me if you have questions!
+  
+  
+ ......  rules  ......
+  
+ * edit as much as you want
+ * do not remove the credit
+ * do not steal parts of my codes
+ * do not redistribute or use as base
+  
+    
+ ......  guide  ......
+  
+ > HOW TO SEARCH
+    1. Make sure you have already clicked somewhere in the code
+    2. Press Ctrl and F
+    3. A little "search for" window should open
+    
+ > ADDING CONTENT:
+    Search for "edit from here",
+    you will be working between that line and "to here".
+    Follow the guide there.
+  
+ > CHANGING THE TEXT ON THE TAB IN YOUR BROWSER:
+    Search for "page title",
+    follow the guide there.
+    
+ > CHANGING THE COLORS/SIZES:
+   Search for "variables",
+   follow the guide there.
+  
+ > CHANGING THE BACKGORUND IMAGE:
+   Search for "background image",
+   replace the image url.
+   Remove the whole line if you don't want a bg image.
+    
+ > SHOWING TUMBLR CONTROLS:
+    (Tumblr controls are the buttons on the top right corner
+    of blogs, like the follow, block, dashboard button etc.)
+    By default, my page themes have the tumblr controls hidden.
+    If you want them to show, search for "hide tumblr controls"
+    and delete the line below it.
+    
+  
+  
+ ......  credits  ......
+  
+ icon font:          honeybee @themehive
+ fonts:              fonts.google.com
+ tumblr controls:    @cyantists
+ smoothscroll:       @zacharyfury
+ tooltips:           @tutorial-baby
+  
+ full credits:       cloudythms.tumblr.com/credits
+ 
+  
+ ---------------------------------------------------------------------->
+ 
+ 
+ <!-- Page Title
+ (Text that appears on the tab / browser window)
+ Change the text between <title> and </title>.
+ Write {Title} to let your blogtitle show. -->
+ <title>
+ about
+ </title>
+ 
+ 
+ 
+ 
+ <!-- Variables 
+ 
+ COLORS:
+ Only change the color codes (after the : and before the ;)
+ Make sure there is one # before the hex code.
+ Example: --color-accent:#efefef;
+ You can also use "black" and "white".
+ Example: --color-background:white;
+ Get hex color codes here:
+ https://htmlcolorcodes.com/color-picker/
+  
+ OTHERS:
+ For the sizes, it should look like this: --fontSize:12px;
+ Change the number to your liking.
+ Example (smaller font): --fontSize:10px;
+ Example (bigger font): --fontSize:13px;
+ Make sure the : and px; are still there.
+ 
+ --> <style>:root {
+     
+     --fontSize:13px;
+     
+     --color-background:white; /* ignore if you have a bg image */
+     --color-contentBackground:#fafafa;
+     --color-borders:lightgray;
+     --color-text:black;
+     --color-accent:#E9B674;
+     
+ }</style>
+ 
+ 
+ 
+ 
+ <!-- ---------------------------------------------------------------- -->
+ <!-- ----------------------- C S S - S T A R T ---------------------- -->
+ <!-- ---------------------------------------------------------------- -->
+ <style type="text/css">
+ 
+     
+ /* hide tumblr controls
+ (delete the line below if you want the controls to show) */
+ body > iframe:first-child { display: none !important; } 
+ 
+     
+ /* ****************************** BASICS ****************************** */
+ 
+ body {
+     padding:3%;
+     font-family:'Lora', sans-serif;
+     font-size:var(--fontSize, 12px);
+     color:var(--color-text,black);
+     background:var(--color-background,white);
+     -webkit-background-size:cover;
+     -o-background-size:cover;
+     background-size:cover;
+     
+     
+     /* background image */
+     
+     background-image:url('https://pixabay.com/get/eb3cb3062af4093ed1534705fb0938c9bd22ffd41cb2174991f3c379af/rock-2929208_1920.jpg');
+     
+     
+ }
+ 
+ 
+ .center {
+     position: absolute;
+     top:50%;
+     left:50%;
+     -ms-transform: translateX(-50%) translateY(-50%);
+     -webkit-transform: translate(-50%,-50%);
+     -moz-transform: translate(-50%,-50%);
+       -o-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+ }
+ 
+ a, a:hover{
+     color:var(--color-text,black);
+ }
+ 
+ a, a:focus {
+     outline: 0;
+     text-decoration:none;
+ }
+ 
+ /* selections */
+ ::-moz-selection {
+   background: rgba(0,0,0,0.3);
+   color: white;
+ }
+ ::selection {
+   background: rgba(0,0,0,0.3);
+   color: white;
+ }
+ ::-moz-selection {
+   background: rgba(0,0,0,0.3);
+   color: white;
+ }
+ 
+ /* custom scrollbar */
+ main ::-webkit-scrollbar-thumb:vertical {
+ background-color:rgba(0,0,0,0.2);
+ height:100px;
+ -webkit-border-radius:15px;
+         border-radius:15px;
+ }
+ main ::-webkit-scrollbar-thumb:horizontal {
+ background-color:rgba(0,0,0,0.2);
+ height:100px !important;
+ }
+ main ::-webkit-scrollbar {
+ height:10px;
+ width:10px;
+ background-color:transparent;
+ }
+ 
+ /* tumblr controls */
+  iframe.tmblr-iframe {
+     z-index:99999999999999!important;
+     top:0!important;
+     right:0!important;
+     opacity:0.3;
+         filter:invert(1) contrast(150%);
+         -webkit-filter:invert(1) contrast(150%);
+         -o-filter:invert(1) contrast(150%);
+         -moz-filter:invert(1) contrast(150%);
+         -ms-filter:invert(1) contrast(150%);
+     transform:scale(0.65);
+     transform-origin:100% 0;
+     -webkit-transform:scale(0.65);
+     -webkit-transform-origin:100% 0;
+     -o-transform:scale(0.65);
+     -o-transform-origin:100% 0;
+     -moz-transform:scale(0.65);
+     -moz-transform-origin:100% 0;
+     -ms-transform:scale(0.65);
+     -ms-transform-origin:100% 0;
+      transition:1s ease;
+      -o-transition:1s ease;
+      -moz-transition:1s ease;
+      -webkit-transition:1s ease;
+  }
+ iframe.tmblr-iframe:hover {
+     opacity:0.6!important;}
+ .tmblr-iframe--app-cta-button {
+     display: none!important;
+ }
+ 
+ /* ************************** LAYOUT ************************** */
+ 
+ 
+ main { 
+     height:500px;
+     width:900px;
+     max-height:90vh;
+     max-width:90vw;
+     position:relative;
+     border:1px solid var(--color-borders);
+     -webkit-border-radius:5px;
+             border-radius:5px;
+     background:var(--color-contentBackground,white);
+     
+     display:-ms-grid;
+     
+     display:grid;
+     grid-gap:0 0;
+     -ms-grid-rows:auto;
+     -ms-grid-columns:25% 0 auto 0 10%;
+         grid-template:
+         "left middle right" auto
+         / 25% auto 10%;
+         
+         
+     -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.05);
+     box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.05);
+     
+ }
+ 
+ .left, .middle, .right {
+     
+ }
+ 
+ .left {
+     -ms-grid-row:1;
+     -ms-grid-column:1;
+     grid-area:left;
+     border-right:1px solid var(--color-borders) !important;
+     overflow-y:auto;
+ }
+ .middle {
+     -ms-grid-row:1;
+     -ms-grid-column:3;
+     grid-area:middle;
+     overflow-y:auto;
+ }
+ .right {
+     -ms-grid-row:1;
+     -ms-grid-column:5;
+     grid-area:right;
+     border-left:1px solid var(--color-borders) !important;
+ }
+ 
+ h1 {
+     position:absolute;
+     top:0;
+     left:5%;
+     -webkit-transform:translateY(-80%);
+        -moz-transform:translateY(-80%);
+         -ms-transform:translateY(-80%);
+          -o-transform:translateY(-80%);
+             transform:translateY(-80%);
+     line-height:100%;
+     margin:0;
+     z-index:-1;
+     letter-spacing: 0.05em;
+     word-spacing: 0.3em;
+     font-family:'Allura';
+     font-size:4em;
+     color:var(--color-text);
+ }
+ 
+ 
+ 
+ 
+ /* ************************** LEFT ************************** */
+ 
+ 
+ .left {
+     border: 2em solid transparent;
+     padding-right: 2em;
+ }
+ 
+ .fact {
+     display:block;
+     font-weight: bold;
+     border-bottom: 1px solid var(--color-borders);
+     padding-bottom: 0.3em;
+     padding-left:1em;
+ }
+ 
+ .value, .value-bar {
+     display:block;
+     margin-bottom:1.1em;
+     margin-top: 0.5em;
+     text-align: right;
+     padding-right: 1em;
+     font-style: italic;
+ }
+ 
+ 
+ .value-bar, .value-bar span {
+     height:0.95em;
+ }
+ .value-bar {
+     width:70%;
+     position: relative;
+     margin:0.9em auto 2em auto;
+ }
+ .value-bar span {
+     background:var(--color-accent);
+     position:absolute;
+     top:0;
+     left:0;
+     -webkit-border-radius: 7px;
+             border-radius: 7px;
+ }
+ 
+ /* ************************** MIDDLE ************************** */
+ 
+ 
+ .middle {
+     padding-right: 2em;
+     border: 3em solid transparent;
+ }
+ 
+ .middle b {
+     color:var(--color-accent);
+ }
+ .middle i {
+     opacity:0.6;
+ }
+ .middle u {
+     text-decoration:none;
+     border-bottom:1px dashed;
+ }
+ 
+ .middle ol, .middle ul {
+     margin: 1.5em 0;
+ }
+ .middle li {
+     margin: 0.5em;
+ }
+ 
+ .middle a {
+     text-decoration:none;
+     border-bottom:1px dotted var(--color-text);
+     -webkit-transition:0.3s ease;
+     -o-transition:0.3s ease;
+     -moz-transition:0.3s ease;
+     transition:0.3s ease;
+ }
+ .middle a:hover {
+     opacity:0.6;
+     color:var(--color-accent);
+ }
+ 
+ .middle p {
+     text-align:justify;
+     line-height: 170%;
+     letter-spacing: 0.01em;
+ }
+ 
+ .middle h2 {
+     text-align:center;
+     margin: 1.5em 0;
+ }
+ .middle h2:before, .middle h2:after {
+     content:'';
+     display:block;
+     margin:0.3em auto;
+     width:60%;
+     height:1px;
+     background-image: -webkit-gradient(linear,
+     left top, right top,
+     from(rgba(0, 0, 0, 0)), color-stop(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
+     background-image: -webkit-linear-gradient(left,
+     rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+     background-image: -moz-linear-gradient(left,
+     rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+     background-image: -o-linear-gradient(left,
+     rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+     background-image: linear-gradient(to right,
+     rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+ }
+ 
+ 
+ /* ************************** RIGHT ************************** */
+ 
+ .right {
+     overflow: hidden;
+     display:-webkit-box;
+     display:-webkit-flex;
+     display:-moz-box;
+     display:-ms-flexbox;
+     display:flex;
+     -webkit-box-orient: vertical;
+     -webkit-box-direction: normal;
+     -webkit-flex-flow: column nowrap;
+        -moz-box-orient: vertical;
+        -moz-box-direction: normal;
+         -ms-flex-flow: column nowrap;
+             flex-flow: column nowrap;
+     -webkit-box-pack: space-evenly;
+     -webkit-justify-content: space-evenly;
+        -moz-box-pack: space-evenly;
+         -ms-flex-pack: space-evenly;
+             justify-content: space-evenly;
+     -webkit-box-align: center;
+     -webkit-align-items: center;
+        -moz-box-align: center;
+         -ms-flex-align: center;
+             align-items: center;
+     border: 2em solid transparent;
+     padding-left: 2em;
+ }
+ 
+ .right a {
+     display:block;
+     margin:1.2em 0;
+     text-align:center;
+     color:var(--color-accent);
+ }
+ 
+ .right a .th {
+     font-size: 1.5em;
+     -webkit-transition:color 0.3s ease-in-out,
+                 -webkit-transform 0.3s ease-out;
+     transition:color 0.3s ease-in-out,
+                 -webkit-transform 0.3s ease-out;
+     -o-transition:color 0.3s ease-in-out,
+                 -o-transform 0.3s ease-out;
+     -moz-transition:color 0.3s ease-in-out,
+                 transform 0.3s ease-out,
+                 -moz-transform 0.3s ease-out;
+     transition:color 0.3s ease-in-out,
+                 transform 0.3s ease-out;
+     transition:color 0.3s ease-in-out,
+                 transform 0.3s ease-out,
+                 -webkit-transform 0.3s ease-out,
+                 -moz-transform 0.3s ease-out,
+                 -o-transform 0.3s ease-out;
+     
+ }
+ 
+ .right a:hover .th {
+     color:var(--color-borders);
+     -webkit-transform:rotate(-30deg);
+        -moz-transform:rotate(-30deg);
+         -ms-transform:rotate(-30deg);
+          -o-transform:rotate(-30deg);
+             transform:rotate(-30deg);
+     
+ }
+ 
+ 
+ </style>
+ </head>
+ <!-- ---------------------------------------------------------------- -->
+ <!-- ------------------------ HTML - S T A R T ---------------------- -->
+ <!-- ---------------------------------------------------------------- -->
+ <body><main class="center">
+ 
+ 
+ <!-- edit from here -->
+ 
+ 
+             <!--- title ---->
+             <h1>about me</h1>
+     
+     
+     
+ <!------------- left ------------->
+ <section class="left">
+ 
+ 
+     <div class="fact">name</div>
+     <div class="value">alana</div>
+     
+     <div class="fact">pronouns</div>
+     <div class="value">she/they</div>
+     
+     <div class="fact">birthday</div>
+     <div class="value">17.07.</div>
+     
+     <div class="fact">project</div>
+     <div class="value-bar"><span style="width:40%"></span></div>
+     
+     <div class="fact">skill</div>
+     <div class="value-bar"><span style="width:80%"></span></div>
+     
+     <div class="fact">fact</div>
+     <div class="value">value</div>
+ 
+ 
+ 
+ </section>
+ 
+ 
+ 
+ <!------------- middle -----------
+ 
+ Formatting:
+ 
+     <p>paragraph</p>
+     line break: <br>
+     
+     <b>bold text</b>
+     <i>italic text</i>
+     <u>underline text</u>
+     <a href="LINK">link</a>
+     
+     ordered list:
+     <ol>
+         <li>list item</li>
+         <li>list item</li>
+     </ol>
+     
+     unordered list:
+     <ul>
+         <li>list item</li>
+         <li>list item</li>
+     </ul>
+     
+ -->
+ <section class="middle">
+     
+     
+ <p>
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vulputate leo justo, rhoncus <b>pharetra</b> mi hendrerit in. Praesent ullamcorper, justo ut rutrum commodo, elit ex <i>lobortis</i> dolor, sed vulputate lectus justo vitae ante. Proin vulputate eu nibh id tempor. Donec <u>lacinia</u> facilisis maximus. Nulla et ligula nunc. Proin vulputate eu nibh id tempor. Suspendisse condimentum eleifend lorem, eu egestas lacus tempor varius. Quisque quis <a href="#">pharetra</a> ex. Duis vulputate nisl lacus, mollis varius neque iaculis non.
+ </p>
+ 
+ <p>
+ Fusce lacus massa, convallis ac ullamcorper finibus, posuere vitae lectus. Duis aliquet gravida magna non bibendum. Nullam purus dolor, aliquam sed odio et, placerat sodales leo. Suspendisse luctus sollicitudin sodales.
+ </p>
+ 
+ <h2>lorem ipsum</h2>
+ 
+ <p>
+ Phasellus sapien tellus, pellentesque nec risus eget, hendrerit pellentesque elit. Fusce molestie, dui eu cursus sodales, turpis erat pellentesque lacus, at tempus eros odio non dolor. Cras ultricies diam sed nibh semper, blandit tincidunt sapien sollicitudin. Proin quam magna, vulputate sit amet lectus id, sollicitudin fringilla nulla. Phasellus eget erat faucibus, gravida arcu sed, feugiat nunc. Nunc feugiat vehicula lorem pharetra gravida. Donec varius ac nibh nec fermentum. 
+ </p>
+ 
+ <ul>
+     <li>list item</li>
+     <li>list item</li>
+     <li>list item</li>
+     <li>list item</li>
+     <li>list item</li>
+ </ul>
+ 
+ <p>
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vulputate leo justo, rhoncus pharetra mi hendrerit in. Praesent ullamcorper, justo ut rutrum commodo, elit ex lobortis dolor, sed vulputate lectus justo vitae ante. Proin vulputate eu nibh id tempor. Donec lacinia facilisis maximus. Nulla et ligula nunc. Suspendisse condimentum eleifend lorem, eu egestas lacus tempor varius. Quisque quis pharetra ex. Duis vulputate nisl lacus, mollis varius neque iaculis non.
+ </p>
+     
+     
+     
+     
+     
+ </section>
+ 
+ 
+ 
+ <!------------- right -----------
+ more icons at: https://themehive.co/honeybee -->
+ <section class="right">
+ 
+ 
+     <a href="LINK"
+     target="_blank"><span class="th th-instagram"></span></a>
+     
+     <a href="LINK"
+     target="_blank"><span class="th th-pinterest"></span></a>
+     
+     <a href="LINK"
+     target="_blank"><span class="th th-snapchat"></span></a>
+     
+     <a href="LINK"
+     target="_blank"><span class="th th-twitter"></span></a>
+     
+     <a href="LINK"
+     target="_blank"><span class="th th-youtube"></span></a>
+     
+     <a href="LINK"
+     target="_blank"><span class="th th-spotify"></span></a>
+     
+     <a href="LINK"
+     target="_blank"><span class="th th-pencil"></span></a>
+     
+ 
+ </section>
+ 
+ <!--  to here -->
+ </main>
+ <div style="height:100px"></div>
+ 
+ 
+ 
+ <!-- ---------- credit ---------- -->
+ <!-- credit link. you may move but not remove. -->
+ <link href="https://static.tumblr.com/tpbx7ye/yiLpc9kpz/cloudythms.css" rel="stylesheet"><style>#credit { opacity:0.3; } credit, #credit a, #credit a:before { color: var(--color-contentBackground,white) !important; }</style>
+ <div id="credit"><a href="https://cloudythms.tumblr.com/">
+ <i class="far fa-copyright"></i></a></div>
+ 
+ 
+ <!-- -------------------------- SCRIPTS ---------------------------- -->
+   
+ <!-- jQuery	
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> -->
+  
+ <!-- Fonts -->
+ <link href="https://fonts.googleapis.com/css?family=Karla|Lora:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet"> 
+ <link href="https://fonts.googleapis.com/css?family=Allura&amp;subset=latin-ext" rel="stylesheet"> 
+  
+ <!-- FontAwesome -->
+ <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+ 
+ <!-- Linearicons -->
+ <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+ 
+ <!-- Honeybee -->
+ <link href="//dl.dropbox.com/s/vpi3f9s7nhpe7v7/honeybee.css" rel="stylesheet">
+  
+ <!-- Smooth Scroll-->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.1/SmoothScroll.min.js"></script> 
+  
+ <!-- no tumblr redirect links-->
+ <script>
+ $(document).ready(function(){
+ //remove tumblr redirects script by magnusthemes@tumblr
+ $('a[href*="t.umblr.com/redirect"]').each(function(){
+   var originalURL = $(this).attr("href").split("?z=")[1].split("&t=")[0];
+   var replaceURL = decodeURIComponent(originalURL);
+   $(this).attr("href", replaceURL);
+ });
+ });
+ </script> 
+     
+ <!-- Tooltips -->
+ <script src="https://static.tumblr.com/iuw14ew/VSQma1786/jquery.style-my-tooltips.js"></script>
+ <script>
+ (function($){
+ $(document).ready(function(){
+ $("a[title]").style_my_tooltips({
+ tip_follows_cursor:true,
+ tip_delay_time:30, /* put a higher number for more delay */
+ tip_fade_speed:400, /* put a higher number for a slower fade */
+ attribute:"title"
+ });
+ });
+ })(jQuery);
+ </script>
+ <style>
+ .tooltip{display: inline;
+ position: relative;}
+ #s-m-t-tooltip {
+     max-width:300px;
+     border-radius: 0px;
+     padding:3px 4px 5px 4px;
+     margin:20px 7px -2px 20px;
+     background-color:var(--color-background,white);
+     border:1px solid #E0E0E0;
+     border-radius: 5px;
+     font-size:0.8em;
+     letter-spacing:0.5px;
+     text-transform:uppercase;
+     color:var(--color-text,black);
+     z-index:9999999999999999;
+ }
+ </style>
+ 
+ </body>
+ </html>

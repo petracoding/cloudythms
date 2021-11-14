@@ -1,0 +1,578 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="https://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<!-----------------------------------------------------------------------
+ 
+ 
+        {   cloudythms
+                     FAQ PAGE 01    }
+           
+         
+  https://cloudythms.tumblr.com/
+       contact me if you have questions!
+ 
+ 
+ 
+.....................  RULES  .....................
+   
+- You may move, but not remove the credit
+- Leave this comment
+- Edit the rest as much as you want
+- Do not redistribute without permission / use as base
+- Do not claim as your own
+ 
+ 
+
+ 
+.....................  GUIDE  .....................
+ 
+To search for something:
+    1. Make sure you have already clicked somewhere in the code
+    2. Press Ctrl and F
+    3. A little "search for" window should open
+ 
+ 
+ CHANGING HEADER TITLE/LINKS:
+    
+    Search for "edit header here" and change it however you want.
+ 
+ 
+ADDING CONTENT:
+
+    Find 'edit from here'.
+    You will see a block of code lines that you can edit.
+    If you want more categories, just copy the block
+    and paste another one below.
+    I've also added a template at the very bottom which you can copy
+    in case something went wrong when you edited.
+    
+    
+CHANGE DEFAULT STATE:
+
+    By default, all categories are closed until opened.
+    If you want all categories to be opened at the start,
+    search for "default state" and follow the instructions.
+ 
+ 
+CHANGING THE COLORS:
+
+    Just find every instance of a default color (list below)
+    and replace them with a color you want.
+    
+    Get color codes here: https://htmlcolorcodes.com/color-picker/
+    Use the one that starts with #
+    Example: #ffffff for white.
+    
+    DEFAULTS:
+    text        dark gray   #383838
+    accent 1    pink        #ffc1f6
+    accent 2    orange      #ffddc1
+    accent 3    yellow      #fcfcab
+    accent 4    dark pink   #b280ab
+    
+    accent 2 should have a hue between accent 1 and 3.
+    accent 4 should be a darker version of any other accent.
+    
+    if you don't want multiple colors,
+    just use the same color code for accent 1-3,
+    and make accent 4 a darker version of that.
+     
+     
+CHANGING THE TEXT ON THE TAB IN YOUR BROWSER:
+
+    Search for <title> and change the text between
+    <title> and </title> to anything you want.
+    If you want your blog title to appear, write {Title}
+    
+    
+SHOWING TUMBLR CONTROLS:
+
+    (Tumblr controls are the buttons on the top right corner of blogs,
+    like the follow, block, dashboard button etc.)
+    By default, my page themes have the tumblr controls hidden.
+    If you want them to show, search for 'hide tumblr controls'
+    and delete the line below it.
+
+    
+questions?
+    Ask me.
+    https://cloudythms.tumblr.com/
+    
+
+ 
+ 
+ 
+ 
+..................... CREDITS .....................
+   
+- icon font:        https://fontawesome.io/
+- fonts:            https://fonts.google.com/
+- smoothscroll:     https://zacharyfury.tumblr.com/post/138066236021/
+- tooltips:         https://tutorial-baby.tumblr.com/post/74581118284/
+- no redirects:     https://magnusthemes.tumblr.com/post/162657076440/
+- other resources:  https://cloudythms.tumblr.com/res
+ 
+---------------------------------------------------------------------->
+
+
+<!-- Text that appears on the tab / browser window -->
+<title>faq</title>
+
+
+<link rel="shortcut icon" href="{Favicon}"/>
+
+
+<!-- ------------------------------------------------------------- -->
+		
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><link href="https://static.tumblr.com/tpbx7ye/OYupblc9f/cloudythms.css" rel="stylesheet">
+
+<!-- Fonts --> <link href="https://fonts.googleapis.com/css?family=Fira+Mono|Lora|Open+Sans|Roboto|Roboto+Mono|Roboto+Slab|Karla&amp;subset=latin-ext" rel="stylesheet">
+
+<!-- FontAwesome --> <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+<!-- Smooth Scroll --> <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.1/SmoothScroll.min.js"></script>
+
+<!-- no tumblr redirect links -->
+<script>
+$(document).ready(function(){
+//remove tumblr redirects script by magnusthemes@tumblr
+  $('a[href*="t.umblr.com/redirect"]').each(function(){
+      var originalURL = $(this).attr("href").split("?z=")[1].split("&t=")[0];
+      var replaceURL = decodeURIComponent(originalURL);
+      $(this).attr("href", replaceURL);
+  });
+});
+</script>
+    
+<!-- tooltips -->
+<script src="https://static.tumblr.com/iuw14ew/VSQma1786/jquery.style-my-tooltips.js"></script>
+<script>
+    (function($){
+    $(document).ready(function(){
+    $("a[title]").style_my_tooltips({
+    tip_follows_cursor:true,
+     
+    /* Change your tooltip times here. */
+    tip_delay_time:30, /* put a higher number for more delay */
+    tip_fade_speed:400, /* put a higher number for a slower fade */
+    /* recommended: delay:10-100 fade:200-600 */
+     
+    attribute:"title"
+    });
+    });
+    })(jQuery);
+</script>
+<style>
+.tooltip{
+    display: inline;
+    position: relative;
+}
+#s-m-t-tooltip {
+    max-width:300px;
+    border-radius: 0px;
+    padding:3px 4px 5px 4px;
+    margin:20px 7px -2px 20px;
+    background-color:#ffffff;
+    border:1px solid #E0E0E0;
+    border-radius: 5px;
+    font-family:calibri;
+    font-size:10px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    color:#000;
+    z-index:9999999999999999;
+}
+</style>
+
+
+<!-- ---------------------------------------------------------------- -->
+<!-- ----------------------- C S S - S T A R T ---------------------- -->
+<!-- ---------------------------------------------------------------- -->
+<style type="text/css">
+
+/* hide tumblr controls (delete this line if you want them to show) */
+body > iframe:first-child { display: none !important; } 
+
+		
+/* ****************************** BASICS ****************************** */
+
+body {
+    padding:3%;
+    font-family:'Karla', sans-serif;
+    font-size:12px; /* font size */
+    color:#383838; /* normal text color */
+}
+
+#wrapper {
+    display:block;
+    width:600px; /* width of everything */
+}
+
+.center {
+    position: absolute;
+    top:25vh;
+    left:50%;
+    -ms-transform: translateX(-50%) translateY(0%);
+    -webkit-transform: translate(-50%,0%);
+    transform: translate(-50%,0%);
+}
+
+
+a, a:hover{
+    color:#b2b2b2; 
+}
+
+a, a:focus {
+    outline: 0;
+    text-decoration:none;
+}
+
+::selection {
+  background: rgba(0,0,0,0.3);
+  color: #ffffff;
+}
+::-moz-selection {
+  background: rgba(0,0,0,0.3);
+  color: #ffffff;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+background-color:rgba(0,0,0,0.2);
+height:100px;
+border-radius:15px;
+}
+::-webkit-scrollbar-thumb:horizontal {
+background-color:rgba(0,0,0,0.2);
+height:100px !important;
+}
+::-webkit-scrollbar {
+height:10px;
+width:10px;
+background-color:transparent;
+}
+
+			
+/* ************************** HEADER ************************** */
+
+.header {
+    text-align:center;
+    margin-bottom:50px;
+    padding-bottom:10px;
+    position:relative;
+}
+
+.header:after {
+   content:'';
+   width:100%;
+   position: absolute;
+   left:0;
+   bottom:-1px;
+   height: 3px;
+   background: #ffddc1; /* accent 2 */
+   background: -webkit-linear-gradient(to right, #ffc1f6, #fcfcab);
+   background: linear-gradient(to right, #ffc1f6, #fcfcab);
+   /* accent 1 + accent 3 */
+}
+
+.header h1 {
+    display:inline-block;
+    margin:0 5px;
+}
+
+.header a {
+    color:#b280ab; /* accent 4 */
+    border-bottom:2px solid #ffc1f6; /* accent 1 */
+    margin-left:3px;
+    margin-right:3px;
+}
+.header a:first-child {
+    margin-left:0;
+}
+.header a:last-child {
+    margin-right:0;
+}
+.header a:hover {
+    padding-bottom:2px;
+}
+
+a#openall, a#closeall {
+    cursor:help;
+    border-bottom:2px solid #ffddc1; /* accent 2 */
+}
+
+
+
+/* ************************** CONTENT ************************** */
+
+.content {
+    max-height:575px;
+}
+
+.category {
+    margin-bottom:40px;
+    padding:15px;
+    border-radius:6px;
+}
+
+.category:nth-child(4n+1){
+    border:2px solid #ffc1f6; /* accent 1 */
+}
+.category:nth-child(2n+2){
+    border:2px solid #ffddc1; /* accent 2 */
+}
+.category:nth-child(4n+3){
+    border:2px solid #fcfcab; /* accent 3 */
+}
+
+.q {
+    background:white;
+    letter-spacing:0.5px;
+    font-size:14px;
+    padding:5px;
+    padding-left:25px;
+    position:relative;
+    cursor:help;
+}
+.q:before {
+    position:absolute;
+    content:'\f107';
+    font-family: FontAwesome;
+    left:-5px;
+    line-height:130%;
+    padding-left:15px;
+}
+.q.open:before {
+    position:absolute;
+    content:'\f106';
+    font-family: FontAwesome;
+    left:-5px;
+    line-height:150%;
+    padding-left:15px;
+}
+.a {
+    margin-top:10px;
+}
+
+
+/* links */
+.a a {
+    color:#b280ab; /* accent 4 */
+    background:white;
+    display:inline-block;
+    width:150px;
+    padding:5px 11px;
+    margin-bottom:10px;
+    margin-right:20px;
+    position:relative;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.a a:nth-child(3n){
+    margin-right:0;
+}
+.a a:before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left:0;
+  background-color: #ffddc1; /* accent 2 */
+  transition: all 0.7s ease, background-color 0.5s ease 0.2s;
+  
+  -webkit-transform: scaleX(0); 
+      -ms-transform: scaleX(0);
+          transform: scaleX(0);
+  
+  
+}
+.a a:hover:before{
+    background-color: #ffc1f6; /* accent 1 */
+  -webkit-transform: scaleX(1);
+      -ms-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+
+/* faq */
+.a p {
+    padding:10px;
+}
+.a p a {
+    color:#b280ab; /* accent 4 */
+    cursor:pointer;
+    display:inline;
+    padding:0;
+    margin:0;
+    background:none;
+    border-bottom:2px solid #b280ab; /* accent 4 */
+    transition:0.3s;
+}
+.a p a:hover {
+    border-bottom:2px solid #ffddc1; /* accent 2 */
+}
+.a p i, .a p em {
+    opacity:0.5;
+}
+.a p a:before {
+    display:none;
+}
+
+
+
+</style>
+
+
+
+</head>
+<!-- ---------------------------------------------------------------- -->
+<!-- ------------------------ HTML - S T A R T ---------------------- -->
+<!-- ---------------------------------------------------------------- -->
+<body>
+<div class="center" id="wrapper">
+
+<!--- edit header here ---->
+<div class="header">
+    <a href="/">home</a>
+    <a href="/ask">contact</a>
+    <h1>faq</h1> <!-- title -->
+    <a id="openall">open all</a>
+    <a id="closeall">close all</a>
+</div>
+
+<!--- MAIN CONTENT ---->
+<div class="content">
+
+
+
+<!--- **** EDIT FROM HERE **** ---->
+
+
+
+<!------------- start of category ------------->
+<div class="category">
+    <div class="q">question here</div>
+    <div class="a">
+        <p>
+This is where you add your text. Don't remove the (p) and (/p).
+You can make line breaks like so:<br>
+You can also make <b>bold</b> or <i>italic</i> text.<br>
+You can also insert <a href="https://www.google.com/">links</a>.
+        </p>
+    </div>
+</div>
+<!------------- end of category --------------->
+
+<!------------- start of category ------------->
+<div class="category">
+    <div class="q">question here</div>
+    <div class="a">
+        <p>
+This is where you add your text. Don't remove the (p) and (/p).
+You can make line breaks like so:<br>
+You can also make <b>bold</b> or <i>italic</i> text.<br>
+You can also insert <a href="https://www.google.com/">links</a>.
+        </p>
+    </div>
+</div>
+<!------------- end of category --------------->
+
+<!------------- start of category ------------->
+<div class="category">
+    <div class="q">question here</div>
+    <div class="a">
+        <p>
+This is where you add your text. Don't remove the (p) and (/p).
+You can make line breaks like so:<br>
+You can also make <b>bold</b> or <i>italic</i> text.<br>
+You can also insert <a href="https://www.google.com/">links</a>.
+        </p>
+    </div>
+</div>
+<!------------- end of category --------------->
+
+
+
+
+<!--- **** TO HERE **** ---->
+
+
+
+
+
+<!-- **** TEMPLATE ****
+(copy this and paste it between "edit from here" and "to here")
+
+
+<div class="category">
+    <div class="q">CATEGORY</div>
+    <div class="a">
+        <a href="LINK URL">LINK TEXT</a>
+        <a href="https://www.google.com/">Google</a>
+        <a href="/tagged/selfie">Selfies</a>
+        <a href="LINK">LINK</a>
+        <a href="LINK">LINK</a>
+    </div>
+</div>
+
+
+or
+
+
+<div class="category">
+    <div class="q">question here</div>
+    <div class="a">
+        <p>
+This is where you add your text. Don't remove the (p) and (/p).
+You can make line breaks like so:<br>
+You can also make <b>bold</b> or <i>italic</i> text.<br>
+You can also insert <a href="https://www.google.com/">links</a>.
+        </p>
+    </div>
+</div>
+
+
+-->
+
+
+
+<!-- ---------------------------------------------------------------- -->
+<!-- ---------------------- SCRIPT - S T A R T ---------------------- -->
+<!-- ---------------------------------------------------------------- -->
+<script type="text/javascript">
+$(document).ready(function(){
+    
+    /* DEFAULT STATE */
+    // default open: use "slideDown" and "addClass"
+    // default closed: use "slideUp" and "removeClass"
+    $(".a").slideUp();
+    $(".q").removeClass("open");
+    
+    $("#openall").click(function(){
+        $(".a").slideDown();
+        $(".q").addClass("open");
+    });
+    
+    $("#closeall").click(function(){
+        $(".a").slideUp();
+        $(".q").removeClass("open");
+    });
+    
+    $(".q").click(function(){
+        $(this).siblings(".a").slideToggle();
+        $(this).toggleClass("open");
+    });
+  
+});
+</script>
+
+
+<div style="height: 100px;"></div>
+</div> <!-- /content -->
+</div> <!-- /wrapper -->
+
+<!-- credit link. you may move but not remove. -->
+<div id="credit"><a href="https://cloudythms.tumblr.com/">☁</a></div>
+<!-- theme by cloudythms.tumblr.com -->
+		
+</body>
+</html>

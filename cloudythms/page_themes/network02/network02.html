@@ -1,0 +1,1056 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="https://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><link rel="shortcut icon" href="{Favicon}"/><meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+  <!-----------------------------------------------------------------------
+  
+ 
+         {   cloudythms
+                    network theme 02    }
+          
+                       by
+              cloudythms.tumblr.com
+        contact me if you have questions!
+  
+  
+  
+ ......  rules  ......
+  
+ * edit as much as you want
+ * do not remove the credit
+ * do not steal parts of my codes
+ * do not redistribute or use as base
+  
+    
+    
+ ......  guide  ......
+  
+  
+ > HOW TO SEARCH
+   1. Make sure you have already clicked somewhere in the code
+   2. Press Ctrl and F
+   3. A little "search for" window should open
+  
+ > CHANGE HEADER:
+   Search for "header image".
+ 
+ > GET ASK FORM TO WORK:
+   Search for "ask form",
+   follow the guide there.
+   
+ > ADDING/CHANGING CONTENT:
+   Search for any of these:
+     EDIT PART 1 : header
+     EDIT PART 2 : about
+     EDIT PART 3 : about links
+     EDIT PART 4 : faq
+     EDIT PART 5 : members
+     EDIT PART 6 : contact 
+ 
+ > CHANGING THE TEXT ON THE TAB IN YOUR BROWSER:
+   Search for "page title",
+   follow the guide there.
+  
+ > CHANGING THE COLORS: / DISABLING MEMBER OVERLAYS:
+   Search for "variables",
+   follow the guide there.
+  
+ > SHOWING TUMBLR CONTROLS:
+   (Tumblr controls are the buttons on the top right corner
+   of blogs, like the follow, block, dashboard button etc.)
+   By default, my page themes have the tumblr controls hidden.
+   If you want them to show, search for "hide tumblr controls"
+   and delete the line below it.
+  
+  
+  
+ ......  credits  ......
+  
+ svg icons:          flaticon.com
+ icon font:          fontawesome / ionicons / linearicons
+ fonts:              fonts.google.com
+ smoothscroll:       @zacharyfury
+ tooltips:           @tutorial-baby
+ full credits:       cloudythms.tumblr.com/credits
+ 
+  
+ ---------------------------------------------------------------------->
+ 
+ 
+ <!-- Page Title
+ (Text that appears on the tab / browser window)
+ Change the text between <title> and </title>.
+ Write {Title} to let your blogtitle show. -->
+ <title>{Title}</title>
+  
+  
+ <!-- Favicon (little image that's shown in the browser)
+    Change {Favicon} to your image URL. Leave the "". -->
+ <link rel="shortcut icon" href="{Favicon}"/>
+ 
+ 
+ <!-- ---------------------------------------------------------------- -->
+ <!-- ----------------------- C S S - S T A R T ---------------------- -->
+ <!-- ---------------------------------------------------------------- -->
+ <style type="text/css">
+ 
+     
+     
+ /* hide tumblr controls
+ (delete the line below if you want the controls to show) */
+ body > iframe:first-child { display: none !important; } 
+ 
+ 
+ 
+ 
+ /* Variables
+  
+ COLORS:
+     Only change the color codes (after the : and before the ;)
+     Make sure there is one # before the hex code.
+     Example: --color-accent:#efefef;
+     You can also use "black" and "white".
+     Example: --color-background:white;
+     Get hex color codes here:
+     https://htmlcolorcodes.com/color-picker/
+     
+     
+ DEFAULT (LIGHT):
+     --text:black;
+     --overlay:white;
+     --overlayTransperency:rgba(255,255,255,0.8);
+     --accent1:#6a1c1a;
+     --accent2:#f0e7c9;
+ DEFAULT (DARK):
+     --text:#efefef;
+     --overlay:black;
+     --overlayTransperency:rgba(0,0,0,0.8);
+     --accent1:#f0e7c9;
+     --accent2:#6a1c1a;
+  
+ */
+ :root {
+     --text:black;
+     --overlay:white;
+     --overlayTransperency:rgba(255,255,255,0.7);
+     --accent1:#6a1c1a;
+     --accent2:#f0e7c9;
+ }
+ 
+ /* Don't want to have member overlays? Paste this below between {
+    and }: display:none !important;
+ */
+ #members .members a .overlay {
+     
+ }
+ 
+ 
+     
+ /* ****************************** BASICS ****************************** */
+ 
+ 
+ body, html {
+     height: 100%;
+     padding: 0;
+     margin: 0;
+ }
+ 
+ body {
+     font-family:'Muli', sans-serif;
+     font-size:12px;
+     color:var(--text, black);
+ }
+ 
+ a, a:hover{
+     color:var(--text, black);
+ }
+ 
+ a, a:focus {
+     outline: 0;
+     text-decoration:none;
+ }
+ 
+ /* selections */
+ ::-moz-selection {
+   background: rgba(0,0,0,0.3);
+   color: var(--overlay, white);
+ }
+ ::selection {
+   background: rgba(0,0,0,0.3);
+   color: var(--overlay, white);
+ }
+ ::-moz-selection {
+   background: rgba(0,0,0,0.3);
+   color: var(--overlay, white);
+ }
+ 
+ /* custom scrollbar */
+ ::-webkit-scrollbar-thumb:vertical {
+ background-color:rgba(0,0,0,0.2);
+ height:100px;
+ -webkit-border-radius:15px;
+         border-radius:15px;
+ }
+ ::-webkit-scrollbar-thumb:horizontal {
+ background-color:rgba(0,0,0,0.2);
+ height:100px !important;
+ }
+ ::-webkit-scrollbar {
+ height:10px;
+ width:10px;
+ background-color:transparent;
+ }
+ 
+ /* tumblr controls */
+  iframe.tmblr-iframe {
+     z-index:99999999999999!important;
+     top:0!important;
+     right:0!important;
+     opacity:0.3;
+         filter:invert(1) contrast(150%);
+         -webkit-filter:invert(1) contrast(150%);
+         -o-filter:invert(1) contrast(150%);
+         -moz-filter:invert(1) contrast(150%);
+         -ms-filter:invert(1) contrast(150%);
+     transform:scale(0.65);
+     transform-origin:100% 0;
+     -webkit-transform:scale(0.65);
+     -webkit-transform-origin:100% 0;
+     -o-transform:scale(0.65);
+     -o-transform-origin:100% 0;
+     -moz-transform:scale(0.65);
+     -moz-transform-origin:100% 0;
+     -ms-transform:scale(0.65);
+     -ms-transform-origin:100% 0;
+      transition:1s ease;
+      -o-transition:1s ease;
+      -moz-transition:1s ease;
+      -webkit-transition:1s ease;
+  }
+ iframe.tmblr-iframe:hover {
+     opacity:0.6!important;}
+ .tmblr-iframe--app-cta-button {
+     display: none!important;
+ }
+ 
+ 
+ 
+ /* ************************** CONTENT ************************** */
+ 
+ 
+ main {
+     width:100%;
+ }
+ section {
+     position:relative;
+     width:100%;
+     min-height:100vh;
+     -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+             box-sizing: border-box;
+     display:-webkit-box;
+     display:-webkit-flex;
+     display:-moz-box;
+     display:-ms-flexbox;
+     display:flex;
+     -webkit-box-orient:horizontal;
+     -webkit-box-direction:normal;
+     -webkit-flex-flow:row nowrap;
+        -moz-box-orient:horizontal;
+        -moz-box-direction:normal;
+         -ms-flex-flow:row nowrap;
+             flex-flow:row nowrap;
+     -webkit-align-content: center;
+         -ms-flex-line-pack: center;
+             align-content: center;
+     -webkit-box-pack: center;
+     -webkit-justify-content: center;
+        -moz-box-pack: center;
+         -ms-flex-pack: center;
+             justify-content: center;
+     -webkit-box-align: center;
+     -webkit-align-items: center;
+        -moz-box-align: center;
+         -ms-flex-align: center;
+             align-items: center;
+     background-attachment: fixed;
+     background-position: center;
+     background-repeat: no-repeat;
+     -webkit-background-size: cover;
+          -o-background-size: cover;
+             background-size: cover;
+ }
+ section > div {
+     text-align:center;
+ }
+ .gen a {
+     position:absolute;
+ }
+ .gen a.up { top:10%; }
+ .gen a.down { bottom:10%; }
+ 
+ .dots {
+     position:absolute;
+     top:50vh;
+     left:1.5vw;
+     -webkit-transform:translateY(-50%);
+        -moz-transform:translateY(-50%);
+         -ms-transform:translateY(-50%);
+          -o-transform:translateY(-50%);
+             transform:translateY(-50%);
+     z-index: 1;
+ }
+ .dots a {
+     cursor:help;
+     display:block;
+     width:10px;
+     height:10px;
+     -webkit-border-radius:50%;
+             border-radius:50%;
+     background:var(--text, black);
+     margin: 10px 0;
+     opacity:0.3;
+     -webkit-transition:0.3s ease;
+     -o-transition:0.3s ease;
+     -moz-transition:0.3s ease;
+     transition:0.3s ease;
+ }
+ .dots a:hover, .dots a.active {
+     opacity:0.7;
+ }
+ 
+ 
+ #top { background-color:var(--accent1); }
+ #about { background-color:var(--accent2); }
+ #members { background-color:var(--accent2); }
+ #contact { background-color:var(--accent2); }
+ 
+ 
+ /* IMAGES BETWEEN SECTIONS 
+ 
+ #parallax-one {
+     background-image:url('https://www.tricky-photoshop.com/wp-content/uploads/2012/10/111.png');
+ }
+ #parallax-two {
+     background-image:url('https://www.tricky-photoshop.com/wp-content/uploads/2012/10/111.png');
+ }
+ #parallax-three {
+     background-image:url('https://www.tricky-photoshop.com/wp-content/uploads/2012/10/111.png');
+ }
+ */
+ 
+ 
+ .parallax {
+     background-color:var(--accent1);
+     background-attachment: fixed;
+     background-position: center;
+     background-repeat: no-repeat;
+     -webkit-background-size: cover;
+          -o-background-size: cover;
+             background-size: cover;
+     height: 25vh; 
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ /* SECTION 1: HEADER */
+ 
+ 
+ 
+ 
+ #top {
+     
+     /* header image */
+     background-image:
+     url('https://www.imageupload.co.uk/images/2018/09/11/pexels-photo-351265.jpg'); 
+ }
+ 
+ #top > div {
+     background:var(--overlayTransperency, rgba(255,255,255,0.5));
+     padding:3em;
+     -webkit-border-radius: 10px;
+             border-radius: 10px;
+     width: 50%;
+     height: 50%;
+ }
+ 
+ #top h1 {
+     font-family:'Playfair Display', sans-serif;
+     font-size: 4em;
+     margin: 0;
+     padding: 0;
+ }
+ #top h2 {
+     margin: 0.5em 0 2em 0;
+     padding: 0;
+     font-size:1em;
+     opacity:0.8;
+     letter-spacing: 0.3em;
+     word-spacing: 0.5em;
+ }
+ #top h2 a {
+     -webkit-transition:0.3s ease;
+     -o-transition:0.3s ease;
+     -moz-transition:0.3s ease;
+     transition:0.3s ease;
+ }
+ #top h2 a:hover {
+     opacity:0.6;
+ }
+ 
+ #top nav {
+     font-family:'Playfair Display', sans-serif;
+     display: -webkit-box;
+     display: -webkit-flex;
+     display: -moz-box;
+     display: -ms-flexbox;
+     display: flex;
+     -webkit-box-pack: center;
+     -webkit-justify-content: center;
+        -moz-box-pack: center;
+         -ms-flex-pack: center;
+             justify-content: center;
+     -webkit-box-orient: horizontal;
+     -webkit-box-direction: normal;
+     -webkit-flex-flow: row wrap;
+        -moz-box-orient: horizontal;
+        -moz-box-direction: normal;
+         -ms-flex-flow: row wrap;
+             flex-flow: row wrap;
+ }
+ #top nav a {
+     margin-left: 0.3em;
+     margin-right: 0.3em;
+     font-size: 1.5em;
+     border:1px solid transparent;
+     padding:0.3em 0.5em;
+     -webkit-border-radius:0.7em;
+             border-radius:0.7em;
+     -webkit-transition:0.2s linear;
+     -o-transition:0.2s linear;
+     -moz-transition:0.2s linear;
+     transition:0.2s linear;
+ }
+ #top nav a:hover {
+ }
+ 
+ 
+ 
+ 
+ /* OTHER SECTIONS */
+ 
+ #about > div, #members > div, #contact > div {
+     padding: 15%;
+     max-width: 1000px;
+ }
+ #about h1, #members h1, #contact h1 {
+     font-family:'Playfair Display', sans-serif;
+     font-size: 2.5em;
+     margin: 0;
+     margin-bottom: 0.5em;
+ }
+ section p {
+     text-align: left;
+     line-height: 200%;
+     font-size: 1.15em;
+     word-spacing: 0.05em;
+ }
+ section i {
+     opacity:0.6;
+ }
+ section u {
+     text-decoration:none;
+     border-bottom:1px solid;
+ }
+ section p a, #about .faq a {
+     color:var(--accent1);
+     font-weight:bold;
+     border-bottom:2px solid transparent;
+     -webkit-transition:0.3s ease;
+     -o-transition:0.3s ease;
+     -moz-transition:0.3s ease;
+     transition:0.3s ease;
+ }
+ section p a:hover, #about .faq a:hover {
+     border-bottom:2px solid var(--accent1);
+ }
+ 
+ 
+ 
+ 
+ 
+ /* SECTION 2: ABOUT */
+ 
+ #about .left { float:left; }
+ #about .right { float:right; }
+ 
+ #about .about {
+     width:65%;
+     text-align:justify;
+ }
+ 
+ #about .about h1:nth-of-type(2){
+     margin-top:1em;
+ }
+ 
+ #about nav a {
+     font-size:1.5em;
+     margin-left:0.5em;
+     margin-right:0.5em;
+     letter-spacing: 0.05em;
+     border-bottom:2px solid transparent;
+     -webkit-transition:color 0.5s ease, border 0.4s ease;
+     -o-transition:color 0.5s ease, border 0.4s ease;
+     -moz-transition:color 0.5s ease, border 0.4s ease;
+     transition:color 0.5s ease, border 0.4s ease;
+ }
+ #about nav a:first-of-type {
+     margin-left:0;
+ }
+ #about nav a:hover {
+     color:var(--accent1);
+     border-bottom:2px solid var(--text, black);
+ }
+ 
+ #about .faq {
+     width:35%;
+     text-align:left;
+     padding-left:10%;
+     -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+             box-sizing: border-box;
+     font-size: 1.15em;
+ }
+ #about .faq .q {
+     font-weight:bold;
+ }
+ #about .faq .a {
+     margin-bottom:2.5em;
+ }
+ #about .faq .a:last-of-type { margin-bottom:0; }
+ 
+ 
+ 
+ 
+ 
+ /* SECTION 3: MEMBERS */
+ 
+ 
+ #members h1 {
+     margin-bottom: 1em;
+ }
+ 
+ #members .members {
+     display:-webkit-box;
+     display:-webkit-flex;
+     display:-moz-box;
+     display:-ms-flexbox;
+     display:flex;
+     -webkit-box-orient:horizontal;
+     -webkit-box-direction:normal;
+     -webkit-flex-flow:row wrap;
+        -moz-box-orient:horizontal;
+        -moz-box-direction:normal;
+         -ms-flex-flow:row wrap;
+             flex-flow:row wrap;
+     -webkit-box-pack: space-evenly;
+     -webkit-justify-content: space-evenly;
+        -moz-box-pack: space-evenly;
+         -ms-flex-pack: space-evenly;
+             justify-content: space-evenly;
+     -webkit-align-content: flex-start;
+         -ms-flex-line-pack: start;
+             align-content: flex-start;
+     -webkit-box-align: end;
+     -webkit-align-items: flex-end;
+        -moz-box-align: end;
+         -ms-flex-align: end;
+             align-items: flex-end;
+ }
+ #members .members a {
+     position:relative;
+     margin: 2%;
+ }
+ #members .members a, #members .members a img {
+     width:150px;
+     height:150px;
+     max-width:35vw;
+     max-height:35vw;
+ }
+ 
+ #members .members a .overlay {
+     position:absolute;
+     width:100%;
+     height:100%;
+     top:0;
+     left:0;
+     background:var(--overlayTransperency, rgba(255,255,255,0.5));
+     overflow:hidden;
+     padding: 10%;
+     border:3px solid transparent;
+     -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+             box-sizing: border-box;
+     opacity:0;
+ }
+ #members .members a:hover .overlay {
+     opacity:1;
+     border:3px solid var(--accent1);
+ }
+ #members .members a:hover img {
+     -webkit-filter: grayscale(50%);
+     filter: grayscale(50%);
+ }
+ 
+ #members .members a,
+ #members .members a img,
+ #members .members a .overlay {
+     -webkit-border-radius:10px;
+             border-radius:10px;
+     -webkit-transition:0.5s ease-out;
+     -o-transition:0.5s ease-out;
+     -moz-transition:0.5s ease-out;
+     transition:0.5s ease-out;
+ }
+ #members .members a:hover,
+ #members .members a:hover img,
+ #members .members a:hover .overlay {
+     -webkit-border-radius:25%;
+             border-radius:25%;
+ }
+ 
+ #members .members a .overlay h2,
+ #members .members a .overlay h3,
+ #members .members a .overlay p {
+     margin:0;
+     padding:0;
+     line-height:100%;
+ }
+ #members .members a .overlay h2 {
+     font-size: 1.5em;
+     margin-top:0.5em;
+     word-break: break-all;
+ }
+ #members .members a .overlay h3 {
+     font-size: 1.1em;
+     margin: 0.5em 0 1em 0;
+     word-break: break-all;
+ }
+ #members .members a .overlay p {
+     font-size:0.9em;
+     text-align:center;
+     line-height: 120%;
+ }
+ 
+ 
+ 
+ 
+ /* SECTION 4: CONTACT */
+ 
+ 
+ #contact > div {
+     padding: 15% 25%;
+ }
+ 
+ #contact p {
+     text-align:center;
+     margin-bottom:2em;
+ }
+ 
+ #contact nav {
+     font-family:'Playfair Display', sans-serif;
+     margin-top:3em;
+ }
+ #contact nav a {
+     margin-left:0.5em;
+     margin-right:0.5em;
+ }
+ 
+ 
+ 
+ 
+ /*** MOBILE ***/
+ 
+ @media only screen and (max-width: 768px) {
+     
+     body {
+         font-size:10px;
+     }
+     #about > div, #members > div, #contact > div {
+         padding: 7%;
+     }
+     section p {
+         line-height:150%;
+     }
+     .dots {
+         display:none;
+     }
+     
+ } 
+ 
+  
+ </style>
+ </head>
+ <!-- ---------------------------------------------------------------- -->
+ <!-- ------------------------ HTML - S T A R T ---------------------- -->
+ <!-- ---------------------------------------------------------------- -->
+ <body><main>
+ 
+ <section id="top"> <!-- HEADER -->
+ 
+ <span class="dots">
+     <a href="#top" class="active"></a>
+     <a href="#about"></a>
+     <a href="#members"></a>
+     <a href="#contact"></a>
+ </span>
+     
+     
+     <!-- EDIT PART 1 : header (title, subtitle, links)
+     
+     Link: <a href="LINK">text</a>
+     -->
+     <div>
+         <h1>example network</h1>
+         <h2>subtitle goes here</h2>
+         <nav>
+             <a href="#about">about</a>
+             <a href="#members">members</a>
+             <a href="#contact">contact</a>
+             <a href="YOUR-LINK-HERE">link</a>
+         </nav>
+     </div>
+ 
+ </section>
+ 
+ 
+ <!-- ------------------------------------------------------------- -->
+ <div class="parallax" id="parallax-one"></div>
+ <!-- ------------------------------------------------------------- -->
+ 
+ 
+ <section id="about"> <!-- ABOUT -->
+ 
+ <span class="dots">
+     <a href="#top"></a>
+     <a href="#about" class="active"></a>
+     <a href="#members"></a>
+     <a href="#contact"></a>
+ </span>
+ 
+     <div>
+     
+     <div class="about left">
+     
+     
+     
+ <!-- EDIT PART 2 : about
+ 
+ FORMATTING:
+     Put paragraphs between <p> and </p>
+     Line break:     <br>
+     Bold text:      <b>text</b>
+     Italic text:    <i>text</i>
+     Underline text: <u>text</u>
+     Link:           <a href="LINK">text</a>
+ 
+ -->
+ <h1>about</h1>
+         
+ <p>Lorem ipsum <b>dolor</b> sit amet, <i>consetetur</i> sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam <u>voluptua</u>. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd <a href="#">gubergren</a>, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+ 
+ <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+ 
+ 
+ 
+ <!-- EDIT PART 3 : about links
+ 
+ Link: <a href="LINK">text</a>
+ -->
+ <h1>links</h1>
+ 
+ <nav>
+     <a href="LINK">link</a>
+     <a href="LINK">link</a>
+     <a href="LINK">link</a>
+     <a href="LINK">link</a>
+ </nav>
+ 
+     </div>
+     
+     <div class="faq right">
+     
+     
+     
+     
+ <!-- EDIT PART 4 : faq -->
+ <h1>faq</h1>
+ 
+ <div class="q">why, who, where, how, when?</div>
+ <div class="a">because this is the answer to the question.</div>
+ 
+ <div class="q">why, who, where, how, when?</div>
+ <div class="a">because this is the answer to the question.</div>
+ 
+ <div class="q">why, who, where, how, when?</div>
+ <div class="a">because this is the answer to the question.</div>
+ 
+ <div class="q">why, who, where, how, when?</div>
+ <div class="a">because this is the answer to the question.</div>
+ 
+ <div class="q">why, who, where, how, when?</div>
+ <div class="a">because this is the answer to the question.</div>
+         
+         
+     </div>
+     
+     <div style="clear:both;"></div></div>
+     
+ </section>
+ 
+ 
+ <!-- ------------------------------------------------------------- -->
+ <div class="parallax" id="parallax-two"></div>
+ <!-- ------------------------------------------------------------- -->
+ 
+ 
+ <section id="members"> <!-- MEMBERS -->
+ 
+ <span class="dots">
+     <a href="#top"></a>
+     <a href="#about"></a>
+     <a href="#members" class="active"></a>
+     <a href="#contact"></a>
+ </span>
+ 
+     <div>
+     
+     <h1>members</h1>
+     
+     <div class="members">
+     
+     
+     
+               <!-- EDIT PART 5 : members -->
+     
+         
+ <a href="LINK">
+     <img src="https://i.pinimg.com/originals/0b/17/ee/0b17ee63a47277efeb5ff4956b22ecb4.png" />
+     <div class="overlay">
+         <h2>name</h2>
+         <h3>@username</h3>
+         <p>additional info about this network member is written here</p>
+     </div>
+ </a>
+ 
+ <a href="LINK">
+     <img src="https://data.whicdn.com/images/307192626/large.jpg" />
+     <div class="overlay">
+         <h2>name</h2>
+         <h3>@username</h3>
+         <p>additional info about this network member is written here</p>
+     </div>
+ </a>
+ 
+ <a href="LINK">
+     <img src="https://hw-img.datpiff.com/m20af4da/Crown_Jones_ElceeTheArtist_Aesthetic_Ep_By_Crown-front.jpg" />
+     <div class="overlay">
+         <h2>name</h2>
+         <h3>@username</h3>
+         <p>additional info about this network member is written here</p>
+     </div>
+ </a>
+ 
+ <a href="LINK">
+     <img src="https://i1.wp.com/i.pinimg.com/474x/5c/9a/db/5c9adbb87fd243035e488c999008b908.jpg?fit=450,300&zoom=2&strip=all" />
+     <div class="overlay">
+         <h2>name</h2>
+         <h3>@username</h3>
+         <p>additional info about this network member is written here</p>
+     </div>
+ </a>
+ 
+ <a href="LINK">
+     <img src="https://i.pinimg.com/474x/8e/68/6a/8e686ad825c92ded485d9b40b86cd879.jpg" />
+     <div class="overlay">
+         <h2>name</h2>
+         <h3>@username</h3>
+         <p>additional info about this network member is written here</p>
+     </div>
+ </a>
+ 
+ <a href="LINK">
+     <img src="https://data.whicdn.com/images/282683626/large.jpg" />
+     <div class="overlay">
+         <h2>name</h2>
+         <h3>@username</h3>
+         <p>additional info about this network member is written here</p>
+     </div>
+ </a>
+ 
+ <a href="LINK">
+     <img src="https://i.ebayimg.com/images/g/nOUAAOSwpXNazjLZ/s-l300.jpg" />
+     <div class="overlay">
+         <h2>name</h2>
+         <h3>@username</h3>
+         <p>additional info about this network member is written here</p>
+     </div>
+ </a>
+ 
+ <a href="LINK">
+     <img src="https://static1.squarespace.com/static/57f8971f6a496306c82f9b27/584d96afe58c627c3bfd0825/5a15a11788199e4c9ef1375d/1511366948264/?format=300w" />
+     <div class="overlay">
+         <h2>name</h2>
+         <h3>@username</h3>
+         <p>additional info about this network member is written here</p>
+     </div>
+ </a>
+         
+         
+         
+         
+         
+         
+         
+     </div>
+     </div>
+ 
+     
+ </section>
+ 
+ 
+ <!-- ------------------------------------------------------------- -->
+ <div class="parallax" id="parallax-three"></div>
+ <!-- ------------------------------------------------------------- -->
+ 
+ 
+ <section id="contact"> <!-- CONTACT -->
+ 
+ <span class="dots">
+     <a href="#top"></a>
+     <a href="#about"></a>
+     <a href="#members"></a>
+     <a href="#contact" class="active"></a>
+ </span>
+ 
+     <div>
+ 
+ 
+ 
+ 
+ <!-- EDIT PART 6 : contact -->
+ 
+ <h1>contact</h1>
+ 
+ <p>Duis autem vel eum <a href="">iriure</a> dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+ 
+ <!-- ask form - replace YOURURLHERE with your url -->
+ <iframe frameborder="0" scrolling="no" src="https://www.tumblr.com/ask_form/YOURURLHERE.tumblr.com" style="background-color:transparent; overflow:hidden;max-width: 600px;width: 100%;min-width: 100px;" id="ask_form"></iframe><!--[if IE]><script type="text/javascript">document.getElementById('ask_form').allowTransparency=true;</script><![endif]-->
+ 
+ <nav>
+     <a href="#top">go to top</a>
+     <a>/</a>
+     <a href="https://cloudythms.tumblr.com/" target="_blank">theme</a>
+     <!-- DO NOT REMOVE THIS CREDIT! -->
+ </nav>
+ 
+     
+     </div>
+ 
+ 
+     
+ </section>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ </main>
+ <!-- -------------------------- SCRIPTS ---------------------------- -->
+   
+ <!-- jQuery -->	
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  
+ <!-- Fonts -->
+ <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i&amp;subset=latin-ext" rel="stylesheet"> 
+ <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet"> 
+ 
+ <!-- Smooth Scroll -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.1/SmoothScroll.min.js"></script>
+ <script>
+ $(document).ready(function(){
+   // Add smooth scrolling to all links
+   $("a").on('click', function(event) {
+ 
+     // Make sure this.hash has a value before overriding default behavior
+     if (this.hash !== "") {
+       // Prevent default anchor click behavior
+       event.preventDefault();
+ 
+       // Store hash
+       var hash = this.hash;
+ 
+       // Using jQuery's animate() method to add smooth page scroll
+       // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+       $('html, body').animate({
+         scrollTop: $(hash).offset().top
+       }, 800, function(){
+    
+         // Add hash (#) to URL when done scrolling (default click behavior)
+         window.location.hash = hash;
+       });
+     } // End if
+   });
+ });
+ </script>
+  
+ <!-- no tumblr redirect links -->
+ <script>
+ $(document).ready(function(){
+ //remove tumblr redirects script by magnusthemes@tumblr
+ $('a[href*="t.umblr.com/redirect"]').each(function(){
+   var originalURL = $(this).attr("href").split("?z=")[1].split("&t=")[0];
+   var replaceURL = decodeURIComponent(originalURL);
+   $(this).attr("href", replaceURL);
+ });
+ });
+ </script>
+     
+ <!-- Tooltips -->
+ <script src="https://static.tumblr.com/iuw14ew/VSQma1786/jquery.style-my-tooltips.js"></script>
+ <script>
+ (function($){
+ $(document).ready(function(){
+ $("a[title]").style_my_tooltips({
+ tip_follows_cursor:true,
+ tip_delay_time:30, /* put a higher number for more delay */
+ tip_fade_speed:400, /* put a higher number for a slower fade */
+ attribute:"title"
+ });
+ });
+ })(jQuery);
+ </script>
+ <style>
+ .tooltip{display: inline;
+ position: relative;}
+ #s-m-t-tooltip {
+     max-width:300px;
+     border-radius: 0px;
+     padding:3px 4px 5px 4px;
+     margin:20px 7px -2px 20px;
+     background-color:var(--overlay, white);
+     border:1px solid var(--accent1);
+     border-radius: 5px;
+     font-size:0.8em;
+     letter-spacing:0.5px;
+     text-transform:uppercase;
+     color:var(--text, black);
+     z-index:9999999999999999;
+ }
+ </style>
+ 
+ </body>
+ </html>

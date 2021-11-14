@@ -1,0 +1,316 @@
+<!-----------------------------------------------------------------------
+ 
+ 
+  {   cloudythms
+           redirect theme #1   }
+           
+         
+- https://cloudythms.tumblr.com/
+- visit me if you have questions!
+ 
+ 
+     .. rules
+     
+- You may move, but not remove the credit
+- Leave this comment
+- Edit the rest as much as you want
+- Do not redistribute without permission / use as base
+- Do not claim as your own
+
+ 
+---------------------------------------------------------------------->
+
+
+<!DOCTYPE html>
+<head>
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+{block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
+
+<!-- Text that appears on the tab / browser window
+    Change the {Title} to any text if you want to. -->
+<title>{Title}</title>
+ 
+<!-- Favicon (little image that shown in browser)
+    Change {Favicon} to your image URL. Leave the "". -->
+<link rel="shortcut icon" href="{Favicon}"/>
+ 
+<!-- jQuery -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+ 
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans|PT+Sans|PT+Serif" rel="stylesheet">
+ 
+ 
+<!-- ----------------------------- options ---------------------------- -->
+
+<meta name="image:Background Image" content="0"/>
+
+<meta name="color:Background" content="#f5f5f5" />
+<meta name="color:Text" content="#2b2b2b" />
+<meta name="color:Link" content="#427ea3" />
+<meta name="color:Link Hover" content="#084368" />
+<meta name="color:Image Border" content="#ffffff" />
+ 
+<meta name="select:Font" content="PT Sans" title="PT Sans">
+<meta name="select:Font" content="Open Sans" title="Open Sans">
+ 
+<meta name="if:Automatic Redirect" content="1"/>
+<meta name="if:Show Icon" content="1"/>
+<meta name="if:Question Mark Cursor" content="0"/>
+<meta name="if:Uppercase" content="0"/>
+<meta name="if:Hover Effect" content="1"/>
+
+<meta name="if:--- BACKGROUND ---" content="0"/>
+<meta name="if:Fixed Background Image" content="1"/>
+<meta name="if:Cover Background Image" content="1"/>
+<meta name="if:Repeat Background Image" content="0"/>
+ 
+<meta name="text:Old URL" content="oldurl"/>
+<meta name="text:New URL" content="newurl"/>
+<meta name="text:Text" content="has moved to"/>
+<meta name="text:Info text" content="click here if you're not automatically redirected"/>
+<meta name="text:Font Size" content="16px"/>
+<meta name="text:Redirect delay in ms" content="2000"/>
+<meta name="text:Distance from Top" content="12%"/>
+
+
+
+ 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.1/SmoothScroll.min.js"></script>
+
+<!-- --------------------------- tooltips -------------------------- -->
+
+<script src="https://static.tumblr.com/iuw14ew/VSQma1786/jquery.style-my-tooltips.js"></script>
+<script>
+    (function($){
+    $(document).ready(function(){
+    $("a[title]").style_my_tooltips({
+    tip_follows_cursor:true,
+     
+    /* Change your tooltip times here. */
+    tip_delay_time:30, /* put a higher number for more delay */
+    tip_fade_speed:400, /* put a higher number for a slower fade */
+    /* recommended: delay:10-100 fade:200-600 */
+     
+    attribute:"title"
+    });
+    });
+    })(jQuery);
+</script>
+<style>
+    .tooltip{
+        display: inline;
+        position: relative;
+    }
+    #s-m-t-tooltip {
+        max-width:300px;
+        border-radius: 0px;
+        padding:3px 4px 5px 4px;
+        margin:20px 7px -2px 20px;
+        background-color:#ffffff;
+        border:1px solid #E0E0E0;
+        border-radius: 5px 5px 5px 5px;
+        -moz-border-radius: 5px 5px 5px 5px;
+        -webkit-border-radius: 5px 5px 5px 5px;
+        font-family:calibri;
+        font-size:10px;
+        letter-spacing:1px;
+        color:#000;
+        z-index:999999999999999999999999999999999999;
+    }
+</style>
+
+<!-- --------------------------- redirection -------------------------- -->
+ 
+
+{block:IfAutomaticRedirect}
+<script>
+
+window.onload = function () { 
+     setTimeout( redirectTumblr, {text:Redirect delay in ms} );
+}
+
+function redirectTumblr() { 
+   location.replace('https://{text:new url}.tumblr.com' + location.pathname);
+} 
+ 
+</script> 
+{/block:IfAutomaticRedirect}
+
+
+
+<!-- ---------------------------------------------------------------- -->
+<!-- ----------------------- C S S - S T A R T ---------------------- -->
+<!-- ---------------------------------------------------------------- -->
+
+
+<style>
+
+body > iframe:first-child { display: none !important; }
+
+body {
+   
+    background-color:{color:background};
+    color:{color:text};  
+    font-family: "{select:Font}", Arial, sans-serif;
+    font-size: 11px;
+    text-align:justify;
+    margin:0;
+    line-height:16px;
+   
+   
+    /* background image */
+   
+    {block:IfBackgroundImage}
+    background-image:url({image:Background Image});
+    {/block:IfBackgroundImage}
+     
+    background-repeat: no-repeat;
+    {block:IfRepeatBackgroundImage}
+    background-repeat: repeat;
+    {/block:IfRepeatBackgroundImage}
+     
+    background-attachment:center;
+    {block:IfFixedBackgroundImage}
+    background-attachment:fixed;
+    {/block:IfFixedBackgroundImage}
+   
+    {block:IfCoverBackgroundImage}
+    background-size:cover;
+    {/block:IfCoverBackgroundImage}
+ 
+}
+
+::selection {
+  background: #CACACA;
+  color: #ffffff;
+}
+::-moz-selection {
+  background: #CACACA;
+  color: #ffffff;
+}
+
+a, a:visited, a:link, a:active {
+    color:{color:link};
+    text-decoration:none;
+}
+
+a:hover {
+    color:{color:link hover};
+    {block:IfQuestionMarkCursor}
+    cursor:help;
+    {/block:IfQuestionMarkCursor}
+}
+
+a, a:focus {   outline: 0; }
+
+#content {
+    margin:{text:distance from top} auto;
+    width:50%;
+    text-align:center;
+    max-height:100%;
+}
+
+.main {
+    font-size:{text:font size};
+    margin-bottom:15px;
+    display:inline-block;
+    {block:IfUppercase}
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+    word-spacing:1px;
+    {/block:IfUppercase}
+}
+
+.main a {
+    font-size:calc({text:font size} + 7px);
+    letter-spacing:0px;
+    
+    -moz-transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.5s;
+    -moz-transition-timing-function: ease-in-out;
+    -webkit-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+}
+
+.main a:hover{
+    {block:IfHoverEffect}
+    letter-spacing:3px;
+    {/block:IfHoverEffect}
+}
+
+.main br {
+    line-height:250%;
+}
+
+img{
+    display:block;
+    border:7px solid {color:image border};
+    border-radius: 50px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    margin:0 auto;
+    margin-bottom:20px;
+}
+
+.plus {
+    border-top:1px solid {color:text};
+    padding-top:10px;
+    font-size:calc({text:font size} - 7px);
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+    word-spacing:1px;
+}
+
+.plus a, .plus a:hover {
+    color:{color:text};
+}
+
+/*          more          */
+
+/* pastecsshere */
+
+{CustomCSS}
+
+</style>
+</head>
+<body>
+
+<!-- ---------------------------------------------------------------- -->
+<!-- ----------------------- H T M L - S T A R T -------------------- -->
+<!-- ---------------------------------------------------------------- -->
+<!-- pastehtmlhere -->
+
+<div id="content">
+
+
+<span class="main">
+
+{block:IfShowIcon}
+<a href="https://{text:New Url}.tumblr.com">
+<img src="{PortraitURL-48}"></a>
+{/block:IfShowIcon}
+
+{text:Old Url} {text:text}
+<br><a href="https://{text:New Url}.tumblr.com">{text:New Url}</a>
+    
+</span>
+
+{block:IfAutomaticRedirect}
+<span class="plus">
+<br><br><a href="https://{text:New Url}.tumblr.com">{text:info text}</a>
+</span>
+{/block:IfAutomaticRedirect}
+
+
+
+</div>
+
+<!-- credit link. you may move but not remove. -->
+<div style="position:fixed;bottom:10px;right:15px;font-size:12px;opacity:0.5;"><a href="https://cloudythms.tumblr.com/" title="theme by cloudythms"
+style="text-decoration:none;">☁</a></div>
+
+
+</body></html>

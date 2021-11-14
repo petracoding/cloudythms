@@ -1,0 +1,680 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="https://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><link rel="shortcut icon" href="{Favicon}"/><meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <!-----------------------------------------------------------------------
+    
+    
+           {   cloudythms
+                        birthday page 01    }
+              
+    
+                           by
+                cloudythms.tumblr.com
+          contact me if you have questions!
+    
+    
+   ......  rules  ......
+    
+   * edit as much as you want
+   * do not remove the credit
+   * do not steal parts of my codes
+   * do not redistribute or use as base
+    
+      
+   ......  guide  ......
+    
+   > HOW TO SEARCH
+      1. Make sure you have already clicked somewhere in the code
+      2. Press Ctrl and F
+      3. A little "search for" window should open
+      
+   > ADDING CONTENT:
+      Search for "edit from here",
+      you will be working between that line and "to here".
+      After the "to here" line there's a template to copy.
+      Follow the guide there.
+    
+   > CHANGING THE TEXT ON THE TAB IN YOUR BROWSER:
+      Search for "page title",
+      follow the guide there.
+    
+   > CHANGING HEADER TITLE/LINKS:
+      Search for "edit header here",
+      follow the guide there.
+      
+   > CHANGING THE COLORS/SIZES:
+     Search for "variables",
+     follow the guide there.
+     If you don't want to use specific colors for months,
+     search for "month colors" and follow the guide there.
+      
+   > SHOWING TUMBLR CONTROLS:
+      (Tumblr controls are the buttons on the top right corner
+      of blogs, like the follow, block, dashboard button etc.)
+      By default, my page themes have the tumblr controls hidden.
+      If you want them to show, search for "hide tumblr controls"
+      and delete the line below it.
+      
+    
+    
+   ......  credits  ......
+    
+   svg icons:          flaticon.com
+   icon font:          fontawesome / ionicons / linearicons
+   fonts:              fonts.google.com
+   tumblr controls:    @cyantists
+   smoothscroll:       @zacharyfury
+   tooltips:           @tutorial-baby
+    
+   full credits:       cloudythms.tumblr.com/credits
+   
+    
+   ---------------------------------------------------------------------->
+   
+   
+   <!-- Page Title
+   (Text that appears on the tab / browser window)
+   Change the text between <title> and </title>.
+   Write {Title} to let your blogtitle show. -->
+   <title>
+   Birthdays
+   </title>
+   
+   
+   
+   
+   <!-- Variables 
+   
+   COLORS:
+   Only change the color codes (after the : and before the ;)
+   Make sure there is one # before the hex code.
+   Example: --color-accent:#efefef;
+   You can also use "black" and "white".
+   Example: --color-background:white;
+   Get hex color codes here:
+   https://htmlcolorcodes.com/color-picker/
+    
+   OTHERS:
+   For the sizes, it should look like this: --fontSize:12px;
+   Change the number to your liking.
+   Example (smaller font): --fontSize:10px;
+   Example (bigger font): --fontSize:13px;
+   Make sure the : and px; are still there.
+   
+   --> <style>:root {
+       
+       --fontSize:13px;
+       
+       --color-background:white;
+       --color-text:black;
+       --color-link:black;
+       
+       /* this is the color that will be used for every
+          month that doesn't have an id like january, february, ... */
+       --color-accent:#b5f0a2;
+       
+   }
+   
+   
+   /* month colors
+   
+   Below you can change the color for each month.
+   
+   If you don't want to use specific colors for months,
+   delete the following code: */
+   
+   /* FROM HERE */
+   
+   #january    { --color-accent:#dca2f0; }
+   #february   { --color-accent:#ada2f0; }
+   #march      { --color-accent:#7d9aea; }
+   #april      { --color-accent:#a2d3f0; }
+   #may        { --color-accent:#a2f0e6; }
+   #june       { --color-accent:#a2f0bf; }
+   #july       { --color-accent:#b5f0a2; }
+   #august     { --color-accent:#dcf0a2; }
+   #september  { --color-accent:#f0dda2; }
+   #october    { --color-accent:#f0c2a2; }
+   #november   { --color-accent:#f0a2a2; }
+   #december   { --color-accent:#f0a2c2; }
+   
+   /* TO HERE */
+   
+   
+   
+   
+   </style>
+   <!-- ---------------------------------------------------------------- -->
+   <!-- ----------------------- C S S - S T A R T ---------------------- -->
+   <!-- ---------------------------------------------------------------- -->
+   <style type="text/css">
+   
+           
+   /* hide tumblr controls
+   (delete the line below if you want the controls to show) */
+   body > iframe:first-child { display: none !important; } 
+   
+           
+   /* ****************************** BASICS ****************************** */
+   
+   body {
+       padding:3%;
+       font-family:'Karla', 'Open Sans', sans-serif;
+       font-size:var(--fontSize, 12px);
+       color:var(--color-text,black);
+       background:var(--color-background,white);
+   }
+   
+   #wrapper {
+       display:block;
+       width:80%;
+       max-width:800px;
+   }
+   
+   .center {
+       position: absolute;
+       top:25vh;
+       left:50%;
+       -ms-transform: translateX(-50%) translateY(0%);
+       -webkit-transform: translate(-50%,0%);
+       transform: translate(-50%,0%);
+   }
+   
+   a, a:hover{
+       color:var(--color-link,black);
+   }
+   
+   a, a:focus {
+       outline: 0;
+       text-decoration:none;
+   }
+   
+   /* selections */
+   ::selection {
+     background: rgba(0,0,0,0.2);
+     color: white;
+   }
+   ::-moz-selection {
+     background: rgba(0,0,0,0.2);
+     color: white;
+   }
+   
+   /* custom scrollbar */
+   ::-webkit-scrollbar-thumb:vertical {
+   background-color:rgba(0,0,0,0.2);
+   height:100px;
+   border-radius:15px;
+   }
+   ::-webkit-scrollbar-thumb:horizontal {
+   background-color:rgba(0,0,0,0.2);
+   height:100px !important;
+   }
+   ::-webkit-scrollbar {
+   height:10px;
+   width:10px;
+   background-color:transparent;
+   }
+   
+   /* tumblr controls */
+    iframe.tmblr-iframe {
+       z-index:99999999999999!important;
+       top:0!important;
+       right:0!important;
+       opacity:0.3;
+           filter:invert(1) contrast(150%);
+           -webkit-filter:invert(1) contrast(150%);
+           -o-filter:invert(1) contrast(150%);
+           -moz-filter:invert(1) contrast(150%);
+           -ms-filter:invert(1) contrast(150%);
+       transform:scale(0.65);
+       transform-origin:100% 0;
+       -webkit-transform:scale(0.65);
+       -webkit-transform-origin:100% 0;
+       -o-transform:scale(0.65);
+       -o-transform-origin:100% 0;
+       -moz-transform:scale(0.65);
+       -moz-transform-origin:100% 0;
+       -ms-transform:scale(0.65);
+       -ms-transform-origin:100% 0;
+        transition:1s ease;
+        -o-transition:1s ease;
+        -moz-transition:1s ease;
+        -webkit-transition:1s ease;
+    }
+   iframe.tmblr-iframe:hover {
+       opacity:0.6!important;}
+   .tmblr-iframe--app-cta-button {
+       display: none!important;
+   }
+   
+   /* ************************** HEADER ************************** */
+   
+   header {
+       margin-bottom:5vh;
+   }
+   
+   header h1 {
+       margin-bottom:0;
+       font-weight:normal;
+   }
+   
+   nav {
+       
+   }
+   
+   nav a {
+       display:inline-block;
+       margin-right:5px;
+       border-bottom:1px solid transparent;
+   }
+   
+   nav a:hover {
+       border-bottom:1px solid;
+   }
+   
+   
+   /* ************************** CONTENT ************************** */
+   
+   main {
+       
+   }
+   
+   section {
+       
+   }
+   @media only screen and (min-width: 800px) {
+   section {
+       column-count: 2;
+       column-gap: 100px;
+   }
+   } 
+   
+   
+   .month {
+       margin-bottom:20px;
+       
+       /* do not break month */
+       overflow: hidden; 
+       -webkit-column-break-inside: avoid; 
+       page-break-inside: avoid; 
+       break-inside: avoid; 
+       break-inside: avoid-column;
+   }
+    
+   .month h1 {
+       font-size: 1.3em;
+       font-weight: normal;
+       position:relative;
+       left:30px;
+   }
+   .month h1:before {
+       content: '\f073';
+       font-family: FontAwesome;
+       position: absolute;
+       left: -23px;
+       top: 4px;
+       vertical-align: middle;
+       font-size: 0.8em;
+       color:var(--color-accent);
+   }
+    
+   .month ol {
+     list-style-type:none;
+     padding-left:0;
+     border-radius:7px;
+     border:2px solid var(--color-accent);
+   }
+    
+   .month li {
+       padding:15px;
+       padding-left:0;
+       border-bottom:2px solid var(--color-accent);
+       position:relative;
+       min-height: 15px;
+   }
+    
+   .month li:last-child {
+       border:0;
+   }
+    
+    
+    
+   .month .left {
+       background-color: var(--color-accent);
+       width:50px;
+       text-align:center;
+       font-weight:bold;
+       position: absolute;
+       height: 103%;
+       line-height: 370%;
+      
+         top: 49%;
+         -webkit-transform: translate(0%, -50%);
+         -ms-transform: translate(0%, -50%);
+         transform: translate(0%, -50%);
+   }
+    
+   .month .right {
+       margin-top:-3px;
+       margin-left:60px;
+   }
+    
+   .month .right a {
+       display:inline-block;
+       margin-right:10px;
+       border-bottom:2px solid transparent;
+       transition:0.3s;
+       color:black;
+       padding-top: 4px;
+   }
+    
+   .month .right a:hover {
+       border-bottom:2px solid var(--color-accent);
+   }
+   
+   
+   
+    
+   </style>
+   </head>
+   <!-- ---------------------------------------------------------------- -->
+   <!-- ------------------------ HTML - S T A R T ---------------------- -->
+   <!-- ---------------------------------------------------------------- -->
+   <body><div id="wrapper" class="center">
+   <header>
+   
+   
+   <!--- edit header here ---->
+   
+   <h1>birthdays</h1>
+   <nav>
+       <a href="/">home</a>
+       <a href="/ask">contact</a>
+       <a href="/archive">archive</a>
+   </nav>
+   
+       
+       
+       
+       
+   </header><main><section>
+   <!-- ----------------------- EDIT FROM HERE ------------------------- -->
+   
+   
+   
+   
+   <!------------- start of month ------------->
+   <div class="month" id="january"><h1>january</h1><ol>
+   <li><div class="left">01.</div><div class="right">
+       <a href="LINK"
+      title="additional info">name</a>
+       <a href="LINK"
+      title="additional info">name</a>
+   </div></li>
+   <li><div class="left">02.</div><div class="right">
+       <a href="LINK"
+      title="additional info">name</a>
+       <a href="LINK"
+      title="additional info">name</a>
+       <a href="LINK"
+      title="additional info">name</a>
+       <a href="LINK"
+      title="additional info">name</a>
+       <a href="LINK"
+      title="additional info">name</a>
+       <a href="LINK"
+      title="additional info">name</a>
+       <a href="LINK"
+      title="additional info">name</a>
+       <a href="LINK"
+      title="additional info">name</a>
+   </div></li>
+   </ol></div>
+   <!------------- end of month ------------->
+      
+   <!------------- start of month ------------->
+   <div class="month" id="february"><h1>february</h1><ol>
+   <li><div class="left">01.</div><div class="right">
+       <a href="LINK"
+       title="additional info">name</a>
+   </div></li>
+   </ol></div>
+   <!------------- end of month ------------->
+      
+   <!------------- start of month ------------->
+   <div class="month" id="march"><h1>march</h1><ol>
+   <li><div class="left">01.</div><div class="right">
+       <a href="LINK"
+       title="additional info">name</a>
+   </div></li>
+   </ol></div>
+   <!------------- end of month ------------->
+   
+   <!------------- start of month ------------->
+   <div class="month" id="april"><h1>april</h1><ol>
+   <li><div class="left">01.</div><div class="right">
+       <a href="LINK"
+       title="additional info">name</a>
+   </div></li>
+   </ol></div>
+   <!------------- end of month ------------->
+   
+   <!------------- start of month ------------->
+   <div class="month" id="may"><h1>may</h1><ol>
+   <li><div class="left">01.</div><div class="right">
+       <a href="LINK"
+       title="additional info">name</a>
+   </div></li>
+   </ol></div>
+   <!------------- end of month ------------->
+   
+   <!------------- start of month ------------->
+   <div class="month" id="june"><h1>june</h1><ol>
+   <li><div class="left">01.</div><div class="right">
+       <a href="LINK"
+       title="additional info">name</a>
+   </div></li>
+   </ol></div>
+   <!------------- end of month ------------->
+   
+   <!------------- start of month ------------->
+   <div class="month" id="july"><h1>july</h1><ol>
+   <li><div class="left">01.</div><div class="right">
+       <a href="LINK"
+       title="additional info">name</a>
+   </div></li>
+   </ol></div>
+   <!------------- end of month ------------->
+   
+   <!------------- start of month ------------->
+   <div class="month" id="august"><h1>august</h1><ol>
+   <li><div class="left">01.</div><div class="right">
+       <a href="LINK"
+       title="additional info">name</a>
+   </div></li>
+   </ol></div>
+   <!------------- end of month ------------->
+   
+   <!------------- start of month ------------->
+   <div class="month" id="september"><h1>september</h1><ol>
+   <li><div class="left">01.</div><div class="right">
+       <a href="LINK"
+       title="additional info">name</a>
+   </div></li>
+   </ol></div>
+   <!------------- end of month ------------->
+   
+   <!------------- start of month ------------->
+   <div class="month" id="october"><h1>october</h1><ol>
+   <li><div class="left">01.</div><div class="right">
+       <a href="LINK"
+       title="additional info">name</a>
+   </div></li>
+   </ol></div>
+   <!------------- end of month ------------->
+   
+   <!------------- start of month ------------->
+   <div class="month" id="november"><h1>november</h1><ol>
+   <li><div class="left">01.</div><div class="right">
+       <a href="LINK"
+       title="additional info">name</a>
+   </div></li>
+   </ol></div>
+   <!------------- end of month ------------->
+   
+   <!------------- start of month ------------->
+   <div class="month" id="december"><h1>december</h1><ol>
+   <li><div class="left">01.</div><div class="right">
+       <a href="LINK"
+       title="additional info">name</a>
+   </div></li>
+   </ol></div>
+   <!------------- end of month ------------->
+   
+   
+   
+   
+   <!-- -------------------------- TO HERE ----------------------------- 
+   
+   
+       *** how to add months: ***
+   1. copy one of the following blocks of code and
+      paste it between "edit from here" and "to here".
+   2. change the id to any month (english names),
+      or do not set an id at all (it will become the default color),
+      like this: id=""
+   3. change the title to whatever you want
+      (inbetween <h1> and </h1>)
+   4. now add days and/or names
+   
+      *** how to add days: ***
+      Copy the entire code between (and including) <li> and </li>
+      and copy it below. Then change the number of the day.
+      (See third example below)
+      
+      *** how to add names: ***
+      Copy the entire code between (and including) <a> and </a>
+      and copy it below. (See second example below)
+      Then you will need to change the info:
+      - Link: Replace LINK with the link to their blog/website/...
+      - Additional Info: Replace this with any info you want to give
+        about the person, for example age, pronouns, ...
+        If you don't want this, remove the whole title="..."
+      - Name: Replace name with the name/username of the person.
+      
+      Example:
+      <a href="https://cloudythms.tumblr.com/"
+       title="made this theme">cloudythms</a>
+   
+       
+   
+   
+   
+   EXAMPLE: one day, one name
+   
+   <div class="month" id="january"><h1>january</h1><ol>
+   <li><div class="left">01.</div><div class="right">
+       <a href="LINK"
+       title="additional info">name</a>
+   </div></li>
+   </ol></div>
+   
+   
+   EXAMPLE: one day, two names
+   
+   <div class="month" id="january"><h1>january</h1><ol>
+   <li><div class="left">01.</div><div class="right">
+       <a href="LINK"
+       title="additional info">name</a>
+       <a href="LINK"
+       title="additional info">name</a>
+   </div></li>
+   </ol></div>
+   
+   
+   EXAMPLE: two days, each one name
+   
+   <div class="month" id="january"><h1>january</h1><ol>
+   <li><div class="left">01.</div><div class="right">
+       <a href="LINK"
+       title="additional info">name</a>
+   </div></li>
+   <li><div class="left">02.</div><div class="right">
+       <a href="LINK"
+       title="additional info">name</a>
+   </div></li>
+   </ol></div>
+   
+   
+   
+   
+   --></section><div style="height:100px"></div></main></div>
+   
+   
+   <!-- ---------- credit ---------- -->
+   <!-- credit link. you may move but not remove. -->
+   <link href="https://static.tumblr.com/tpbx7ye/yiLpc9kpz/cloudythms.css" rel="stylesheet"><style>#credit { opacity:0.5; }</style>
+   <div id="credit"><a href="https://cloudythms.tumblr.com/">
+   <i class="far fa-copyright"></i></a></div>
+   
+   
+   <!-- -------------------------- SCRIPTS ---------------------------- -->
+       
+   <!-- jQuery -->	
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    
+   <!-- Fonts -->
+   <link href="https://fonts.googleapis.com/css?family=Fira+Mono|Lora|Open+Sans|Roboto|Roboto+Mono|Roboto+Slab|Karla&amp;subset=latin-ext" rel="stylesheet">
+    
+   <!-- FontAwesome -->
+   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    
+   <!-- Smooth Scroll -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.1/SmoothScroll.min.js"></script>
+    
+   <!-- no tumblr redirect links -->
+   <script>
+   $(document).ready(function(){
+   //remove tumblr redirects script by magnusthemes@tumblr
+   $('a[href*="t.umblr.com/redirect"]').each(function(){
+     var originalURL = $(this).attr("href").split("?z=")[1].split("&t=")[0];
+     var replaceURL = decodeURIComponent(originalURL);
+     $(this).attr("href", replaceURL);
+   });
+   });
+   </script>
+       
+   <!-- Tooltips -->
+   <script src="https://static.tumblr.com/iuw14ew/VSQma1786/jquery.style-my-tooltips.js"></script>
+   <script>
+   (function($){
+   $(document).ready(function(){
+   $("a[title]").style_my_tooltips({
+   tip_follows_cursor:true,
+   tip_delay_time:30, /* put a higher number for more delay */
+   tip_fade_speed:400, /* put a higher number for a slower fade */
+   attribute:"title"
+   });
+   });
+   })(jQuery);
+   </script>
+   <style>
+   .tooltip{display: inline;
+   position: relative;}
+   #s-m-t-tooltip {
+       max-width:300px;
+       border-radius: 0px;
+       padding:3px 4px 5px 4px;
+       margin:20px 7px -2px 20px;
+       background-color:var(--color-background,white);
+       border:1px solid #E0E0E0;
+       border-radius: 5px;
+       font-size:0.8em;
+       letter-spacing:0.5px;
+       text-transform:uppercase;
+       color:var(--color-text,black);
+       z-index:9999999999999999;
+   }
+   </style>
+   
+   </body>
+   </html>

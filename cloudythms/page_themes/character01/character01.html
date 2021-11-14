@@ -1,0 +1,794 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="https://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><link rel="shortcut icon" href="{Favicon}"/><meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+ 
+  <!-----------------------------------------------------------------------
+  
+  
+         {   cloudythms
+                      character page 01    }
+            
+  
+                         by
+              cloudythms.tumblr.com
+        contact me if you have questions!
+  
+  
+ ......  rules  ......
+  
+ * edit as much as you want
+ * do not remove the credit
+ * do not steal parts of my codes
+ * do not redistribute or use as base
+  
+    
+ ......  guide  ......
+  
+ > HOW TO SEARCH
+    1. Make sure you have already clicked somewhere in the code
+    2. Press Ctrl and F
+    3. A little "search for" window should open
+    
+ > ADDING/EDITING CHARACTERS:
+    Search for "edit from here",
+    you will be working between that line and "to here".
+    After the "to here" line there's a template to copy.
+    Follow the guide there.
+  
+ > CHANGING THE TEXT ON THE TAB IN YOUR BROWSER:
+    Search for "page title",
+    follow the guide there.
+  
+ > CHANGING SIDEBAR:
+    Search for "edit sidebar here",
+    follow the guide there.
+    
+ > CHANGING THE COLORS/SIZES:
+   Search for "variables",
+   follow the guide there.
+  
+  
+ ......  credits  ......
+  
+ icon font:          linearicons
+ fonts:              fonts.google.com
+ tumblr controls:    @cyantists
+ smoothscroll:       @zacharyfury
+ tooltips:           @tutorial-baby
+ full credits:       cloudythms.tumblr.com/credits
+ 
+ ---------------------------------------------------------------------->
+ 
+ 
+ <!-- Page Title
+ (Text that appears on the tab / browser window)
+ Change the text between <title> and </title>.
+ Write {Title} to let your blogtitle show. -->
+ <title>
+ Characters
+ </title>
+ 
+ 
+ 
+ 
+ <!-- Variables 
+ 
+ COLORS:
+ Only change the color codes (after the : and before the ;)
+ Make sure there is one # before the hex code.
+ Example: --color-accent:#efefef;
+ You can also use "black" and "white".
+ Example: --color-background:white;
+ Get hex color codes here:
+ https://htmlcolorcodes.com/color-picker/
+  
+ OTHERS:
+ For the sizes, it should look like this: --fontSize:12px;
+ Change the number to your liking.
+ Example (smaller font): --fontSize:10px;
+ Example (bigger font): --fontSize:13px;
+ Make sure the : and px; are still there.
+ 
+ --> <style>:root {
+     
+     --fontSize:12px;
+     
+     --sidebarWidth:250px;
+     --sidebarImage:150px;
+     
+     --color-background:#efefef;
+     --color-contentBackground:white;
+     --color-text:black;
+     --color-accent:#61D19B;
+     
+ }</style>
+ 
+ 
+ 
+ 
+ <!-- ---------------------------------------------------------------- -->
+ <!-- ----------------------- C S S - S T A R T ---------------------- -->
+ <!-- ---------------------------------------------------------------- -->
+ <style type="text/css">
+ 
+ 
+ /* tumblr controls */
+  iframe.tmblr-iframe {
+     z-index:99999999999999!important;
+     top:-2px!important;
+     right:0!important;
+     opacity:0;
+     padding-right:38px; 
+     filter:invert(1) contrast(150%);
+     -webkit-filter:invert(1) contrast(150%);
+     -o-filter:invert(1) contrast(150%);
+     -moz-filter:invert(1) contrast(150%);
+     -ms-filter:invert(1) contrast(150%);
+     transform:scale(0.65);
+     transform-origin:100% 0;
+     -webkit-transform:scale(0.65);
+     -webkit-transform-origin:100% 0;
+     -o-transform:scale(0.65);
+     -o-transform-origin:100% 0;
+     -moz-transform:scale(0.65);
+     -moz-transform-origin:100% 0;
+     -ms-transform:scale(0.65);
+     -ms-transform-origin:100% 0;
+      -webkit-transition:0.5s ease;
+      -o-transition:0.5s ease;
+      -moz-transition:0.5s ease;
+      transition:0.5s ease;
+  }
+ 
+ iframe.tmblr-iframe:hover {
+     opacity:0.3!important;}
+ 
+ .hcontrols {
+     position:fixed;
+     top:0;
+     right:0;
+     z-index:999999999;}
+ 
+ .hcontrols svg {
+     width:14px;
+     height:14px;
+     padding:9px;}
+ 
+ .hcontrols svg path {
+     fill:#888888;
+ } 
+     
+ /* ****************************** BASICS ****************************** */
+ 
+ body {
+     padding:3%;
+     font-family:'Rubik', sans-serif;
+     font-size:var(--fontSize, 12px);
+     color:var(--color-text,black);
+     background:var(--color-background,white);
+ }
+ 
+ .center {
+     position: absolute;
+     top:25vh;
+     left:50%;
+     -ms-transform: translateX(-50%) translateY(0%);
+     -webkit-transform: translate(-50%,0%);
+     -moz-transform: translate(-50%,0%);
+       -o-transform: translate(-50%,0%);
+          transform: translate(-50%,0%);
+ }
+ 
+ a, a:hover{
+     color:var(--color-accent,black);
+ }
+ 
+ a, a:focus {
+     outline: 0;
+     text-decoration:none;
+ }
+ 
+ /* selections */
+ ::-moz-selection {
+   background: rgba(0,0,0,0.3);
+   color: white;
+ }
+ ::selection {
+   background: rgba(0,0,0,0.3);
+   color: white;
+ }
+ ::-moz-selection {
+   background: rgba(0,0,0,0.3);
+   color: white;
+ }
+ 
+ /* custom scrollbars */
+ article ::-webkit-scrollbar-thumb:vertical {
+ background-color:var(--color-accent, #efefef);
+ height:100px;
+ -webkit-border-radius:15px;
+         border-radius:15px;
+ }
+ article ::-webkit-scrollbar-thumb:horizontal {
+ background-color:var(--color-accent, #efefef);
+ height:100px !important;
+ }
+ article ::-webkit-scrollbar {
+ height:5px;
+ width:5px;
+ background-color:transparent;
+ }
+ 
+ /* ************************** SIDEBAR ************************** */
+ 
+ 
+ aside {
+     background:var(--color-contentBackground);
+     position:fixed;
+     top:0;
+     left:0;
+     z-index:1;
+     height:100vh;
+     width:var(--sidebarWidth, 200px);
+     -webkit-box-sizing:border-box;
+        -moz-box-sizing:border-box;
+             box-sizing:border-box;
+     padding:2em;
+     border-right:3px solid var(--color-accent, transparent);
+ }
+ 
+ aside * {
+     margin:0 auto;
+ }
+ 
+ aside > :first-child {
+     margin-top:10vh;
+ }
+ 
+ .s-image {
+     margin-bottom:5vh;
+ }
+ .s-image, .s-image img {
+     width:var(--sidebarImage, 150px);
+     height:var(--sidebarImage, 150px);
+     -webkit-border-radius:50%;
+             border-radius:50%;
+ }
+ 
+ .s-description {
+     margin-bottom:3vh;
+     line-height:160%;
+     text-align:justify;
+     opacity:0.8;
+     font-style:italic;
+     padding:0.5em;
+ }
+ 
+ .s-links, .s-filters {
+     margin-bottom:3vh;
+     text-align:center;
+     line-height: 150%;
+ }
+ .s-links a, .s-filters a {
+     display:inline-block;
+     margin-left:0.3em;
+     margin-right:0.3em;
+     border-bottom:1px solid transparent;
+     color:var(--color-accent);
+     -webkit-transition:0.3s ease;
+     -o-transition:0.3s ease;
+     -moz-transition:0.3s ease;
+     transition:0.3s ease;
+ }
+ .s-links a:hover, .s-filters a:hover {
+     border-bottom:1px solid;
+ }
+ 
+ .s-filters a {
+     cursor:help;
+ }
+ .s-filters a.active {
+     font-weight:bold;
+ }
+ .s-filters b {
+     font-weight:normal;
+     color:gray;
+     font-style:italic;
+ }
+ .s-filters .lnr {
+     display: inline-block;
+     margin-top: -1.5px;
+     margin-right: 0.3em;
+     font-size: 1.4em;
+     vertical-align: middle;
+     color: var(--color-accent, black);
+ }
+ 
+ /* ************************** LAYOUT ************************** */
+ 
+ 
+ main {
+     position:absolute;
+     left:var(--sidebarWidth, 200px);
+     top:0;
+     width:-webkit-calc(100% - var(--sidebarWidth, 200px));
+     width:-moz-calc(100% - var(--sidebarWidth, 200px));
+     width:calc(100% - var(--sidebarWidth, 200px));
+     max-width:-webkit-calc(3 * 450px);
+     max-width:-moz-calc(3 * 450px);
+     max-width:calc(3 * 450px);
+ }
+ 
+ section {
+     display:-webkit-box;
+     display:-webkit-flex;
+     display:-moz-box;
+     display:-ms-flexbox;
+     display:flex;
+     
+     -webkit-box-orient:horizontal;
+     -webkit-box-direction:normal;
+     -webkit-flex-flow:row wrap;
+        -moz-box-orient:horizontal;
+        -moz-box-direction:normal;
+         -ms-flex-flow:row wrap;
+             flex-flow:row wrap;
+             
+     -webkit-box-pack:start;
+     -webkit-justify-content:flex-start;
+        -moz-box-pack:start;
+         -ms-flex-pack:start;
+             justify-content:flex-start;
+             
+     -webkit-align-content:flex-start;
+         -ms-flex-line-pack:start;
+             align-content:flex-start;
+             
+     -webkit-box-align:stretch;
+     -webkit-align-items:stretch;
+        -moz-box-align:stretch;
+         -ms-flex-align:stretch;
+             align-items:stretch;
+             
+     padding:2%;
+ }
+ 
+ article {
+     -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+             box-sizing: border-box;
+     border:1px solid var(--color-accent);
+     -webkit-border-radius: 6px;
+             border-radius: 6px;
+     padding:1.5%;
+     margin: 1.8%;
+     width:450px;
+     height:350px;
+     overflow: hidden;
+     background:var(--color-contentBackground);
+ }
+ 
+ /* ************************** CHARACTER ************************** */
+ 
+ 
+ .c-top {
+     overflow:hidden;
+     height:50%;
+ }
+ 
+ .c-image {
+     float:left;
+ }
+ .c-image, .c-image img {
+     width:150px;
+     height:150px;
+     -webkit-border-radius: 4%;
+             border-radius: 4%;
+ }
+ 
+ .c-title {
+     font-weight:500;
+     font-size: 2.3em;
+     text-align: center;
+     margin: 0.5em 0.3em 0.25em 0;
+     line-height: 100%;
+     width: 100%;
+     min-height: 25%;
+     color:var(--color-accent);
+ }
+ .c-title a {
+     margin: 0;
+     -webkit-transition:0.3s ease-in;
+     -o-transition:0.3s ease-in;
+     -moz-transition:0.3s ease-in;
+     transition:0.3s ease-in;
+     border-bottom:1px solid transparent;
+ }
+ .c-title a[href]:hover {
+     border-bottom:1px solid;
+ }
+ 
+ .c-facts {
+     display:table;
+     margin: 0 auto;
+     line-height:150%;
+     overflow-y:auto;
+     overflow-x:hidden;
+     font-style:italic;
+     font-size:1.1em;
+     padding:0em 0.5em 0 1em;
+     letter-spacing: -0.05em;
+     min-width: 55%;
+ }
+ .c-facts tr td {
+     /*width:25%;*/
+ }
+ .c-facts tr td:nth-of-type(2){
+     padding-right:1.5em;
+ }
+ .c-facts tr td:nth-of-type(odd){ /* key */
+     text-align:left;
+     padding-right:0.5em;
+     color:var(--color-accent);
+     font-style:normal;
+ }
+ .c-facts tr td:nth-of-type(even){ /* value */
+     text-align:right;
+     padding-left:0em;
+     opacity:0.8;
+     line-height: 90%;
+ }
+ 
+ .c-description {
+     clear:both;
+     overflow-y:auto;
+     height:54%;
+     -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+             box-sizing: border-box;
+     padding-right:1em;
+     border: 1.1em solid transparent;
+     word-spacing: 0.1em;
+     text-align: justify;
+     line-height: 150%;
+ }
+ .c-description b{
+     font-weight:500;
+     color:var(--color-accent);
+ }
+ .c-description i{
+     color:var(--color-accent);
+ }
+ .c-description u, .c-description a {
+     text-decoration:none;
+     border-bottom:1px solid;
+     -webkit-transition:0.4s ease;
+     -o-transition:0.4s ease;
+     -moz-transition:0.4s ease;
+     transition:0.4s ease;
+ }
+ .c-description a:hover {
+     color:var(--color-accent);
+     border-bottom:1px solid transparent;
+ }
+ 
+ /* ************************** MOBILE ************************** */
+ 
+ 
+ .tmblr-iframe--app-cta-button { display: none!important; }
+ @media only screen and (max-width: 768px) {
+     body > iframe:first-child { display: none !important; } 
+     .hcontrols { display: none !important; } 
+     
+     aside {
+         min-height:100px;
+         height: auto;
+         width:100%;
+         padding:1em;
+         border-right:none;
+         border-bottom:3px solid var(--color-accent, transparent);
+         overflow:hidden;
+     }
+     .s-description {
+         margin-bottom:0;
+     }
+     .s-image, .s-filters {
+         display:none;
+     }
+     .s-links a {
+         margin-left:0.5em;
+         margin-right:0.5em;
+     }
+     main {
+         left:0;
+         top:100px;
+         width:100%;
+         margin: 0 auto;
+         position: relative;
+     }
+     section {
+         -webkit-box-pack:center;
+         -webkit-justify-content:center;
+            -moz-box-pack:center;
+             -ms-flex-pack:center;
+                 justify-content:center;
+     }
+     article {
+         margin: 5%;
+     }
+     .c-top {
+         height:auto;
+     }
+     .c-title {
+         font-size: 1.75em;
+         height: 75px;
+     }
+     .c-title a {
+         display: block;
+         -webkit-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+             -ms-transform: translateY(-50%);
+              -o-transform: translateY(-50%);
+                 transform: translateY(-50%);
+         position: relative;
+         top: 47%;
+         border:none;
+     }
+     .c-title a[href]:hover {
+         border:none;
+         text-decoration:underline;
+     }
+     .c-image, .c-image img {
+         width:75px;
+         height:75px;
+         padding:2.5%;
+     }
+     .c-facts {
+         clear: both;
+         width: 100%;
+     }
+     .c-description {
+         height:50%;
+     }
+ }
+ 
+  
+ </style>
+ <link href="https://fonts.googleapis.com/css?family=Fira+Mono:400,500,700|Rubik:400,400i,500,500i,700,700i|Source+Code+Pro:400,500,600,700&amp;subset=latin-ext" rel="stylesheet"> 
+ </head>
+ <!-- ---------------------------------------------------------------- -->
+ <!-- ------------------------ HTML - S T A R T ---------------------- -->
+ <!-- ---------------------------------------------------------------- -->
+ <body>
+ <aside>
+ 
+ <!-- edit sidebar here -->
+ 
+ <!--- sidebar image ---->
+ <!-- change the placeholder link to any image link.
+ the image is automatically resized to 150x150.
+ remove all 3 lines if you don't want one. -->
+ <div class="s-image">
+     <img src="https://via.placeholder.com/150">
+ </div>
+ 
+ 
+ <!--- sidebar description ---->
+ <!-- Use <br> for a new line -->
+ <div class="s-description">
+     This is where your description goes. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor.
+ </div>
+ 
+ 
+ <!--- sidebar links ---->
+ <!-- <a href="YOURLINKHERE">displayed text</a> -->
+ <div class="s-links">
+     <a href="/">home</a>
+     <a href="/ask">inbox</a>
+     <a href="/archive">archive</a>
+     <a href="LINK">custom link</a>
+ </div>
+ 
+ 
+ <!--- sidebar filters ---->
+ <!-- <a class="f">TAG</a>
+      whereas TAG matches the tag you use in the character codes below.
+      leave the "all" filter. you can change its display text ("all") 
+ If you don't want filters, delete the whole block. -->
+ <div class="s-filters">
+     <span class="lnr lnr-funnel"></span>
+     <a class="f active" id="f-all">all</a>
+     <a class="f">child</a>
+     <a class="f">adult</a>
+ </div>
+ 
+ 
+     
+     
+ </aside><main><section>
+ <!-- ----------------------- EDIT FROM HERE ------------------------- -->
+ 
+ 
+ 
+ <!-- start of character -->
+ <article class="write tags here">
+     <div class="c-top">
+     <div class="c-image">
+         <img src="https://via.placeholder.com/150">
+     </div>
+     <div class="c-title">
+         <a href="#">firstname lastname</a>
+     </div>
+     <table class="c-facts">
+         <tr><td>fact</td>   <td>value</td>
+             <td>fact</td>   <td>value</td></tr>
+         <tr><td>fact</td>   <td>value</td>
+             <td>fact</td>   <td>value</td></tr>
+         <tr><td>fact</td>   <td>value</td>
+             <td>fact</td>   <td>value</td></tr>
+     </table>
+     </div>
+     <div class="c-description">
+ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Some <b>bold text</b> and <i>italic text</i> and <u>underlined</u> and <a href="#">links</a> as well.
+     </div>
+ </article>
+ <!--- end of character --->
+ 
+ 
+ 
+ <!-- -------------------------- TO HERE ----------------------------- 
+ 
+ 
+     *** how to add a character: ***
+     
+     copy the following block of code and
+     paste it between "edit from here" and "to here".
+     type in the name, facts, and description.
+     (the facts should be short, otherwise they do not show up)
+     
+     paste the image link instead of "IMAGELINK".
+       (images are 150x150, automatically resized)
+     
+     if you want your character to link to something,
+     paste the link url instead of "LINK".
+       if you DON'T want your character to link to something,
+     remove the href="LINK" from the code. it will look like this:
+     <a>character name</a>
+     
+     to give your character tags, type them in "your tags here".
+     examples:
+       a favorite:                 <article class="fav">
+       a female child character:   <article class="child female">
+       a character without tags:   <article class="">
+     to utilize these tags, use the filters in the sidebar.
+         
+ 
+ 
+ 
+     *** code template: ***
+     
+     
+ <article class="write tags here">
+     <div class="c-top">
+     <div class="c-image">
+         <img src="https://via.placeholder.com/150">
+     </div>
+     <div class="c-title">
+         <a href="#">firstname lastname</a>
+     </div>
+     <table class="c-facts">
+         <tr><td>fact</td>   <td>value</td>
+             <td>fact</td>   <td>value</td></tr>
+         <tr><td>fact</td>   <td>value</td>
+             <td>fact</td>   <td>value</td></tr>
+         <tr><td>fact</td>   <td>value</td>
+             <td>fact</td>   <td>value</td></tr>
+     </table>
+     </div>
+     <div class="c-description">
+ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Some <b>bold text</b> and <i>italic text</i> and <u>underlined</u> and <a href="#">links</a> as well.
+     </div>
+ </article>
+ 
+ 
+ 
+ 
+ (If you want less rows of facts, it would look like this:)
+         <tr><td>fact</td>   <td>value</td>
+             <td>fact</td>   <td>value</td></tr>
+         <tr><td>fact</td>   <td>value</td>
+             <td>fact</td>   <td>value</td></tr>
+ 
+ 
+ 
+ --></section><div style="height:10vh"></div></main>
+ 
+ 
+ <!-- ---------- credit ---------- -->
+ <!-- credit link. you may move but not remove. -->
+ <link href="https://static.tumblr.com/tpbx7ye/yiLpc9kpz/cloudythms.css" rel="stylesheet"><style>#credit { opacity:0.5; }</style>
+ <div id="credit"><a href="https://cloudythms.tumblr.com/">
+ <i class="far fa-copyright"></i></a></div>
+ 
+ 
+ <!-- -------------------------- SCRIPTS ---------------------------- -->
+   
+ <!-- jQuery -->	
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+ 
+ <!-- FontAwesome -->
+ <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+ 
+ <!-- Linearicons -->
+ <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+  
+ <!-- Smooth Scroll -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.1/SmoothScroll.min.js"></script>
+  
+ <!-- no tumblr redirect links -->
+ <script>
+ $(document).ready(function(){
+ //remove tumblr redirects script by magnusthemes@tumblr
+ $('a[href*="t.umblr.com/redirect"]').each(function(){
+   var originalURL = $(this).attr("href").split("?z=")[1].split("&t=")[0];
+   var replaceURL = decodeURIComponent(originalURL);
+   $(this).attr("href", replaceURL);
+ });
+ });
+ </script>
+     
+ <!-- Tooltips -->
+ <script src="https://static.tumblr.com/iuw14ew/VSQma1786/jquery.style-my-tooltips.js"></script>
+ <script>
+ (function($){
+ $(document).ready(function(){
+ $("a[title]").style_my_tooltips({
+ tip_follows_cursor:true,
+ tip_delay_time:30, /* put a higher number for more delay */
+ tip_fade_speed:400, /* put a higher number for a slower fade */
+ attribute:"title"
+ });
+ });
+ })(jQuery);
+ </script>
+ <style>
+ .tooltip{display: inline;
+ position: relative;}
+ #s-m-t-tooltip {
+     max-width:300px;
+     border-radius: 0px;
+     padding:3px 4px 5px 4px;
+     margin:20px 7px -2px 20px;
+     background-color:var(--color-background,white);
+     border:1px solid #E0E0E0;
+     border-radius: 5px;
+     font-size:0.8em;
+     letter-spacing:0.5px;
+     text-transform:uppercase;
+     color:var(--color-text,black);
+     z-index:9999999999999999;
+ }
+ </style>
+ 
+ 
+ <!-- Filtering -->
+ <script>
+ $(function(){
+     $(".f").click(function(){
+         $(".f").removeClass("active");
+         $(this).addClass("active");
+         if($(this).attr('id') == 'f-all'){
+             $("article").fadeIn(200);
+         }else{
+             var filter = $(this).text();
+             $("article").fadeOut();
+             $("article."+filter).fadeIn(100);
+         }
+         
+     });
+ });
+ </script>
+ 
+  <div class="hcontrols"><svg version="1.1" id="Layer_1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 216 216" enable-background="new 0 0 216 216" xml:space="preserve"><path d="M106.6,134c14.3,0,26-11.7,26-26s-11.7-26-26-26s-26,11.7-26,26S92.2,134,106.6,134z M106.6,94c7.7,0,14,6.3,14,14s-6.3,14-14,14s-14-6.3-14-14S98.9,94,106.6,94z M40.4,124.6l7.2,3.3c3,1.4,4.4,4.8,3.3,7.9l-2.8,7.4c-2.1,5.7-1.4,11.8,2.1,16.7c3.4,5,9,7.9,15,7.9c2.2,0,4.4-0.4,6.5-1.2l7.4-2.8c0.7-0.3,1.4-0.4,2.2-0.4c2.4,0,4.7,1.4,5.7,3.7l3.3,7.2c3,6.6,9.4,10.7,16.6,10.7s13.6-4.1,16.6-10.7l3.3-7.2c1-2.2,3.2-3.7,5.7-3.7c0.7,0,1.5,0.1,2.2,0.4l7.4,2.8c2.1,0.8,4.3,1.2,6.5,1.2c0,0,0,0,0,0c5.9,0,11.5-3,15-7.9c3.4-5,4.2-11.1,2.1-16.7l-2.8-7.4c-1.1-3.1,0.3-6.5,3.3-7.9l7.2-3.3c6.6-3,10.7-9.4,10.7-16.6s-4.1-13.6-10.7-16.6l-7.2-3.3c-3-1.4-4.4-4.8-3.3-7.9l2.8-7.4c2.1-5.7,1.4-11.8-2.1-16.7c-3.4-5-9-7.9-15-7.9c-2.2,0-4.4,0.4-6.5,1.2l-7.4,2.8c-0.7,0.3-1.4,0.4-2.2,0.4c-2.4,0-4.7-1.4-5.7-3.7l-3.3-7.2c-3-6.6-9.4-10.7-16.6-10.7S93,35.2,90,41.8l-3.3,7.2c-1,2.2-3.2,3.7-5.7,3.7c-0.7,0-1.5-0.1-2.2-0.4l-7.4-2.8c-2.1-0.8-4.3-1.2-6.5-1.2c-5.9,0-11.5,3-15,7.9c-3.4,5-4.2,11.1-2.1,16.7l2.8,7.4c1.1,3.1-0.3,6.5-3.3,7.9l-7.2,3.3c-6.6,3-10.7,9.4-10.7,16.6S33.8,121.6,40.4,124.6z M45.3,102.3l7.2-3.3c8.7-4,12.9-14.1,9.5-23l-2.8-7.4c-1-2.7,0-4.7,0.7-5.7c1.6-2.4,4.6-3.4,7.4-2.3l7.4,2.8c2.1,0.8,4.2,1.2,6.4,1.2c0,0,0,0,0,0c7.1,0,13.6-4.2,16.6-10.7l3.3-7.2c1.5-3.4,4.7-3.7,5.7-3.7s4.1,0.3,5.7,3.7l3.3,7.2c3,6.5,9.5,10.7,16.6,10.7c2.2,0,4.3-0.4,6.4-1.2l7.4-2.8c2.8-1,5.7,0,7.4,2.3c0.7,1,1.7,3,0.7,5.7l-2.8,7.4c-3.3,8.9,0.8,19,9.5,23l7.2,3.3c3.4,1.5,3.7,4.7,3.7,5.7s-0.3,4.1-3.7,5.7l-7.2,3.3c-8.7,4-12.9,14.1-9.5,23l2.8,7.4c1,2.7,0,4.7-0.7,5.7c-1.6,2.4-4.6,3.4-7.4,2.3l-7.4-2.8c-2.1-0.8-4.2-1.2-6.4-1.2c-7.1,0-13.6,4.2-16.6,10.7l-3.3,7.2c-1.5,3.4-4.7,3.7-5.7,3.7s-4.1-0.3-5.7-3.7l-3.3-7.2c-3-6.5-9.5-10.7-16.6-10.7c-2.2,0-4.3,0.4-6.4,1.2l-7.4,2.8c-2.8,1-5.7,0-7.4-2.3c-0.7-1-1.7-3-0.7-5.7l2.8-7.4c3.3-8.9-0.8-19-9.5-23l-7.2-3.3c-3.4-1.5-3.7-4.7-3.7-5.7S41.9,103.9,45.3,102.3z"/></svg></div> 
+ 
+ </body>
+ </html>
